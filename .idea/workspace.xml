@@ -2,29 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b38b641-a2c9-4e3c-8311-6e09dbe0be67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CTCI/CTCI.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CTCI/src/IsUnique.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CTCI/src/PalindromePermutation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CTCI/src/StrPermutations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CTCI/src/URLify.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/LeetCode.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/Powers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/TrailingZeros.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/isPalindromeNum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/CTCI/IsUnique.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/CTCI/META-INF/CTCI.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/CTCI/PalindromePermutation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/CTCI/StrPermutations.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/CTCI/URLify.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/META-INF/LeetCode.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/Powers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/TrailingZeros.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/isPalindromeNum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CTCI/src/StringCompression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/CTCI/OneAway.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/CTCI/StringCompression.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week1/Week1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Week1/Week1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTCI/src/OneAway.java" beforeDir="false" afterPath="$PROJECT_DIR$/CTCI/src/OneAway.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +59,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.PalindromePermutation">
+  <component name="RunManager" selected="Application.StringCompression">
+    <configuration name="OneAway" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="OneAway" />
+      <module name="CTCI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PalindromePermutation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PalindromePermutation" />
       <module name="CTCI" />
@@ -92,9 +81,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrailingZeros" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TrailingZeros" />
-      <module name="LeetCode" />
+    <configuration name="StringCompression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StringCompression" />
+      <module name="CTCI" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -106,30 +95,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrailingZeros.positiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LeetCode" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TrailingZeros" />
-      <option name="METHOD_NAME" value="positiveTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.TrailingZeros" />
-      <item itemvalue="JUnit.TrailingZeros.positiveTest" />
       <item itemvalue="Application.StrPermutations" />
       <item itemvalue="Application.URLify" />
       <item itemvalue="Application.PalindromePermutation" />
+      <item itemvalue="Application.OneAway" />
+      <item itemvalue="Application.StringCompression" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StringCompression" />
+        <item itemvalue="Application.OneAway" />
         <item itemvalue="Application.PalindromePermutation" />
         <item itemvalue="Application.URLify" />
         <item itemvalue="Application.StrPermutations" />
-        <item itemvalue="Application.TrailingZeros" />
-        <item itemvalue="JUnit.TrailingZeros.positiveTest" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +123,7 @@
       <option name="presentableId" value="Default" />
       <updated>1546838406389</updated>
       <workItem from="1546838407765" duration="6350000" />
-      <workItem from="1564524059134" duration="26429000" />
+      <workItem from="1564524059134" duration="31985000" />
     </task>
     <servers />
   </component>
