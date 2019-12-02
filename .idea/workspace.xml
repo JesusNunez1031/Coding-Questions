@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b38b641-a2c9-4e3c-8311-6e09dbe0be67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CTCI/src/StringCompression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/CTCI/OneAway.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/CTCI/StringCompression.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DynamicProg/src/FibSeq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/CSP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/postOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/DynamicProg/FibSeq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CTCI/src/OneAway.java" beforeDir="false" afterPath="$PROJECT_DIR$/CTCI/src/OneAway.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +49,11 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jesus\Desktop\Github Repos\Coding-Questions\LeetCode\src" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -59,7 +66,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.StringCompression">
+  <component name="RunManager" selected="Application.FibSeq">
+    <configuration name="FibSeq" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FibSeq" />
+      <module name="DynamicProg" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OneAway" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="OneAway" />
       <module name="CTCI" />
@@ -69,13 +83,6 @@
     </configuration>
     <configuration name="PalindromePermutation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PalindromePermutation" />
-      <module name="CTCI" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StrPermutations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="StrPermutations" />
       <module name="CTCI" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -96,19 +103,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.StrPermutations" />
       <item itemvalue="Application.URLify" />
       <item itemvalue="Application.PalindromePermutation" />
       <item itemvalue="Application.OneAway" />
       <item itemvalue="Application.StringCompression" />
+      <item itemvalue="Application.FibSeq" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FibSeq" />
         <item itemvalue="Application.StringCompression" />
         <item itemvalue="Application.OneAway" />
         <item itemvalue="Application.PalindromePermutation" />
         <item itemvalue="Application.URLify" />
-        <item itemvalue="Application.StrPermutations" />
       </list>
     </recent_temporary>
   </component>
@@ -124,6 +131,9 @@
       <updated>1546838406389</updated>
       <workItem from="1546838407765" duration="6350000" />
       <workItem from="1564524059134" duration="31985000" />
+      <workItem from="1571078610748" duration="124000" />
+      <workItem from="1575272105335" duration="1081000" />
+      <workItem from="1575276816977" duration="2305000" />
     </task>
     <servers />
   </component>
@@ -135,7 +145,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
