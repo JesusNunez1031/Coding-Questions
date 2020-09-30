@@ -17,7 +17,6 @@ public class FibSeq {
 
     // Method to calculate fib sequence using memoization
     public static int fibMemo(int n, Integer[] memo) {
-
         if (memo[n] != null) {
             return memo[n];
         }
@@ -31,15 +30,15 @@ public class FibSeq {
     }
 
     // Method to calculate fib sequence using a bottom up approach
-    public static int fibBottomUp(int n){
-        if(n == 1 || n == 2) {
+    public static int fibBottomUp(int n) {
+        if (n == 1 || n == 2) {
             return 1;
         }
         int[] bottom_up = new int[n + 1];
         bottom_up[0] = 1;
         bottom_up[1] = 1;
-        for(int i = 2; i <= n;i++) {
-            bottom_up[i] = bottom_up[i-1] + bottom_up[i-2];
+        for (int i = 2; i <= n; i++) {
+            bottom_up[i] = bottom_up[i - 1] + bottom_up[i - 2];
         }
         return bottom_up[n];
     }
