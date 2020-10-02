@@ -2,36 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b38b641-a2c9-4e3c-8311-6e09dbe0be67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/HackerRank/HackerRank.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HackerRank/src/CountingValleys.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HackerRank/src/IntroJava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HackerRank/src/JavaDateAndTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HackerRank/src/SockMerchant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HackerRank/src/StaticBlocks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/ImplementStrStr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/LengthOfLastWord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/MaxSubarray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/MergeTwoSortedLists.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/RemoveDuplicatesFromSortedArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/RemoveElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/ValidParentheses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/longestCommonPrefix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/searchInsert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/HackerRank/CountingValleys.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/HackerRank/IntroJava.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/HackerRank/JavaDateAndTime.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/HackerRank/SockMerchant.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/HackerRank/StaticBlocks.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/MergeTwoSortedLists$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/MergeTwoSortedLists.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/RemoveDuplicatesFromSortedArray.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/RemoveElement.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/ValidParentheses.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/longestCommonPrefix.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/searchInsert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DynamicProg/src/ClimbingStairs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/PlusOne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/RemoveDuplicatesFromList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/LengthOfLastWord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/MaxSubarray.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/PlusOne.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/LeetCode/RomanToInt.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/LeetCode/RomanToInt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DynamicProg/src/FibSeq.java" beforeDir="false" afterPath="$PROJECT_DIR$/DynamicProg/src/FibSeq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/BinaryAddition.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/BinaryAddition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/MergeTwoSortedLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/MergeTwoSortedLists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/HackerRank/CountingValleys.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/HackerRank/CountingValleys.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/BinaryAddition.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/LeetCode/BinaryAddition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/MergeTwoSortedLists.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/LeetCode/MergeTwoSortedLists.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/longestCommonPrefix.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/LeetCode/longestCommonPrefix.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +85,14 @@
       <recent name="C:\Users\Jesus\Desktop\Github Repos\Coding-Questions\LeetCode\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CountingValleys">
+  <component name="RunManager" selected="Application.MergeTwoSortedLists">
+    <configuration name="BinaryAddition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BinaryAddition" />
+      <module name="LeetCode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CountingValleys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CountingValleys" />
       <module name="HackerRank" />
@@ -109,22 +100,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ImplementStrStr" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ImplementStrStr" />
+    <configuration name="MergeTwoSortedLists" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MergeTwoSortedLists" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntroJava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="IntroJava" />
-      <module name="HackerRank" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RemoveElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RemoveElement" />
+    <configuration name="PlusOne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PlusOne" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,19 +122,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.RemoveElement" />
-      <item itemvalue="Application.ImplementStrStr" />
-      <item itemvalue="Application.IntroJava" />
       <item itemvalue="Application.SockMerchant" />
       <item itemvalue="Application.CountingValleys" />
+      <item itemvalue="Application.PlusOne" />
+      <item itemvalue="Application.BinaryAddition" />
+      <item itemvalue="Application.MergeTwoSortedLists" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MergeTwoSortedLists" />
+        <item itemvalue="Application.BinaryAddition" />
+        <item itemvalue="Application.PlusOne" />
         <item itemvalue="Application.CountingValleys" />
         <item itemvalue="Application.SockMerchant" />
-        <item itemvalue="Application.IntroJava" />
-        <item itemvalue="Application.RemoveElement" />
-        <item itemvalue="Application.ImplementStrStr" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +171,8 @@
       <workItem from="1601439206292" duration="9637000" />
       <workItem from="1601505398999" duration="16741000" />
       <workItem from="1601531812305" duration="7515000" />
-      <workItem from="1601577906394" duration="16600000" />
+      <workItem from="1601577906394" duration="21879000" />
+      <workItem from="1601664910103" duration="4859000" />
     </task>
     <servers />
   </component>
@@ -215,50 +200,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="365" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1601448251889" />
-    <state width="1877" height="306" key="GridCell.Tab.0.bottom" timestamp="1601598237065">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1601675406004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="306" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601598237065" />
-    <state width="1877" height="306" key="GridCell.Tab.0.center" timestamp="1601598237065">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601675406004" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1601675406004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="306" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601598237065" />
-    <state width="1877" height="306" key="GridCell.Tab.0.left" timestamp="1601598237064">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601675406004" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1601675406004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="306" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601598237064" />
-    <state width="1877" height="306" key="GridCell.Tab.0.right" timestamp="1601598237065">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601675406004" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1601675406004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="306" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601598237065" />
-    <state width="1877" height="306" key="GridCell.Tab.1.bottom" timestamp="1601598237065">
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601675406004" />
+    <state width="1877" height="444" key="GridCell.Tab.1.bottom" timestamp="1601675246306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="306" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601598237065" />
-    <state width="1877" height="306" key="GridCell.Tab.1.center" timestamp="1601598237065">
+    <state width="1877" height="444" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601675246306" />
+    <state width="1877" height="444" key="GridCell.Tab.1.center" timestamp="1601675246306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="306" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601598237065" />
-    <state width="1877" height="306" key="GridCell.Tab.1.left" timestamp="1601598237065">
+    <state width="1877" height="444" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601675246306" />
+    <state width="1877" height="444" key="GridCell.Tab.1.left" timestamp="1601675246306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="306" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601598237065" />
-    <state width="1877" height="306" key="GridCell.Tab.1.right" timestamp="1601598237065">
+    <state width="1877" height="444" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601675246306" />
+    <state width="1877" height="444" key="GridCell.Tab.1.right" timestamp="1601675246306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="306" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601598237065" />
+    <state width="1877" height="444" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601675246306" />
     <state x="461" y="161" key="SettingsEditor" timestamp="1601593270539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601593270539" />
-    <state x="656" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1601577906327">
+    <state x="656" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1601664910582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601577906327" />
-    <state x="600" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601595701398">
+    <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601664910582" />
+    <state x="600" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601620494922">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="600" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601595701398" />
+    <state x="600" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601620494922" />
+    <state x="690" y="285" key="extract.method.dialog" timestamp="1601676035325">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="285" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601676035325" />
     <state x="656" y="257" width="607" height="526" key="find.popup" timestamp="1601448176862">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -626,26 +615,6 @@
           <option name="timeStamp" value="146" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/LeetCode/src/MergeTwoSortedLists.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="176" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/LeetCode/src/MergeTwoSortedLists.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="177" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/LeetCode/src/MergeTwoSortedLists.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="178" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/LeetCode/src/MergeTwoSortedLists.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="179" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LeetCode/src/ImplementStrStr.java</url>
           <line>6</line>
           <option name="timeStamp" value="221" />
@@ -725,6 +694,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Coding_Questions$RomanToInt.ic" NAME="RomanToInt Coverage Results" MODIFIED="1601452841252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Coding_Questions$MergeTwoSortedLists.ic" NAME="MergeTwoSortedLists Coverage Results" MODIFIED="1601674674053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="masterDetails">
     <states>

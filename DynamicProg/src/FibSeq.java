@@ -43,6 +43,23 @@ public class FibSeq {
         return bottom_up[n];
     }
 
+    //Another example of using DP
+    public static int fib2(int N) {
+        if(N == 0){
+            return 0;
+        }
+        int[] dp = new int[N+1];
+        dp[0] = 0;
+        dp[1] = 1;
+
+        int i = 2;
+        while (i <= N) {
+            dp[i] = dp[i-1] + dp[i-2];
+            i++;
+        }
+        return dp[N];
+    }
+
     public static void main(String[] args) {
         Integer[] memo = new Integer[100];
         timeStart = System.currentTimeMillis();

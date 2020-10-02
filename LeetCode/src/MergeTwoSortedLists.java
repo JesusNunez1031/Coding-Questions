@@ -44,17 +44,4 @@ public class MergeTwoSortedLists {
         }
         return newList.next;
     }
-
-    public static void main(String[] args) {
-//        ListNode l1 = new ListNode(1);
-//
-//        l1.next = new ListNode(2);
-//        l1.next.next = new ListNode(4);
-//
-//        ListNode head = l1;
-//        while (head != null) {
-//            System.out.println(head.val);
-//            head = head.next;
-//        }
-    }
 }
