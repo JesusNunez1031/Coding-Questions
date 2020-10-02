@@ -1,5 +1,5 @@
 # Coding-Questions
-Collection of coding questions taken from Cracking the coding interview book, LeetCode, HackerRank, and other sources. All questions are solved using Java language. **Directories are named after the source of the question so all leetcode questions I have done can be found in said directory. 
+Collection of coding questions taken from Cracking the coding interview book, LeetCode, HackerRank, and other sources. All questions are solved using Java language. **Directories are named after the source of the question so all leetcode questions I have done can be found in said directory.** 
 
 I will try to add questions daily as I continue to solve more from leetcode and HackerRank. Comments will also be added eventually for others trying to understand files.
 
