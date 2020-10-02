@@ -2,28 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b38b641-a2c9-4e3c-8311-6e09dbe0be67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DynamicProg/src/FindSets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/AddOneToArrayNum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/BinaryAddition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/GapFulNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/RomanToInt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/reverseInteger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/DynamicProg/FindSets.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/AddOneToArrayNum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/BinaryAddition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/CSP.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/GapFulNumbers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/RomanToInt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/postOrder$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/postOrder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/reverseInteger.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HackerRank/HackerRank.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HackerRank/src/CountingValleys.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HackerRank/src/IntroJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HackerRank/src/JavaDateAndTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HackerRank/src/SockMerchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HackerRank/src/StaticBlocks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/ImplementStrStr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/LengthOfLastWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/MaxSubarray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/MergeTwoSortedLists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/RemoveDuplicatesFromSortedArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/RemoveElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/ValidParentheses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/longestCommonPrefix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/searchInsert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/HackerRank/CountingValleys.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/HackerRank/IntroJava.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/HackerRank/JavaDateAndTime.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/HackerRank/SockMerchant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/HackerRank/StaticBlocks.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/MergeTwoSortedLists$ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/MergeTwoSortedLists.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/RemoveDuplicatesFromSortedArray.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/RemoveElement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/ValidParentheses.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/longestCommonPrefix.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/searchInsert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DynamicProg/src/FibSeq.java" beforeDir="false" afterPath="$PROJECT_DIR$/DynamicProg/src/FibSeq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/DynamicProg/FibSeq.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/DynamicProg/FibSeq.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/LeetCode/META-INF/LeetCode.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/LeetCode/Powers.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/LeetCode/Powers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/LeetCode/TrailingZeros.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/LeetCode/TrailingZeros.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/LeetCode/isPalindromeNum.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/LeetCode/isPalindromeNum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/RomanToInt.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/LeetCode/RomanToInt.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +40,20 @@
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="241" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -64,6 +86,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546845879865" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
+    <property name="last.edited.regexp" value="323-3231" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -71,63 +94,63 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jesus\Desktop\Github Repos\Coding-Questions\LeetCode\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RomanToInt">
-    <configuration name="BinaryAddition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BinaryAddition" />
+  <component name="RunManager" selected="Application.CountingValleys">
+    <configuration name="CountingValleys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CountingValleys" />
+      <module name="HackerRank" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImplementStrStr" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ImplementStrStr" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindSets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FindSets" />
-      <module name="DynamicProg" />
+    <configuration name="IntroJava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="IntroJava" />
+      <module name="HackerRank" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GapFulNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GapFulNumbers" />
+    <configuration name="RemoveElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RemoveElement" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RomanToInt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RomanToInt" />
-      <module name="LeetCode" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="reverseInteger" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="reverseInteger" />
-      <module name="LeetCode" />
+    <configuration name="SockMerchant" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SockMerchant" />
+      <module name="HackerRank" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.BinaryAddition" />
-      <item itemvalue="Application.FindSets" />
-      <item itemvalue="Application.GapFulNumbers" />
-      <item itemvalue="Application.reverseInteger" />
-      <item itemvalue="Application.RomanToInt" />
+      <item itemvalue="Application.RemoveElement" />
+      <item itemvalue="Application.ImplementStrStr" />
+      <item itemvalue="Application.IntroJava" />
+      <item itemvalue="Application.SockMerchant" />
+      <item itemvalue="Application.CountingValleys" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RomanToInt" />
-        <item itemvalue="Application.reverseInteger" />
-        <item itemvalue="Application.GapFulNumbers" />
-        <item itemvalue="Application.FindSets" />
-        <item itemvalue="Application.BinaryAddition" />
+        <item itemvalue="Application.CountingValleys" />
+        <item itemvalue="Application.SockMerchant" />
+        <item itemvalue="Application.IntroJava" />
+        <item itemvalue="Application.RemoveElement" />
+        <item itemvalue="Application.ImplementStrStr" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +184,10 @@
       <workItem from="1575339363959" duration="5418000" />
       <workItem from="1575450933198" duration="59000" />
       <workItem from="1575451140495" duration="2376000" />
-      <workItem from="1601439206292" duration="9285000" />
+      <workItem from="1601439206292" duration="9637000" />
+      <workItem from="1601505398999" duration="16741000" />
+      <workItem from="1601531812305" duration="7515000" />
+      <workItem from="1601577906394" duration="16600000" />
     </task>
     <servers />
   </component>
@@ -189,46 +215,62 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="365" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1601448251889" />
-    <state width="1877" height="384" key="GridCell.Tab.0.bottom" timestamp="1601453629321">
+    <state width="1877" height="306" key="GridCell.Tab.0.bottom" timestamp="1601598237065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="384" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601453629321" />
-    <state width="1877" height="384" key="GridCell.Tab.0.center" timestamp="1601453629321">
+    <state width="1877" height="306" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601598237065" />
+    <state width="1877" height="306" key="GridCell.Tab.0.center" timestamp="1601598237065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="384" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601453629321" />
-    <state width="1877" height="384" key="GridCell.Tab.0.left" timestamp="1601453629321">
+    <state width="1877" height="306" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601598237065" />
+    <state width="1877" height="306" key="GridCell.Tab.0.left" timestamp="1601598237064">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="384" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601453629321" />
-    <state width="1877" height="384" key="GridCell.Tab.0.right" timestamp="1601453629321">
+    <state width="1877" height="306" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601598237064" />
+    <state width="1877" height="306" key="GridCell.Tab.0.right" timestamp="1601598237065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="384" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601453629321" />
-    <state width="1877" height="384" key="GridCell.Tab.1.bottom" timestamp="1601453629322">
+    <state width="1877" height="306" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601598237065" />
+    <state width="1877" height="306" key="GridCell.Tab.1.bottom" timestamp="1601598237065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="384" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601453629322" />
-    <state width="1877" height="384" key="GridCell.Tab.1.center" timestamp="1601453629322">
+    <state width="1877" height="306" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601598237065" />
+    <state width="1877" height="306" key="GridCell.Tab.1.center" timestamp="1601598237065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="384" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601453629322" />
-    <state width="1877" height="384" key="GridCell.Tab.1.left" timestamp="1601453629321">
+    <state width="1877" height="306" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601598237065" />
+    <state width="1877" height="306" key="GridCell.Tab.1.left" timestamp="1601598237065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="384" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601453629321" />
-    <state width="1877" height="384" key="GridCell.Tab.1.right" timestamp="1601453629322">
+    <state width="1877" height="306" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601598237065" />
+    <state width="1877" height="306" key="GridCell.Tab.1.right" timestamp="1601598237065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="384" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601453629322" />
-    <state x="656" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1601439205366">
+    <state width="1877" height="306" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601598237065" />
+    <state x="461" y="161" key="SettingsEditor" timestamp="1601593270539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601439205366" />
+    <state x="461" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601593270539" />
+    <state x="656" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1601577906327">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601577906327" />
+    <state x="600" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601595701398">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="600" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601595701398" />
     <state x="656" y="257" width="607" height="526" key="find.popup" timestamp="1601448176862">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="257" width="607" height="526" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601448176862" />
+    <state x="342" y="139" key="new project wizard" timestamp="1601583481115">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="139" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1601583481115" />
+    <state x="273" y="230" width="774" height="678" key="search.everywhere.popup" timestamp="1601593861475">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="273" y="230" width="774" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601593861475" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -562,6 +604,121 @@
           <url>file://$PROJECT_DIR$/LeetCode/src/GapFulNumbers.java</url>
           <line>21</line>
           <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/longestCommonPrefix.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/longestCommonPrefix.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/longestCommonPrefix.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/longestCommonPrefix.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeTwoSortedLists.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="176" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeTwoSortedLists.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="177" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeTwoSortedLists.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="178" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeTwoSortedLists.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/ImplementStrStr.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="221" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/ImplementStrStr.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="223" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/ImplementStrStr.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="224" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/ImplementStrStr.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="225" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/ImplementStrStr.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/ImplementStrStr.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="229" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/HackerRank/src/CountingValleys.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="232" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/HackerRank/src/CountingValleys.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="233" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/HackerRank/src/CountingValleys.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="235" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/HackerRank/src/CountingValleys.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="236" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/HackerRank/src/CountingValleys.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="237" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/HackerRank/src/CountingValleys.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="238" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/HackerRank/src/CountingValleys.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="239" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/HackerRank/src/CountingValleys.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="240" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/HackerRank/src/CountingValleys.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="241" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
