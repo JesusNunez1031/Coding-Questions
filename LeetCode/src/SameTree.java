@@ -5,7 +5,7 @@ public class SameTree {
      */
 
     // Definition for a binary tree node.
-    public class TreeNode {
+    public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -13,11 +13,11 @@ public class SameTree {
         TreeNode() {
         }
 
-        TreeNode(int val) {
+        public TreeNode(int val) {
             this.val = val;
         }
 
-        TreeNode(int val, TreeNode left, TreeNode right) {
+        public TreeNode(int val, TreeNode left, TreeNode right) {
             this.val = val;
             this.left = left;
             this.right = right;
@@ -42,7 +42,16 @@ public class SameTree {
         return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
 
+
     public static void main(String[] args) {
+        TreeNode tree = new TreeNode(5);
+        tree.left = new TreeNode(4);
+        tree.right = new TreeNode(8);
+        tree.left.left = new TreeNode(11);
+        tree.left.left.left = new TreeNode(7);
+        tree.right.right = new TreeNode(4);
+        tree.right.left = new TreeNode(13);
+        tree.right.right.right = new TreeNode(1);
 
     }
 }

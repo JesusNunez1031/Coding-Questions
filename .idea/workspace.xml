@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b38b641-a2c9-4e3c-8311-6e09dbe0be67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/BinaryTreeLevelOrderTraversal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/MaxDepthOfBinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/SameTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/SymmetricTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/MergeSortedArray.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/RemoveDuplicatesFromList$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/RemoveDuplicatesFromList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/PascalsTriangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/PathSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/BinaryTreeLevelOrderTraversal$TreeNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/BinaryTreeLevelOrderTraversal.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/MaxDepthOfBinaryTree$TreeNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/MaxDepthOfBinaryTree.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/PascalsTriangle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/PathSum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/SameTree$TreeNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/SameTree.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/SymmetricTree$TreeNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/SymmetricTree.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/LeetCode/MergeTwoSortedLists.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/LeetCode/MergeTwoSortedLists.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/SameTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/SameTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,17 +85,10 @@
       <recent name="C:\Users\Jesus\Desktop\Github Repos\Coding-Questions\LeetCode\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MergeSortedArray">
+  <component name="RunManager" selected="Application.PascalsTriangle">
     <configuration name="BinaryAddition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BinaryAddition" />
       <module name="LeetCode" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CountingValleys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CountingValleys" />
-      <module name="HackerRank" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -110,27 +107,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlusOne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PlusOne" />
+    <configuration name="PascalsTriangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PascalsTriangle" />
+      <module name="LeetCode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SameTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SameTree" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.CountingValleys" />
-      <item itemvalue="Application.PlusOne" />
       <item itemvalue="Application.BinaryAddition" />
       <item itemvalue="Application.MergeTwoSortedLists" />
       <item itemvalue="Application.MergeSortedArray" />
+      <item itemvalue="Application.SameTree" />
+      <item itemvalue="Application.PascalsTriangle" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PascalsTriangle" />
+        <item itemvalue="Application.SameTree" />
         <item itemvalue="Application.MergeSortedArray" />
         <item itemvalue="Application.MergeTwoSortedLists" />
         <item itemvalue="Application.BinaryAddition" />
-        <item itemvalue="Application.PlusOne" />
-        <item itemvalue="Application.CountingValleys" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +172,8 @@
       <workItem from="1601505398999" duration="16741000" />
       <workItem from="1601531812305" duration="7515000" />
       <workItem from="1601577906394" duration="21879000" />
-      <workItem from="1601664910103" duration="13732000" />
+      <workItem from="1601664910103" duration="13899000" />
+      <workItem from="1601755776477" duration="8211000" />
     </task>
     <servers />
   </component>
@@ -196,46 +201,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="365" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1601448251889" />
-    <state width="1011" height="442" key="GridCell.Tab.0.bottom" timestamp="1601679517913">
+    <state width="916" height="341" key="GridCell.Tab.0.bottom" timestamp="1601763591407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1011" height="442" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601679517913" />
-    <state width="1011" height="442" key="GridCell.Tab.0.center" timestamp="1601679517912">
+    <state width="916" height="341" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601763591407" />
+    <state width="916" height="341" key="GridCell.Tab.0.center" timestamp="1601763591407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1011" height="442" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601679517912" />
-    <state width="1011" height="442" key="GridCell.Tab.0.left" timestamp="1601679517912">
+    <state width="916" height="341" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601763591407" />
+    <state width="916" height="341" key="GridCell.Tab.0.left" timestamp="1601763591407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1011" height="442" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601679517912" />
-    <state width="1011" height="442" key="GridCell.Tab.0.right" timestamp="1601679517912">
+    <state width="916" height="341" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601763591407" />
+    <state width="916" height="341" key="GridCell.Tab.0.right" timestamp="1601763591407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1011" height="442" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601679517912" />
-    <state width="1011" height="442" key="GridCell.Tab.1.bottom" timestamp="1601679518174">
+    <state width="916" height="341" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601763591407" />
+    <state width="916" height="341" key="GridCell.Tab.1.bottom" timestamp="1601763591408">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1011" height="442" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601679518174" />
-    <state width="1011" height="442" key="GridCell.Tab.1.center" timestamp="1601679518174">
+    <state width="916" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601763591408" />
+    <state width="916" height="341" key="GridCell.Tab.1.center" timestamp="1601763591407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1011" height="442" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601679518174" />
-    <state width="1011" height="442" key="GridCell.Tab.1.left" timestamp="1601679518173">
+    <state width="916" height="341" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601763591407" />
+    <state width="916" height="341" key="GridCell.Tab.1.left" timestamp="1601763591407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1011" height="442" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601679518173" />
-    <state width="1011" height="442" key="GridCell.Tab.1.right" timestamp="1601679518174">
+    <state width="916" height="341" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601763591407" />
+    <state width="916" height="341" key="GridCell.Tab.1.right" timestamp="1601763591408">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1011" height="442" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601679518174" />
+    <state width="916" height="341" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601763591408" />
     <state x="461" y="161" key="SettingsEditor" timestamp="1601593270539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601593270539" />
-    <state x="656" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1601664910582">
+    <state x="656" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1601755776006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601664910582" />
+    <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601755776006" />
     <state x="600" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601695431684">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -771,6 +776,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Coding_Questions$RomanToInt.ic" NAME="RomanToInt Coverage Results" MODIFIED="1601452841252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Coding_Questions$SameTree.ic" NAME="SameTree Coverage Results" MODIFIED="1601758470512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Coding_Questions$MergeTwoSortedLists.ic" NAME="MergeTwoSortedLists Coverage Results" MODIFIED="1601674674053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="masterDetails">
