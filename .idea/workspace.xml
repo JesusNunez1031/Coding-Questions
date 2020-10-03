@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b38b641-a2c9-4e3c-8311-6e09dbe0be67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DynamicProg/src/ClimbingStairs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/PlusOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/RemoveDuplicatesFromList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/LengthOfLastWord.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/MaxSubarray.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/PlusOne.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/BinaryTreeLevelOrderTraversal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/MaxDepthOfBinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/SameTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/src/SymmetricTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/MergeSortedArray.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/RemoveDuplicatesFromList$ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/LeetCode/RemoveDuplicatesFromList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DynamicProg/src/FibSeq.java" beforeDir="false" afterPath="$PROJECT_DIR$/DynamicProg/src/FibSeq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/BinaryAddition.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/BinaryAddition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/MergeTwoSortedLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/MergeTwoSortedLists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/HackerRank/CountingValleys.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/HackerRank/CountingValleys.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/LeetCode/BinaryAddition.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/LeetCode/BinaryAddition.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/LeetCode/MergeTwoSortedLists.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/LeetCode/MergeTwoSortedLists.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/LeetCode/longestCommonPrefix.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/LeetCode/longestCommonPrefix.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +81,7 @@
       <recent name="C:\Users\Jesus\Desktop\Github Repos\Coding-Questions\LeetCode\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MergeTwoSortedLists">
+  <component name="RunManager" selected="Application.MergeSortedArray">
     <configuration name="BinaryAddition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BinaryAddition" />
       <module name="LeetCode" />
@@ -96,6 +92,13 @@
     <configuration name="CountingValleys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CountingValleys" />
       <module name="HackerRank" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MergeSortedArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MergeSortedArray" />
+      <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -114,27 +117,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SockMerchant" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SockMerchant" />
-      <module name="HackerRank" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.SockMerchant" />
       <item itemvalue="Application.CountingValleys" />
       <item itemvalue="Application.PlusOne" />
       <item itemvalue="Application.BinaryAddition" />
       <item itemvalue="Application.MergeTwoSortedLists" />
+      <item itemvalue="Application.MergeSortedArray" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MergeSortedArray" />
         <item itemvalue="Application.MergeTwoSortedLists" />
         <item itemvalue="Application.BinaryAddition" />
         <item itemvalue="Application.PlusOne" />
         <item itemvalue="Application.CountingValleys" />
-        <item itemvalue="Application.SockMerchant" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +168,7 @@
       <workItem from="1601505398999" duration="16741000" />
       <workItem from="1601531812305" duration="7515000" />
       <workItem from="1601577906394" duration="21879000" />
-      <workItem from="1601664910103" duration="4859000" />
+      <workItem from="1601664910103" duration="13732000" />
     </task>
     <servers />
   </component>
@@ -200,38 +196,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="365" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1601448251889" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1601675406004">
+    <state width="1011" height="442" key="GridCell.Tab.0.bottom" timestamp="1601679517913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601675406004" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1601675406004">
+    <state width="1011" height="442" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601679517913" />
+    <state width="1011" height="442" key="GridCell.Tab.0.center" timestamp="1601679517912">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601675406004" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1601675406004">
+    <state width="1011" height="442" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601679517912" />
+    <state width="1011" height="442" key="GridCell.Tab.0.left" timestamp="1601679517912">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601675406004" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1601675406004">
+    <state width="1011" height="442" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601679517912" />
+    <state width="1011" height="442" key="GridCell.Tab.0.right" timestamp="1601679517912">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601675406004" />
-    <state width="1877" height="444" key="GridCell.Tab.1.bottom" timestamp="1601675246306">
+    <state width="1011" height="442" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601679517912" />
+    <state width="1011" height="442" key="GridCell.Tab.1.bottom" timestamp="1601679518174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="444" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601675246306" />
-    <state width="1877" height="444" key="GridCell.Tab.1.center" timestamp="1601675246306">
+    <state width="1011" height="442" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601679518174" />
+    <state width="1011" height="442" key="GridCell.Tab.1.center" timestamp="1601679518174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="444" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601675246306" />
-    <state width="1877" height="444" key="GridCell.Tab.1.left" timestamp="1601675246306">
+    <state width="1011" height="442" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601679518174" />
+    <state width="1011" height="442" key="GridCell.Tab.1.left" timestamp="1601679518173">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="444" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601675246306" />
-    <state width="1877" height="444" key="GridCell.Tab.1.right" timestamp="1601675246306">
+    <state width="1011" height="442" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601679518173" />
+    <state width="1011" height="442" key="GridCell.Tab.1.right" timestamp="1601679518174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="444" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601675246306" />
+    <state width="1011" height="442" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601679518174" />
     <state x="461" y="161" key="SettingsEditor" timestamp="1601593270539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -240,10 +236,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601664910582" />
-    <state x="600" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601620494922">
+    <state x="600" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601695431684">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="600" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601620494922" />
+    <state x="600" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601695431684" />
     <state x="690" y="285" key="extract.method.dialog" timestamp="1601676035325">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -688,6 +684,87 @@
           <url>file://$PROJECT_DIR$/HackerRank/src/CountingValleys.java</url>
           <line>42</line>
           <option name="timeStamp" value="241" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="261" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="262" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="263" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="265" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="267" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="268" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="269" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="270" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="271" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="272" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="273" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="274" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="275" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="276" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/src/MergeSortedArray.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="277" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/LeetCode/src/BinaryTreeLevelOrderTraversal.java</url>
+          <line>26</line>
+          <properties field="val" class="BinaryTreeLevelOrderTraversal.TreeNode" />
+          <option name="timeStamp" value="278" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
