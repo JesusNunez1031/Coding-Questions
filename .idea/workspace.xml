@@ -20,45 +20,82 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b38b641-a2c9-4e3c-8311-6e09dbe0be67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/BestTimeToBuyAndSellStock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/BestTimeToBuyAndSellStockII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/DeleteNodeFromLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/MajorityElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/PalindromeLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/PalindromeNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/RemoveLinkedListElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/ReverseLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/ReversedLinkedListII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/SortedArrayToBinarySearchTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/SortedLListToBST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/TwoSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/ValidPalindrome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/ValidPalindromeII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/BestTimeToBuyAndSellStock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/BestTimeToBuyAndSellStockII.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/DeleteNodeFromLinkedList$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/DeleteNodeFromLinkedList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/MajorityElement.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/PalindromeLinkedList$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/PalindromeLinkedList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/PalindromeNumber.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/RemoveLinkedListElements$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/RemoveLinkedListElements.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/ReverseLinkedList$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/ReverseLinkedList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/ReversedLinkedListII$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/ReversedLinkedListII.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/SortedArrayToBinarySearchTree$TreeNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/SortedArrayToBinarySearchTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/SortedLListToBST$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/SortedLListToBST$TreeNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/SortedLListToBST.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/TwoSum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/ValidPalindrome.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/ValidPalindromeII.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/ImplementStrStr.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/LeetCode/PascalsTriangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/LeetCode/PascalsTriangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingQuestions/CodingQuestions.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingQuestions/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/CTCI/IsUnique.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/CTCI/META-INF/CTCI.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/CTCI/OneAway.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/CTCI/PalindromePermutation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/CTCI/StrPermutations.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/CTCI/StringCompression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/CTCI/URLify.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/DynamicProg/FibSeq.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/DynamicProg/FindSets.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/HackerRank/CountingValleys.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/HackerRank/IntroJava.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/HackerRank/JavaDateAndTime.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/HackerRank/SockMerchant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/HackerRank/StaticBlocks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/AddOneToArrayNum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/BestTimeToBuyAndSellStock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/BestTimeToBuyAndSellStockII.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/BinaryAddition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/BinaryTreeLevelOrderTraversal$TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/BinaryTreeLevelOrderTraversal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/CSP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/DeleteNodeFromLinkedList$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/DeleteNodeFromLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/GapFulNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/LengthOfLastWord.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/MajorityElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/MaxDepthOfBinaryTree$TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/MaxDepthOfBinaryTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/MaxSubarray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/MergeSortedArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/MergeTwoSortedLists$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/MergeTwoSortedLists.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/PalindromeLinkedList$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/PalindromeLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/PalindromeNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/PascalsTriangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/PathSum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/PlusOne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/Powers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/RemoveDuplicatesFromList$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/RemoveDuplicatesFromList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/RemoveDuplicatesFromSortedArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/RemoveElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/RemoveLinkedListElements$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/RemoveLinkedListElements.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/ReverseLinkedList$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/ReverseLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/ReversedLinkedListII$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/ReversedLinkedListII.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/RomanToInt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/SameTree$TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/SameTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/SortedArrayToBinarySearchTree$TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/SortedArrayToBinarySearchTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/SortedLListToBST$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/SortedLListToBST$TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/SortedLListToBST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/SymmetricTree$TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/SymmetricTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/TrailingZeros.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/TwoSum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/ValidPalindrome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/ValidPalindromeII.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/ValidParentheses.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/isPalindromeNum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/longestCommonPrefix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/postOrder$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/postOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/reverseInteger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/LeetCode/searchInsert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/Week1/Problem1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/Week1/Problem2.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +149,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546845879865" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
     <property name="last.edited.regexp" value="323-3231" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -128,16 +166,9 @@
       <recent name="C:\Users\Jesus\Desktop\Github Repos\Coding-Questions\LeetCode\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MajorityElement">
+  <component name="RunManager" selected="Java Scratch.Scratch">
     <configuration name="MajorityElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MajorityElement" />
-      <module name="LeetCode" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PalindromeLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PalindromeLinkedList" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,20 +195,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scratch" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.PalindromeLinkedList" />
       <item itemvalue="Application.ReverseLinkedList" />
       <item itemvalue="Application.RemoveLinkedListElements" />
       <item itemvalue="Application.ValidPalindromeII" />
       <item itemvalue="Application.MajorityElement" />
+      <item itemvalue="Java Scratch.Scratch" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Java Scratch.Scratch" />
         <item itemvalue="Application.MajorityElement" />
         <item itemvalue="Application.ValidPalindromeII" />
         <item itemvalue="Application.RemoveLinkedListElements" />
         <item itemvalue="Application.ReverseLinkedList" />
-        <item itemvalue="Application.PalindromeLinkedList" />
       </list>
     </recent_temporary>
   </component>
@@ -236,22 +274,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601769616202" />
-    <state width="1877" height="354" key="GridCell.Tab.0.bottom" timestamp="1601962017978">
+    <state width="1877" height="354" key="GridCell.Tab.0.bottom" timestamp="1602024648251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="354" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601962017978" />
-    <state width="1877" height="354" key="GridCell.Tab.0.center" timestamp="1601962017978">
+    <state width="1877" height="354" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602024648251" />
+    <state width="1877" height="354" key="GridCell.Tab.0.center" timestamp="1602024648251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="354" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601962017978" />
-    <state width="1877" height="354" key="GridCell.Tab.0.left" timestamp="1601962017978">
+    <state width="1877" height="354" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602024648251" />
+    <state width="1877" height="354" key="GridCell.Tab.0.left" timestamp="1602024648250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="354" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601962017978" />
-    <state width="1877" height="354" key="GridCell.Tab.0.right" timestamp="1601962017978">
+    <state width="1877" height="354" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602024648250" />
+    <state width="1877" height="354" key="GridCell.Tab.0.right" timestamp="1602024648251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="354" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601962017978" />
+    <state width="1877" height="354" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602024648251" />
     <state width="1877" height="519" key="GridCell.Tab.1.bottom" timestamp="1601961062387">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -308,10 +346,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="257" width="607" height="526" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601448176862" />
-    <state x="342" y="139" key="new project wizard" timestamp="1601583481115">
+    <state x="342" y="139" key="new project wizard" timestamp="1602015817582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="342" y="139" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1601583481115" />
+    <state x="342" y="139" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1602015817582" />
     <state x="910" y="333" width="727" height="487" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1601791987984">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
