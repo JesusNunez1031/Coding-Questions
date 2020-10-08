@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CTCI/CTCI.iml" filepath="$PROJECT_DIR$/CTCI/CTCI.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Coding-Questions.iml" filepath="$PROJECT_DIR$/.idea/Coding-Questions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CodingBat/CodingBat.iml" filepath="$PROJECT_DIR$/CodingBat/CodingBat.iml" />
       <module fileurl="file://$PROJECT_DIR$/DynamicProg/DynamicProg.iml" filepath="$PROJECT_DIR$/DynamicProg/DynamicProg.iml" />
       <module fileurl="file://$PROJECT_DIR$/HackerRank/HackerRank.iml" filepath="$PROJECT_DIR$/HackerRank/HackerRank.iml" />
       <module fileurl="file://$PROJECT_DIR$/LeetCode/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode/LeetCode.iml" />
