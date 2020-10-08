@@ -10,7 +10,7 @@ public class StringCompression {
         char[] letters = str.toCharArray();
 
         for(char i : letters) {
-            Integer value = map.containsKey(i) ? map.get(i) : 1;
+            Integer value = map.getOrDefault(i, 1);
             if(map.containsKey(i)){
                 map.put(i, value++);
             }

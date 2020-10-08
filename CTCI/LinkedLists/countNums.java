@@ -1,12 +1,11 @@
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-public class Problem1 {
+public class countNums {
 
     //Question: count the occurrences of each element in a single-linked list
     /*
-    Defenition for singly-linked list
+    Definition for singly-linked list
     public class ListNode {
         int val;
         ListNode next;
@@ -27,8 +26,9 @@ public class Problem1 {
         Map<Integer, Integer> map = new HashMap<>();
 
         while (lst != null){
-            int cnt = map.getOrDefault(lst.val, 0) + 1;
-            map.put(lst.val, cnt);
+            int value = map.getOrDefault(lst.val, 0) + 1;
+            map.put(lst.val, value);
+            lst = lst.next;
         }
         return map;
     }
