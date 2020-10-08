@@ -20,78 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b38b641-a2c9-4e3c-8311-6e09dbe0be67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CodingBat/CodingBat.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingBat/Strings-3/MirrorEnds.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingBat/Strings-3/countTriple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingBat/Strings-3/countYZ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingBat/Strings-3/equalIsNot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingBat/Strings-3/gHappy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingBat/Strings-3/maxBlock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingBat/Strings-3/notReplace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingBat/Strings-3/sameEnds.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingBat/Strings-3/sumDigits.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingBat/Strings-3/sumNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingBat/Strings-3/withoutString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeetCode/src/ReverseArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/CodingBat/maxBlock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/AddOneToArrayNum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/BestTimeToBuyAndSellStock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/BestTimeToBuyAndSellStockII.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/BinaryAddition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/BinaryTreeLevelOrderTraversal$TreeNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/BinaryTreeLevelOrderTraversal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/CSP.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/DeleteNodeFromLinkedList$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/DeleteNodeFromLinkedList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/GapFulNumbers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/LengthOfLastWord.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/MajorityElement.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/MaxDepthOfBinaryTree$TreeNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/MaxDepthOfBinaryTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/MaxSubarray.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/MergeSortedArray.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/MergeTwoSortedLists$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/MergeTwoSortedLists.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/PalindromeLinkedList$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/PalindromeLinkedList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/PalindromeNumber.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/PascalsTriangle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/PathSum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/PlusOne.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/Powers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/RemoveDuplicatesFromList$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/RemoveDuplicatesFromList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/RemoveDuplicatesFromSortedArray.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/RemoveElement.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/RemoveLinkedListElements$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/RemoveLinkedListElements.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/ReverseArray.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/ReverseLinkedList$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/ReverseLinkedList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/ReversedLinkedListII$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/ReversedLinkedListII.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/RomanToInt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/SameTree$TreeNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/SameTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/SortedArrayToBinarySearchTree$TreeNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/SortedArrayToBinarySearchTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/SortedLListToBST$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/SortedLListToBST$TreeNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/SortedLListToBST.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/SymmetricTree$TreeNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/SymmetricTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/TrailingZeros.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/TwoSum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/ValidPalindrome.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/ValidPalindromeII.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/ValidParentheses.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/isPalindromeNum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/longestCommonPrefix.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/postOrder$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/postOrder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/reverseInteger.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/production/LeetCode/searchInsert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +80,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -332,10 +260,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="663" y="240" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601954371940" />
-    <state x="741" y="170" key="SettingsEditor" timestamp="1601886947659">
+    <state x="741" y="170" key="SettingsEditor" timestamp="1602127690678">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="741" y="170" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601886947659" />
+    <state x="741" y="170" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602127690678" />
     <state x="656" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1601755776006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -356,6 +284,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="257" width="607" height="526" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601448176862" />
+    <state x="713" y="363" key="git4idea.ui.GitTagDialog" timestamp="1602127780692">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="713" y="363" key="git4idea.ui.GitTagDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602127780692" />
     <state x="342" y="139" width="1137" height="760" key="new project wizard" timestamp="1602123149088">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
