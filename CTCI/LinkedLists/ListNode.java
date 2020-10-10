@@ -1,18 +1,20 @@
 public class ListNode {
 
-    int data;
+    int val;
     ListNode next;
 
     ListNode() {
     }
 
     ListNode(int data) {
-        this.data = data;
+        this.val = data;
     }
 
     ListNode(int value, ListNode next) {
         this.next = next;
-        this.data = value;
+        this.val = value;
     }
+
+
 
 }

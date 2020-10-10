@@ -22,7 +22,7 @@ public class returnKthToLast extends ListNode {
             ptr1 = ptr1.next;
         }
 
-        //By the time ptr1 reaches the end, ptr1 will be at the element we want to modify
+        //By the time ptr1 reaches the end, ptr2 will be at the element we want to modify
         while(ptr1 != null) {
             ptr1 = ptr1.next;
             ptr2 = ptr2.next;
@@ -40,7 +40,7 @@ public class returnKthToLast extends ListNode {
 
         //If the counter == k, we are at the correct position
         if(pos == k) {
-            System.out.printf("%dth to last node is %d", k, head.data);
+            System.out.printf("%dth to last node is %d", k, head.val);
         }
         return pos;
     }
@@ -66,7 +66,7 @@ public class returnKthToLast extends ListNode {
         head.next.next.next.next = new ListNode(5);
         head.next.next.next.next.next = new ListNode(6);
 
-        System.out.println(returnKthToLast(head, 3).data);
-        System.out.println(returnKthToLastListLength(head, 3, 6).data);
+        System.out.println(returnKthToLast(head, 3).val);
+        System.out.println(returnKthToLastListLength(head, 3, 6).val);
     }
 }

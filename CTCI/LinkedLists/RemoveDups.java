@@ -35,7 +35,7 @@ public class RemoveDups {
 
     /* Solution 2: Iterate through list. If you haven't seen the current node before,
     add it to visited set. Otherwise remove it
-    O(n) time
+    O(n) time O(n) space
      */
 
     public void removeDups2(ListNode n){

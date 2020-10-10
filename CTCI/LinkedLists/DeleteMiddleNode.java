@@ -10,7 +10,7 @@ public class DeleteMiddleNode extends ListNode {
         //Make reference var to the value of the next node
         ListNode next = node.next;
         //Set the node to be deleted value to the value of the node next to it
-        node.data = next.data;
+        node.val = next.val;
         //point the node next to the node whose data we just copied from, node is now deleted
         node.next = next.next;
         return true;
