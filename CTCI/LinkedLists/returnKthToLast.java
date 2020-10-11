@@ -67,6 +67,6 @@ public class returnKthToLast extends ListNode {
         head.next.next.next.next.next = new ListNode(6);
 
         System.out.println(returnKthToLast(head, 3).val);
-        System.out.println(returnKthToLastListLength(head, 3, 6).val);
+        //System.out.println(returnKthToLastListLength(head, 3, 6).val);
     }
 }

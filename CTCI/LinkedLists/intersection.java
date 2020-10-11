@@ -18,7 +18,7 @@ public class intersection extends ListNode {
     }
 
     /*
-        Method runs in O(n) time
+        Method runs in O(A + B) time where A and B are the lengths if the given lists O(1) space
         1. First thing we do is create a new class to hold the tail node and size given a list
         2. Compare if the tails are equal (not in value). If there is no intersection, program stops here
         3. Find out which of the two lists is longer and then move its head ptr node k spaces to the right to match
@@ -31,8 +31,8 @@ public class intersection extends ListNode {
         }
 
         //Result objects to hold tail value and size
-        Result r1 = getSizeAndSize(l1);
-        Result r2 = getSizeAndSize(l2);
+        Result r1 = getSizeAndTail(l1);
+        Result r2 = getSizeAndTail(l2);
 
         //If tails are not equal, the lists have no intersection (compare memory not actual value)
         if (r1.tail != r2.tail) {
@@ -74,7 +74,7 @@ public class intersection extends ListNode {
         make sure to not use list and use current instead to not modify the head pointer in given list
      */
 
-    private static Result getSizeAndSize(ListNode list) {
+    private static Result getSizeAndTail(ListNode list) {
         if (list == null) {
             return null;
         }
@@ -88,17 +88,15 @@ public class intersection extends ListNode {
     }
 
     public static void main(String[] args) {
-        ListNode l1 = new ListNode(3);
-        l1.next = new ListNode(1);
-        l1.next.next = new ListNode(5);
-        l1.next.next.next = new ListNode(9);
-        l1.next.next.next.next = new ListNode(7);
-        l1.next.next.next.next.next = new ListNode(2);
-        l1.next.next.next.next.next.next = new ListNode(1);
+        ListNode l1 = new ListNode(2);
+        l1.next = new ListNode(2);
+        l1.next.next = new ListNode(4);
+        l1.next.next.next = new ListNode(5);
+        l1.next.next.next.next = new ListNode(4);
 
-        ListNode l2 = new ListNode(4);
-        l2.next = new ListNode(6);
-        l2.next = l1.next.next.next.next;
+        ListNode l2 = new ListNode(2);
+        l2.next = new ListNode(2);
+        l2.next = l1.next.next;
 
         System.out.println(findIntersection(l1, l2).val);
     }
