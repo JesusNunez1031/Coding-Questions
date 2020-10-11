@@ -4,23 +4,6 @@ public class DeleteNodeFromLinkedList {
 
     It is guaranteed that the node to be deleted is not a tail node in the list.
      */
-    // Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
     public void deleteNode(ListNode node) {
         //Make the value of the node to be deleted to the value of the next node
         node.val=node.next.val;

@@ -1,22 +1,5 @@
 public class ReverseLinkedList {
 
-    //Definition for singly-linked list.
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 
     //Iterative solution
     public static ListNode reverseListIter(ListNode head) {

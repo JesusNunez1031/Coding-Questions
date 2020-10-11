@@ -1,22 +1,5 @@
 public class RotateLinkedListKSteps {
 
-    class ListNode {
-        int data;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int data) {
-            this.data = data;
-        }
-
-        ListNode(int value, ListNode next) {
-            this.next = next;
-            this.data = value;
-        }
-    }
-
     /*
     Since n may be a large number compared to the length of list we need to know the length of linked list.
     After that, move the list after the (l-n%l )th node to the front to finish the rotation.

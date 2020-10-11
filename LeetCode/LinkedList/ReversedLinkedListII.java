@@ -1,30 +1,12 @@
 public class ReversedLinkedListII {
 
 
-    // Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     public ListNode reverseBetween(ListNode head, int m, int n) {
         if (head == null) {
             return null;
         }
 
-        //Varaibles to store the previous node and reference to the head used as the start to the to be reversed list
+        //Variables to store the previous node and reference to the head used as the start to the to be reversed list
         ListNode prev = null;
         ListNode current_node = head;
 

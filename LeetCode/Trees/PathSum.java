@@ -1,5 +1,5 @@
 public class PathSum {
-    public static boolean hasPathSum(SameTree.TreeNode root, int sum) {
+    public static boolean hasPathSum(TreeNode root, int sum) {
         if(root == null) {
             return false;
         }

@@ -1,25 +1,6 @@
 import java.util.List;
 
-public class MergeTwoSortedLists {
-    /**
-     * Definition for singly-linked list.
-     */
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
+public class MergeTwoSortedLists extends ListNode{
 
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode newList = new ListNode(0);

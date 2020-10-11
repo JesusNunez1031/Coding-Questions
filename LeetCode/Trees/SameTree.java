@@ -4,26 +4,6 @@ public class SameTree {
     Given a binary tree, check to see if all the values in
      */
 
-    // Definition for a binary tree node.
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        public TreeNode(int val) {
-            this.val = val;
-        }
-
-        public TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     public static boolean isSameTree(TreeNode p, TreeNode q) {
 
         // p and q are both null
