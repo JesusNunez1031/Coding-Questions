@@ -10,7 +10,7 @@ public class ReverseLinkedList {
         ListNode prev = null;
 
         while (head != null) {
-            //Temp variable to hold refrence to the head.next
+            //Temp variable to hold reference to the head.next
             ListNode next = head.next;
             //Set the new next of current head to the previous node
             head.next = prev;
