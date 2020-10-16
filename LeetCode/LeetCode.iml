@@ -9,6 +9,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Trees" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LinkedList" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Arrays" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Binary Search" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hash Maps" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
