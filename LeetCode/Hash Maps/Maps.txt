@@ -1,0 +1,14 @@
+TreeMap, HashMap, LinkedHashMap: Explain the differences between TreeMap, HashMap, and LinkedHashMap. Provide an example of when each one would be best.
+
+    •HashMap offers 0(1) lookup and insertion. If you iterate through the keys, though, the ordering of the keys is essentially arbitrary. It is implemented by an array of linked lists.
+
+    • TreeMap offers O(log N) lookup and insertion. Keys are ordered, so if you need to iterate through the keys in sorted order, you can. This means that keys must implement the Comparable interface.
+    TreeMap is implemented by a Red-Black Tree.
+
+    • LinkedHashMap offers 0(1) lookup and insertion. Keys are ordered by their insertion order. It is implemented by doubly-linked buckets.
+
+
+    Showcase: suppose we have an array nums = [10, 12, -1, 2, 0] of values and we want to add them to each of the above maps, how would the output look?
+
+            Hashmap      |           LinkedHashMap       |           TreeMap          |
+            (random)     |          {10, 12, -1, 2, 0}   |        {-1, 0, 2, 10, 12}  |
