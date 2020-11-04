@@ -39,4 +39,18 @@ public class firstUniqueCharacterInString {
         }
         return -1;
     }
+//    public int firstUniqChar(String s) {
+//        int[] freq = new int[128];
+//        for(int c : s.toCharArray()) {
+//            freq[c]++;
+//        }
+//
+//        for(int i = 0; i < s.length();i++){
+//            int c = s.charAt(i);
+//            if(freq[c] == 1) {
+//                return i;
+//            }
+//        }
+//        return -1;
+//    }
 }
