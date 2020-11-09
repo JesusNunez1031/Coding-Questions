@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class convertBinaryNumInLinkedListToDecimal {
 
     //Using a string and Integer class
@@ -29,5 +32,23 @@ public class convertBinaryNumInLinkedListToDecimal {
         }
 
         return result;
+    }
+
+    public int getDecimalValueA(ListNode head) {
+        List<Integer> nums = new ArrayList<>();
+
+        //add the values in LL to an array
+        while (head != null) {
+            nums.add(head.val);
+            head = head.next;
+        }
+
+        //traverse the array from the end and convert binary value to integer
+        int j = 0, bin = 0;
+        for (int i = nums.size() - 1; i >= 0; i--) {
+            bin += nums.get(i) * Math.pow(2, j++);
+        }
+
+        return bin;
     }
 }

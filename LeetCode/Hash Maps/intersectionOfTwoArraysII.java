@@ -45,4 +45,31 @@ public class intersectionOfTwoArraysII {
         }
         return res.stream().mapToInt(k -> k).toArray();
     }
+
+    //Another method using a primitive array
+    public int[] intersect2(int[] nums1, int[] nums2) {
+        int len1 = nums1.length;
+        int len2 = nums2.length;
+
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+
+        int i = 0, j = 0, k = 0;
+        int[] res = new int[Math.min(len1, len2)];
+
+        while (i < len1 && j < len2) {
+            //if the number at nums1 is less than the number at nums2, move nums1 pointer forward
+            if (nums1[i] < nums2[j]) {
+                i++;
+            //if the value at nums1 is greater than the one in nums2, move nums2 pointer forward
+            } else if (nums1[i] > nums2[j]) {
+                j++;
+            } else {
+                //otherwise they are equal so add the value to the intersection array
+                res[k++] = nums1[i++];
+                j++;
+            }
+        }
+        return Arrays.copyOfRange(res, 0, k);
+    }
 }
