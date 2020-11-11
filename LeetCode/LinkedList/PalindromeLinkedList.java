@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class PalindromeLinkedList {
 
 
@@ -47,6 +49,30 @@ public class PalindromeLinkedList {
             head = next;
         }
         return prev;
+    }
+
+    //Method using a Stack
+    public boolean isPalindromeStack(ListNode head) {
+        if(head == null) {
+            return true;
+        }
+
+        Stack<Integer> stack = new Stack<>();
+
+        ListNode iter = head;
+
+        while(iter != null) {
+            stack.push(iter.val);
+            iter = iter.next;
+        }
+        ListNode iter2 = head;
+        while(iter2 != null && !stack.isEmpty()) {
+            if(stack.pop() != iter2.val){
+                return false;
+            }
+            iter2 = iter2.next;
+        }
+        return true;
     }
 
     public static void main(String[] args) {
