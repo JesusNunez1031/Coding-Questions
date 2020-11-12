@@ -18,8 +18,8 @@ public class MajorityElement {
     public static int majorityElementNonNeg(int[] nums) {
         int[] occurrences = new int[100];
 
-        for (int i = 0; i < nums.length; i++) {
-            occurrences[nums[i]]++;
+        for (int j : nums) {
+            occurrences[j]++;
         }
 
         int maxCount = Integer.MIN_VALUE;

@@ -16,10 +16,13 @@ public class GapFulNumbers {
         int firstDigit = Integer.parseInt(Integer.toString(num).substring(0, 1));
         int lastDigit = num % 10;
 
-        String div = firstDigit +""+ lastDigit + "";
+        String div = firstDigit + "" + lastDigit + "";
 
-        Pattern isInteger = Pattern.compile("\\d+");
-        return isInteger.equals(num / Integer.parseInt(div));
+//        Pattern isInteger = Pattern.compile("\\d+");
+//        return isInteger.equals(num / Integer.parseInt(div));
+
+        //check if the number is evenly divisible
+        return num % Integer.parseInt(div) == 0;
     }
 
     public static void main(String[] args) {
