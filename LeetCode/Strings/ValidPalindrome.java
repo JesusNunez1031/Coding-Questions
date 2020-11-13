@@ -56,4 +56,25 @@ public class ValidPalindrome {
         }
         return true;
     }
+
+    //method to check if a string is a valid palindrome using recursion [method assumes String s is cleaned with no spaces or special characters]
+    public static boolean isPalindromeRecursion(String s) {
+        if (s.length() <= 1) {
+            return true;
+        }
+
+        /*
+            a valid palindrome has equal characters at the start and end, so at every call we check the first and last character,
+            if they are not equal, we return false, otherwise, we call the method again with the same string excluding the first
+            and last characters
+         */
+        return s.charAt(0) == s.charAt(s.length() - 1) &&
+                isPalindromeRecursion(s.substring(1, s.length() - 1));
+    }
+
+    public static void main(String[] args) {
+        String s = "wasitacaroracatisaw";
+
+        System.out.println(isPalindromeRecursion(s));
+    }
 }
