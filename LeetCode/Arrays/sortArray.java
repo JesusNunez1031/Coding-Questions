@@ -54,7 +54,7 @@ public class sortArray {
             }
         }
 
-        swap(arr, i + 1, right);    //swap the last value with i + 1 value since all values before it are now less than it
+        swap(arr, i + 1, right);    //swap the last value with i + 1 value since all values before i + 1 are now less than it
 
         return i + 1; //return the pivot's sorted index
     }
