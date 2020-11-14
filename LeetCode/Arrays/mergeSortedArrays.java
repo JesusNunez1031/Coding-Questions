@@ -1,5 +1,5 @@
 public class mergeSortedArrays {
-    public void merge(int[] nums1, int m, int[] nums2, int n) {
+    private static void merge(int[] nums1, int m, int[] nums2, int n) {
         //3 pointers, m is the last value in nums1 and n is the last value in nums2. Index is the last index in nums1
         m--;
         n--;
@@ -25,5 +25,14 @@ public class mergeSortedArrays {
             }
             index--;
         }
+    }
+
+    public static void main(String[] args) {
+        int[] nums1 = {1, 2, 3, 0, 0, 0};
+        int[] nums2 = {2, 5, 6};
+        int m = 3;
+        int n = 3;
+
+        merge(nums1, m, nums2, n);
     }
 }

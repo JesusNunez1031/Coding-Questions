@@ -29,7 +29,7 @@ public class stringPermutations {
         }
 
         for (char c : s.toCharArray()) {
-            //if the current stringbuilder doesnt contain the character c, add it the to the SB and call method again to add new strings
+            //if the current string-builder doesnt contain the character c, add it the to the SB and call method again to add new strings
             if (!sb.toString().contains(String.valueOf(c))) {
                 sb.append(c);
                 getPermutations(s, sb, res);
