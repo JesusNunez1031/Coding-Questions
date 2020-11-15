@@ -18,12 +18,19 @@ public class houseRobber {
                      Total amount you can rob = 2 + 9 + 1 = 12.
      */
     public int rob(int[] nums) {
-        if (nums.length == 0) {
+        //no houses to rob
+        if(nums.length == 0) {
             return 0;
         }
-        if (nums.length == 1) {
+        //rob the only house available
+        if(nums.length == 1) {
             return nums[0];
         }
+        //rob the house with the highest yield
+        if(nums.length == 2) {
+            return Math.max(nums[0], nums[1]);
+        }
+
         //array to hold all the values we will use to find max, last value in array will hold the max
         int[] dp = new int[nums.length];
 

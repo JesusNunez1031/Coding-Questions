@@ -13,6 +13,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Hash Maps" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/2D Array" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Backtracking" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Bit Manipulation" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Dynamic Programming" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

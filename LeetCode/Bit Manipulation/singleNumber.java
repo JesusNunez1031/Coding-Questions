@@ -6,7 +6,7 @@ public class singleNumber {
         Follow up: Could you implement a solution with a linear runtime complexity and without using extra memory?
      */
 
-    //Method in O(n) time and space
+    //Method in O(n) time and space [Time Exceeds]
     public static int singleNumber(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int res = 0;
@@ -37,13 +37,13 @@ public class singleNumber {
     that we are ensured at least one unique value, we just have to do one pass and all duplicate values will cancel each other out resulting in the only non duplicate value
      */
     public static int singleNumberOp(int[] nums) {
-        int res = 0;
+        int single = 0;
 
-        //we use the XOR expression, so if value is 1
+        //we use the XOR expression, so all duplicates cancel out leaving only the unique value
         for (int values : nums) {
-            res ^= values;
+            single ^= values;
         }
-        return res;
+        return single;
     }
 
     public static void main(String[] args) {

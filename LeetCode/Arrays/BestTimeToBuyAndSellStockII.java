@@ -13,17 +13,18 @@ public class BestTimeToBuyAndSellStockII {
      */
 
     public int maxProfit(int[] prices) {
-        if(prices.length == 0) {
+        if (prices.length == 0) {
             return 0;
         }
 
         int profit = 0;
-        for(int i = 0;i < prices.length-1;i++) {
-            /*You only make a profit if you buy a stock that is less than the one i+1 from it, so if the stock at prices[i+1] is greater than current stock,
-            we want to buy and sell here so we add the difference to profit
+        for (int i = 0; i < prices.length - 1; i++) {
+            /*
+                You only make a profit if you buy a stock that is less than the one i+1 from it, so if the stock at
+                prices[i+1] is greater than current stock, we want to buy and sell here so we add the difference to profit
              */
-            if(prices[i+1] > prices[i]) {
-                profit += prices[i+1] - prices[i];
+            if (prices[i + 1] > prices[i]) {
+                profit += prices[i + 1] - prices[i];
             }
         }
         return profit;
