@@ -12,24 +12,22 @@ public class rangeSumOfBST {
         Input: root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10
         Output: 23
      */
-    int rangeSum = 0;
+    int sum = 0;
 
-    public int rangeSumBST(TreeNode root, int L, int R) {
-        calculateSum(root, L, R);
-        return rangeSum;
-    }
-
-    public void calculateSum(TreeNode root, int L, int R) {
+    public int rangeSumBST(TreeNode root, int low, int high) {
         if (root == null) {
-            return;
-        }
-        //inOrder traversal, if the current node is in the range of L and R, add its value to the total sum
-        calculateSum(root.left, L, R);
-
-        if (root.val >= L && root.val <= R) {
-            rangeSum += root.val;
+            return 0;
         }
 
-        calculateSum(root.right, L, R);
+        //if the root is in the range of low and high, add it to the sum
+        if (root.val >= low && root.val <= high) {
+            sum += root.val;
+        }
+
+        //traverse left and right subtrees
+        rangeSumBST(root.left, low, high);
+        rangeSumBST(root.right, low, high);
+
+        return sum;
     }
 }
