@@ -1,25 +1,53 @@
 public class RemoveDuplicatesFromList {
+    /*
+    Given a sorted linked list, delete all duplicates such that each element appear only once.
 
-    public static ListNode set;
+    Example 1:
+    Input: 1->1->2
+    Output: 1->2
 
-    //Method with external set for testing
-    public static ListNode deleteDuplicatesTest(ListNode head) {
-        set = new ListNode(head.val);
-        ListNode setHead = set;
-
-        head = head.next;
-
-        while (head != null) {
-            if (head.val != setHead.val) {
-                setHead.next = new ListNode(head.val);
-                setHead = setHead.next;
-            }
-            head = head.next;
+    Example 2:
+    Input: 1->1->2->3->3
+    Output: 1->2->3
+     */
+    //Method to preform deletion in place using two Pointers
+    public static ListNode deleteDuplicates(ListNode head) {
+        if (head == null) {
+            return null;
         }
-        return set;
+
+        //set will hold all unique values and is used to modify head
+        ListNode set = head;
+        ListNode iter = head.next;  //pointer used to traverse the list
+
+        while (iter != null) {
+            /*
+                if the value in set does not equal the value in iter, we want to point the next to it to dereference
+                all duplicates in between set and iter
+             */
+            if (set.val != iter.val) {
+                set.next = iter;
+                set = set.next;
+            } else {
+                /*
+                    if the values are equal, we fist check if the next is null, if it is, the last duplicate is
+                    at the end so we just set the next in set to null
+                 */
+                if (iter.next == null) {
+                    set.next = null;
+                }
+                //otherwise we move the iter pointer forward by one
+                iter = iter.next;
+            }
+        }
+        if (set.val == head.val) {
+            set.next = null;
+        }
+        return head;
     }
 
-    public ListNode deleteDuplicates(ListNode head) {
+    //Method deletes nodes by making a new list and adding only unique values to it
+    public static ListNode deleteDuplicatesEz(ListNode head) {
         //Check for null lists
         if (head == null) {
             return null;
@@ -47,41 +75,21 @@ public class RemoveDuplicatesFromList {
 
 
     public static void main(String[] args) {
-//        ListNode l1 = new ListNode(1);
-//
-//        l1.next = new ListNode(2);
-//        l1.next.next = new ListNode(4);
-//
-//        ListNode head = l1;
-//        while (head != null) {
-//            System.out.println(head.val);
-//            head = head.next;
-//        }
 
         ListNode list = new ListNode(1);
         ListNode l2 = new ListNode(1);
         ListNode l3 = new ListNode(2);
-//        ListNode l4 = new ListNode(3);
-//        ListNode l5 = new ListNode(3);
+        ListNode l4 = new ListNode(3);
+        ListNode l5 = new ListNode(3);
 
         list.next = l2;
         l2.next = l3;
-//        l3.next = l4;
-//        l4.next = l5;
+        l3.next = l4;
+        l4.next = l5;
 
-        deleteDuplicatesTest(list);
+        deleteDuplicates(list);
 
-        while (list != null) {
-            System.out.printf("%d -> ", list.val);
-            list = list.next;
-        }
-
-        System.out.println();
-
-        while (set != null) {
-            System.out.printf("%d -> ", set.val);
-            set = set.next;
-        }
+        list.print(list);
 
     }
 }
