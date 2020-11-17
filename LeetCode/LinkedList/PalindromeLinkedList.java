@@ -19,7 +19,7 @@ public class PalindromeLinkedList {
 
         //pass in the slow head to be reversed
         slow = reverseList(slow);
-        fast = head;
+        fast = head;    //point head back to the front so we can use it to compare with slow
 
         //Check for equality from slow list and head of original list
         while (slow != null) {

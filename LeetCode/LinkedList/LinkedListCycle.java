@@ -7,7 +7,7 @@ public class LinkedListCycle {
 
     Return true if there is a cycle in the linked list. Otherwise, return false.
      */
-
+    //TC: O(N+K), which is O(n) and constant space  Note: another approach is to use a Hashset visiting every node
     public boolean hasCycle(ListNode head) {
         if (head == null) {
             return false;
@@ -16,6 +16,10 @@ public class LinkedListCycle {
         ListNode slow = head;
         ListNode fast = head;
 
+        /*
+            move the fast two times faster than the slow pointer, if there is a cycle, eventually, the slow will
+            catch up to fast, otherwise fast will just terminate loop
+         */
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
