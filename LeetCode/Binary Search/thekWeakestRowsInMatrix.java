@@ -61,7 +61,7 @@ public class thekWeakestRowsInMatrix {
                 search method returns the index of the first civilian, so if there
                 are only 2 solders, the first index of a civilian is 2
             */
-            int solders = binarySearch(row);    //of there are no civilians, the number of soldiers is the length of the row
+            int solders = binarySearch(row);    //if there are no civilians, the number of soldiers is the length of the row
             weakest[i] = new int[]{solders, i};
             i++;
         }
