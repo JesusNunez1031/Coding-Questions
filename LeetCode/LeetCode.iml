@@ -16,6 +16,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Bit Manipulation" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Dynamic Programming" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Sliding Window &amp; Two Pointer" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Design" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
