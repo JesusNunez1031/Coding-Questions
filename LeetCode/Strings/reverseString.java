@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class reverseString {
@@ -9,30 +11,50 @@ public class reverseString {
         reverse. For example, the reverse of 'pots&pans' would be 'snap&stop'.
      */
 
-    public static String reverseStr(String s){
-        if(s.length() == 0){
+    private static String reverseStr(String s) {
+        if (s.length() == 0) {
             return s;
         }
-        return s.charAt(s.length()-1) + reverseStr(s.substring(0, s.length()-1));
+        return s.charAt(s.length() - 1) + reverseStr(s.substring(0, s.length() - 1));
     }
 
-    public static String reverseStrIter(String s){
-        if(s.length() == 0) {
+    //if the string to reverse is in a character array
+    private static void reverseStringArr(char[] s) {
+        if (s == null || s.length <= 1){
+            return;
+        }
+        helper(s, 0, s.length - 1);
+    }
+
+    private static void helper(char[] s, int i, int j) {
+        if (i > j) {
+            return;
+        }
+        char temp = s[i];
+        s[i] = s[j];
+        s[j] = temp;
+
+        helper(s, i + 1, j - 1);
+    }
+
+
+    private static String reverseStrIter(String s) {
+        if (s.length() == 0) {
             return s;
         }
         StringBuilder sb = new StringBuilder();
 
-        for(int i = s.length()-1;i >= 0;i--){
+        for (int i = s.length() - 1; i >= 0; i--) {
             sb.append(s.charAt(i));
         }
         return sb.toString();
     }
 
     //Two pointer approach
-    public static void reverseString(char[] s) {
-        int i = 0, j = s.length-1;
+    private static void reverseString(char[] s) {
+        int i = 0, j = s.length - 1;
 
-        while(i <= j) {
+        while (i <= j) {
             char temp = s[i];
             s[i] = s[j];
             s[j] = temp;
@@ -50,7 +72,8 @@ public class reverseString {
 
     public static void main(String[] args) {
         String s = "pots&pans";
-
-        System.out.println(reverseStr(s));
+        char[] str = {'H', 'a', 'n', 'n', 'a', 'h'};
+        reverseStringArr(str);
+        System.out.println(Arrays.toString(str));
     }
 }

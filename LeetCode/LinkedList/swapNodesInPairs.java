@@ -39,7 +39,7 @@ public class swapNodesInPairs {
         //Set n to the node after the initial head
         ListNode n = head.next;
         //Set the next to the third node
-        head.next = swapPairs(head.next.next);
+        head.next = swapPairsRec(head.next.next);
         //point n back to the rest of the list
         n.next = head;
         return n;

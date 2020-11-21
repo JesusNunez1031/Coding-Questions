@@ -28,6 +28,7 @@ public class numOfIslands {
         grid[i][j] is '0' or '1'.
      */
 
+    //Perform a DFS search on each value that is 1, sink surrounding land, and continue TC: O(n * n) and constant space
     public static int numIslands(char[][] grid) {
         int numOfIslands = 0;
 

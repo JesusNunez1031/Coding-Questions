@@ -43,6 +43,7 @@ public class ReverseLinkedList {
     }
 
     private static ListNode reverseListRecHelper(ListNode head, ListNode prev) {
+        //if the head is null, we've reached the end of the list so we return the new head, prev
         if(head == null) {
             return prev;
         }
@@ -50,6 +51,7 @@ public class ReverseLinkedList {
         ListNode next = head.next;
         head.next = prev;
 
+        //call method with the new head node and the previous node
         return reverseListRecHelper(next, head);
     }
 

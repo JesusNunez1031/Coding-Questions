@@ -43,7 +43,7 @@ public class PascalsTriangle {
     }
 
     public static void main(String[] args) {
-       System.out.println(generate(5).toString());
+       System.out.println(generate(5).toString().replaceAll("],", "\n"));
 
 //        List<List<Integer>> result = new ArrayList<>();
 //        List<Integer> l1 = new ArrayList<>();
