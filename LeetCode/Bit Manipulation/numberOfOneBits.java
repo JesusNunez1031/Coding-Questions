@@ -72,6 +72,7 @@ public class numberOfOneBits {
 
     public static void main(String[] args) {
         int n = 00000000000000000000000000001011;
+        //int n = 11111111111111111111111111111101;
         System.out.println(hammingWeight(n));
     }
 }
