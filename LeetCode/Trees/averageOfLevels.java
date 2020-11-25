@@ -19,28 +19,27 @@ public class averageOfLevels {
         The average value of nodes on level 0 is 3,  on level 1 is 14.5, and on level 2 is 11. Hence return [3, 14.5, 11].
      */
 
-    //Method performs a level order traversal or Depth first traversal, each level is examined at at a time -> O(n) runtime and O(n) space for the queue size
-    public List<Double> averageOfLevels(TreeNode root) {
-        List<Double> avg = new ArrayList<>();
-        if (root == null) {
-            return avg;
-        }
+    //O(n) runtime and O(n) space for the queue size
+    private List<Double> averageOfLevels(TreeNode root) {
+        List<Double> averages = new ArrayList<>();  //list to hold the averages at each level
 
+        if (root == null) {
+            return averages;
+        }
+        /*
+            Perform a level order traversal of the tree, at every level, we calculate the average
+            by adding up all the values in each node and dividing them by the number of nodes seen
+        */
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
 
         while (!queue.isEmpty()) {
-            //each new iteration the queue size will be updated otherwise the size will be dynamically updated and we would process more nodes than wanted
             int size = queue.size();
-
-            //Reset values if not the fist time, otherwise sum will be used to calculate the average based off how many modes we processed per level
             double sum = 0;
-            int nodes = 0;
 
             for (int i = 0; i < size; i++) {
                 TreeNode current = queue.remove();
                 sum += current.val;
-                nodes++;
 
                 if (current.left != null) {
                     queue.add(current.left);
@@ -49,8 +48,8 @@ public class averageOfLevels {
                     queue.add(current.right);
                 }
             }
-            avg.add(sum / nodes);
+            averages.add(sum / size);
         }
-        return avg;
+        return averages;
     }
 }

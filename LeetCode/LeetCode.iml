@@ -18,6 +18,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Sliding Window &amp; Two Pointer" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Design" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Sorting" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tree Traversals [BFS, DFS]" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
