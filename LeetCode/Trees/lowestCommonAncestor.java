@@ -26,7 +26,7 @@ public class lowestCommonAncestor {
             p and q will exist in the BST.
      */
 
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    private TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         //if both p and q are less than the root value, check in the left subtree
         if (p.val < root.val && q.val < root.val) {
             return lowestCommonAncestor(root.left, p, q);
@@ -35,7 +35,7 @@ public class lowestCommonAncestor {
         else if (p.val > root.val && q.val > root.val) {
             return lowestCommonAncestor(root.right, p, q);
         }
-        //If p or q values violate the previous conditions, we just return the current root
+        //If p or q values violate the previous conditions, we just return the current root since a node can be a descendant of itself
         else {
             return root;
         }

@@ -17,17 +17,17 @@ public class MaxDepthOfBinaryTree {
     return its depth = 3.
      */
 
-    public int maxDepth(TreeNode root) {
-
+    private int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;
         }
 
-        //if the node is a leaf add it to total
-        if (root.left == null && root.right == null) { // leaf node
+        //if we are at a leaf node, we return 1 to the stack
+        if (root.left == null && root.right == null) {
             return 1;
         }
 
+        //return the the subtree with the largest depth, left or right +1 to account for the root
         return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
     }
 }
