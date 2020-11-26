@@ -51,7 +51,7 @@ public class numberOfOneBits {
      */
 
     // you need to treat n as an unsigned value
-    public static int hammingWeight(int n) {
+    private static int hammingWeight(int n) {
         int bits = 0;
 
         while (n != 0) {
@@ -65,6 +65,21 @@ public class numberOfOneBits {
             bits = (n & 1) == 1 ? bits + 1 : bits;
 
             //shift n by 1 bit to the right
+            n >>>= 1;
+        }
+        return bits;
+    }
+
+    //Method using for-loop to go through all 32 bits
+    private int hammingWeightEz(int n) {
+        int bits = 0;
+
+        for(int i = 0; i < 32; i++) {
+            //if the LSB of n is 1, we increment bits
+            if((n & 1) == 1) {
+                bits++;
+            }
+            //shift n by 1 to the right
             n >>>= 1;
         }
         return bits;

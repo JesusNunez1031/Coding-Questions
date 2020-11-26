@@ -27,7 +27,7 @@ public class hammingDistance {
                 count++;
             }
 
-            //shift the its in x and y to the right by 1; use >> and not >>> to preserve sign
+            //shift the bits in x and y to the right by 1; use >> and not >>> to preserve sign
             x >>= 1;
             y >>= 1;
         }

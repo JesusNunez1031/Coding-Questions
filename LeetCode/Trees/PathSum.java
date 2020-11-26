@@ -25,12 +25,16 @@ public class PathSum {
         if (root == null) {
             return false;
 
-            //if the current node is a leaf node and the current_sum == sum, we return true
+        /*
+            by the time a leaf node is reached, the total sum from the root to the node will have been calculated,
+            therefore if the total sum of the path is equal to the target sum, we return true, otherwise we ignore it
+            and go back to the call stack and check another path
+         */
         } else if (root.left == null && root.right == null && current_sum + root.val == sum) {
             return true;
         }
 
-        //check the left and right subtrees
+        //check if the path is in the left or right
         return hasSum(root.left, sum, current_sum + root.val) || hasSum(root.right, sum, current_sum + root.val);
     }
 //    public static boolean hasPathSum(TreeNode root, int sum) {

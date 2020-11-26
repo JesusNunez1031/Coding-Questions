@@ -30,7 +30,7 @@ public class missingNumber {
         All the numbers of nums are unique.
      */
     //O(n) TC and space
-    public int missingNumber(int[] nums) {
+    private int missingNumber(int[] nums) {
         int[] freq = new int[nums.length + 1];
 
         for (int i : nums) {
@@ -48,22 +48,33 @@ public class missingNumber {
     }
 
     //O(n) TC and O(1) space
-    public static int missingNumberBit(int[] nums) {
+    private static int missingNumberBit(int[] nums) {
         int missing = nums.length;
 
         for (int i = 0; i < nums.length; i++) {
-            //since there is exactly one missing value and there are no duplicates, we use i and the value in nums[i] to ensure we get the missing number
+            /*
+                since there is exactly one missing value and there are no duplicates, "missing" is the length of all
+                values that should be in nums, so taking the XOR of the index and the value in the specific index,
+                the only remaining value in "missing" will be the value missing from the range
+                    Ex:
+                    index:   0  |  1  |  2  |  3  |
+                    values:  4  |  2  |  1  |  0  |
+
+                the length of nums is 4, range is 0 - 4, all duplicate values cancel out such as the value 4 and the value of missing
+                the index 0 and value 0, index 1 and value 1, index 2 and value 2, etc, and in the end only 3 will remain
+
+             */
             missing ^= i ^ nums[i];
         }
 
         return missing;
     }
 
-    public int missingNumberBitEZ(int[] nums) {
+    private int missingNumberBitEZ(int[] nums) {
         int xor = 0;
 
         //add every number that is supposed to be in the range
-        for(int i = 0; i < nums.length + 1;i++) {
+        for (int i = 0; i < nums.length + 1; i++) {
             xor ^= i;
         }
 
@@ -74,13 +85,13 @@ public class missingNumber {
         return xor;
     }
 
-    public int missingNumberFormula(int[] nums) {
+    private int missingNumberFormula(int[] nums) {
         //use formula of the summation of all values to find the actual sum
-        int actualSum = (nums.length *(nums.length + 1))/ 2;
+        int actualSum = (nums.length * (nums.length + 1)) / 2;
 
         int sum = 0;
         //find the current sum if the values in nums
-        for(int i : nums) {
+        for (int i : nums) {
             sum += i;
         }
         //subtracting the sum from the actual sum leaves the missing value as the remainder
@@ -88,7 +99,7 @@ public class missingNumber {
     }
 
     public static void main(String[] args) {
-        int[] arr = {0, 1, 3, 4};
+        int[] arr = {4, 2, 1, 0};
         System.out.println(missingNumberBit(arr));
     }
 }

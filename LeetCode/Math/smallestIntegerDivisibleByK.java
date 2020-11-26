@@ -30,7 +30,7 @@ public class smallestIntegerDivisibleByK {
 
                                 Number   |  1  |  11  |  111  |  1111  |  11111
                               Number % k |  1  |  2   |   0   |    1   |    2
-                                          |___________________|
+                                         |____________________|
                                                      |
                                           remainders repeat K times
 
@@ -40,7 +40,7 @@ public class smallestIntegerDivisibleByK {
 
                                 Number   |  1  |  11  |  111  |  1111  |  11111  |  111111  |  1111111
                               Number % k |  1  |  5   |   3   |    1   |    5    |     3    |     1
-                                          |_________________________________________________|
+                                         |__________________________________________________|
                                                                  |
                                                       remainders repeat K times
 

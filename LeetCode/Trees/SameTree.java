@@ -1,24 +1,51 @@
 public class SameTree {
 
     /*
-    Given a binary tree, check to see if all the values in
+    Given two binary trees, write a function to check if they are the same or not.
+    Two binary trees are considered the same if they are structurally identical and the nodes have the same value.
+
+    Example 1:
+    Input:     1         1
+              / \       / \
+             2   3     2   3
+
+            [1,2,3],   [1,2,3]
+    Output: true
+
+    Example 2:
+
+    Input:     1         1
+              /           \
+             2             2
+
+            [1,2],     [1,null,2]
+    Output: false
+
+    Example 3:
+    Input:     1         1
+              / \       / \
+             2   1     1   2
+
+            [1,2,1],   [1,1,2]
+    Output: false
      */
 
     public static boolean isSameTree(TreeNode p, TreeNode q) {
 
-        // p and q are both null
+        // p and q are both null, we have traversed the tree's to their leaves
         if (p == null && q == null)
             return true;
 
-        // one of p and q is null
+        //if one is null and the other isnt, we reached the end of a path for a tree while the other sill has nodes
         if (q == null || p == null)
             return false;
 
-        if(p.val != q.val) {
+        //if the values don't match, the tree is not equal
+        if (p.val != q.val) {
             return false;
         }
 
-        //Check the left side of the tree then right and make sure both sides match
+        //traverse the tree left to right
         return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
 
