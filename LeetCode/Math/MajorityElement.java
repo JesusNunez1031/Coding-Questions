@@ -15,7 +15,7 @@ public class MajorityElement {
      */
 
     //Method works iif the given values are 0 <= nums
-    public static int majorityElementNonNeg(int[] nums) {
+    private static int majorityElementNonNeg(int[] nums) {
         int[] occurrences = new int[100];
 
         for (int j : nums) {
@@ -34,7 +34,7 @@ public class MajorityElement {
     }
 
     //Method Using a hashmap
-    public int majorityElementMap(int[] nums) {
+    private int majorityElementMap(int[] nums) {
         if (nums.length == 1) {
             return nums[0];
         }
@@ -54,12 +54,13 @@ public class MajorityElement {
     }
 
     //Boyer-Moore Voting Algorithm
-    public static int findMajority(int[] nums) {
+    private static int findMajority(int[] nums) {
         //Variables for the number of times a number shows up and the number that is the candidate
         int count = 0;
-        Integer candidate = null;
+        int candidate = 0;
 
         for (int i : nums) {
+            //when the count is at 0, we choose the current value in the array as the candidate
             if (count == 0) {
                 candidate = i;
             }
@@ -69,13 +70,17 @@ public class MajorityElement {
         return candidate;
     }
 
-    //Cheese solution is to sort array and return the center element
-    public static int findMajorityCheese(int[] nums) {
+    //Cheese solution is to sort array and return the center element TC: O(n log n)
+    private static int findMajorityCheese(int[] nums) {
         Arrays.sort(nums);
+
+        /*
+            sorting the array, the majority element is found at n/2 array is of odd length and n/2 + 1 if even
+         */
         return nums[nums.length / 2];
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
 
         //The fastest approach is Moore's Algorithm since we constantly do O(1) operations O(n) times
         int[] arr = {3, 2, 3};

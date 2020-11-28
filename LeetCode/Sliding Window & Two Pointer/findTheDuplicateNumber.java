@@ -1,3 +1,6 @@
+import java.util.HashSet;
+import java.util.Set;
+
 public class findTheDuplicateNumber {
     /*
     Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.
@@ -33,7 +36,28 @@ public class findTheDuplicateNumber {
         1 <= nums[i] <= n
         All the integers in nums appear only once except for precisely one integer which appears two or more times.
      */
-    public static int findDuplicate(int[] nums) {
+
+    /*
+        Intuitive method using a set or also an array to hold the frequency of each value, and return when we cant add to
+        the set or the frequency of a value is greater than 1. This requires the use of extra space since we use a set
+    */
+    private int findDuplicateExtraSpace(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+
+        for(int num : nums) {
+            //if we cant add to the set, that means the number has already been seen, so the duplicate was found
+            if(!set.add(num)) {
+                return num;
+            }
+        }
+        return -1;  //there are no duplicates
+    }
+    /*
+        since we know the range is from 1-n, and there is exactly one duplicate number, we can use two pointers, a slow and fast.
+        If the array is visualized as a linked list, there will be a cycle where the duplicates connect to an index. We
+        want to find the index just before the start of the cycle since this will be where the duplicate value will be located
+    */
+    private static int findDuplicate(int[] nums) {
         if (nums.length <= 1) {
             return -1;
         }

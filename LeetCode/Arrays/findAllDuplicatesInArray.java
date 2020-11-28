@@ -44,13 +44,19 @@ public class findAllDuplicatesInArray {
         return dups;
     }
 
-    //Math solution
+    /*
+        since we know that the numbers in the array are in the range of 1-length of the array, we know there will not be any
+        negative numbers. Knowing this, every time we come to a new value, we use it as an index and mark the value at the
+        index of the number's value, we if we see a 7, we mark the value at index 7 - 1 as negative, therefore if we see another
+        7, the value will be negative at its index so we'll know we've seen it before. We subtract 1 from the index to avoid
+        index bounds issues since the size of the array is a value in the range but is not a valid index
+    */
     public List<Integer> findDuplicatesM(int[] nums) {
-        //since we know all values in the array are in the range of 1 to nums.length we can use their indexes to check for duplicates
+        //the result list does not count as extra space
         List<Integer> dups = new ArrayList<>();
 
         for (int i = 0; i < nums.length; i++) {
-            int index = Math.abs(nums[i]) - 1;  //get the index of the value, use abs in case value is negative
+            int index = Math.abs(nums[i]) - 1;  //get the index of the value, use abs in case value is already negative
 
             //if the value is negative, we have seen it before so we add the index + 1 since that is the value
             if (nums[index] < 0) {
