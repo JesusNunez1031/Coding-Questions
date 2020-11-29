@@ -38,6 +38,9 @@ public class jumpGameIII {
         if (start > arr.length || start < 0) {
             return false;
         }
+        /*
+            perform a DFS search for 0 in the given array "arr". we search for a path left or right from the start index
+         */
         return searchZero(arr, start);
     }
 

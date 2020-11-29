@@ -27,7 +27,7 @@ public class floodFill {
         The given starting pixel will satisfy 0 <= sr < image.length and 0 <= sc < image[0].length.
         The value of each color in image[i][j] and newColor will be an integer in [0, 65535].
      */
-    public static int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
+    private static int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
         int color = image[sr][sc];
 
         //if the color at the center of image isn't the new color, we want to fill all adjacent values that match center pixel to new color
@@ -62,8 +62,6 @@ public class floodFill {
         int sc = 1;
         int newColor = 2;
         floodFill(image, sr, sc, newColor);
-        for (int[] row : image) {
-            System.out.println(Arrays.toString(row));
-        }
+        System.out.println(Arrays.deepToString(image).replaceAll("],", "]\n"));
     }
 }
