@@ -44,6 +44,7 @@ public class rotateImage {
         int n = matrix.length;
 
         for (int i = 0; i < n; i++) {
+            //we want to traverse diagonally in the matrix so we set j to i so at every new row we start at 0 + i
             for (int j = i; j < n; j++) {
                 //swap values in row with its column counterpart to transpose matrix, all diagonal values remain unchanged
                 int temp = matrix[i][j];

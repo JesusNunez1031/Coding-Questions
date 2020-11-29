@@ -9,7 +9,7 @@ public class stringPermutations {
         s = "abc"
         output: ["abc", "acb", "bac", "bca", "cab", "cba"]
      */
-    //TC: O(n * n!) using backtracking
+    //TC: O(n!) using backtracking
     public static List<String> strPermutations(String s) {
         List<String> res = new ArrayList<>();
         if (s.equals("")) {
