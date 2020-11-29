@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -13,8 +12,6 @@ public class slidingWindowMaximum {
             return nums;
         }
 
-        //queue to store all the max values at the front and all other values at the end
-        //Deque<Integer> deque = new LinkedList<>();
         int j = 0;
 
         for (int i = 0; i < nums.length - (k - 1); i++) {
