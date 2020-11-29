@@ -44,7 +44,7 @@ public class areTheyTheSame {
             map.put(sqrA, map.getOrDefault(sqrA, 0) + 1);
         }
 
-        //Check if the map contains the value of b and if its occurs the same amount of times as in a
+        //Check if the map contains the value of b and if it occurs the same amount of times as in a
         for (int nums : b) {
             if (map.containsKey(nums) && map.get(nums) > 0) {
                 map.put(nums, map.get(nums) - 1);
