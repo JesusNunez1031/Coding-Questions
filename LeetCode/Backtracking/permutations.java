@@ -26,7 +26,10 @@ public class permutations {
         //list used to make permutations
         List<Integer> permutation = new ArrayList<>();
 
-        //Array used to check if a value has been used
+         /*
+            to avoid using the value of an index more than once, we need to make sure we mark it as used for every
+            current permutation being made
+        */
         boolean[] used = new boolean[nums.length];
 
         //get all permutations from nums
@@ -50,7 +53,7 @@ public class permutations {
                 permutation.add(nums[i]);
                 getPerm(nums, permutation, used, res);  //backtrack and check other values
                 //after we've made a permutation, clear list and set its used to false
-                permutation.remove(permutation.size() - 1); //backtrack and remove values from list
+                permutation.remove(permutation.size() - 1); //backtrack and remove values from list starting from the back
                 used[i] = false;
             }
         }

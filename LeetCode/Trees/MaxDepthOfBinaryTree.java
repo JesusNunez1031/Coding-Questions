@@ -22,7 +22,7 @@ public class MaxDepthOfBinaryTree {
             return 0;
         }
 
-        //if we are at a leaf node, we return 1 to the stack
+        //if we are at a leaf node, we return 1 to the call stack
         if (root.left == null && root.right == null) {
             return 1;
         }
