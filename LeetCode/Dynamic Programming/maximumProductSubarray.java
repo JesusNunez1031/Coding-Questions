@@ -12,6 +12,7 @@ public class maximumProductSubarray {
     Output: 0
     Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
      */
+    //TC: O(n) and constant space
     public int maxProduct(int[] nums) {
         int final_max = nums[0];
         int current_max = nums[0];
