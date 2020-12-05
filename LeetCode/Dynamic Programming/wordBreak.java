@@ -25,7 +25,9 @@ public class wordBreak {
     Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
     Output: false
      */
+    //TC: O(n * m) for every character n is sting s, we look for its m substrings if any exist in the dictionary
     private static boolean wordBreak(String s, List<String> wordDict) {
+        //+1 to account for the empty word
         boolean[] dp = new boolean[s.length() + 1];
 
         /*
