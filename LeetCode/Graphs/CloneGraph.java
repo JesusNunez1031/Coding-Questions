@@ -42,8 +42,8 @@ public class CloneGraph {
                     queue.add(neighbor);
                 }
                 /*
-                    Once the neighbor node has been visited, update the adjacency list, the list will include the
-                    current_nodes neighbor
+                    Once the neighbor node has been marked as visited, we can update the adjacency list by referencing
+                    its clone and adding it to the current_nodes list of neighbors
                 */
                 visited.get(current_node).neighbors.add(visited.get(neighbor));
             }
