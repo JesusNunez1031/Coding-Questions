@@ -1,7 +1,8 @@
 public class addTwoNumbers {
 
     /*
-    You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit.
+    You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse
+    order, and each of their nodes contains a single digit.
     Add the two numbers and return the sum as a linked list.
     You may assume the two numbers do not contain any leading zero, except the number 0 itself
 
@@ -25,12 +26,11 @@ public class addTwoNumbers {
 
             int current_sum = l1_val + l2_val + carry;
 
-            //current_sum / 10 gets us a one or a zero if the sum is only one digit
+            //current_sum / 10 gets us a one if the sum > 9 or a zero if the sum < 10
             carry = current_sum / 10;
 
             //current_sum % 10 gets us the last digit
-            ListNode new_node = new ListNode(current_sum % 10);
-            l3.next = new_node;
+            l3.next = new ListNode(current_sum % 10);
 
             if (l1 != null) {
                 l1 = l1.next;

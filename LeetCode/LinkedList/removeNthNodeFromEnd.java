@@ -28,15 +28,20 @@ public class removeNthNodeFromEnd {
 
         //Move fast ptr n steps forward
         for (int i = 0; i < n; i++) {
+            //if fast hits null when moving it n steps, that means n is not valid since its larger than the list
             if (fast == null) {
                 return null;
             }
             fast = fast.next;
         }
 
-        //Save the previous value in case n = 1
+        //Save the previous value in case the node to delete is the last node in the list
         ListNode prev = null;
-        //By the time fast reaches the end, slow will be at the node we want to delete
+
+        /*
+            Since we moved fast n steps forward, it will beat slow at reaching the end by a gap of n steps, therefore
+            slow is guaranteed to be at the nth node from the end by the time fast reaches the end
+        */
         while (fast != null) {
             prev = slow;
             slow = slow.next;

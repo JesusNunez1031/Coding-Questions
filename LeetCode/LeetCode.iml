@@ -22,6 +22,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Math" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Greedy Algorithms" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DFS &amp; BFS" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Graphs" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
