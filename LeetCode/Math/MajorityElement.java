@@ -4,36 +4,17 @@ import java.util.Map;
 
 public class MajorityElement {
     /*
-    Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+    Given an array of size n, find the majority element. The majority element is the element that appears more than
+    ⌊ n/2 ⌋ times.
 
     You may assume that the array is non-empty and the majority element always exist in the array.
 
     Example 1:
-
     Input: [3,2,3]
     Output: 3
      */
 
-    //Method works iif the given values are 0 <= nums
-    private static int majorityElementNonNeg(int[] nums) {
-        int[] occurrences = new int[100];
-
-        for (int j : nums) {
-            occurrences[j]++;
-        }
-
-        int maxCount = Integer.MIN_VALUE;
-        int num = 0;
-        for (int i = 0; i < occurrences.length; i++) {
-            if (occurrences[i] > maxCount) {
-                maxCount = occurrences[i];
-                num = i;
-            }
-        }
-        return num;
-    }
-
-    //Method Using a hashmap
+    //Method Using a hashmap O(n) time and space
     private int majorityElementMap(int[] nums) {
         if (nums.length == 1) {
             return nums[0];
@@ -52,22 +33,40 @@ public class MajorityElement {
         }
         return -1;
     }
+    /*
+        Using Boyer-Moore Voting Algorithm, set a counter to 1 and the majority element to the first number in  the array.
+        Iterate through the list once, and if we encounter the same "majority element" we increase the counter, otherwise
+        decrease the counter. When the counter reaches 0, we set the "majority element" to the current element and reset
+        the counter to 1.
 
-    //Boyer-Moore Voting Algorithm
+        Next, we iterate the array again having known the "majority element", when we encounter the "majority"
+        we increase a counter, at the end, if the counter is greater than ⌊ n/2 ⌋, where n is the length of the array,
+        then this is indeed the majority element, otherwise, there is no such element.
+
+        Note: here we don't do a second iteration since the majority element is guaranteed
+    */
+
+    //TC: O(2n) == O(n) and constant space
     private static int findMajority(int[] nums) {
-        //Variables for the number of times a number shows up and the number that is the candidate
-        int count = 0;
-        int candidate = 0;
+        int counter = 1;
+        int majority_element = nums[0];
 
-        for (int i : nums) {
-            //when the count is at 0, we choose the current value in the array as the candidate
-            if (count == 0) {
-                candidate = i;
+        for (int val : nums) {
+            //if we find another occurrence of majority_element, increase its count, otherwise decrease the count
+            if (val == majority_element) {
+                counter++;
+            } else {
+                counter--;
             }
-            //Increment the count only if the current number i is the candidate, otherwise subtract 1
-            count += (i == candidate) ? 1 : -1;
+
+            //if the counter reaches 0, reset values
+            if (counter == 0) {
+                counter = 1;
+                majority_element = val;
+            }
         }
-        return candidate;
+        //"majority element" is guarenteed so we dont have to check if its occurance is > ⌊ n/2 ⌋
+        return majority_element;
     }
 
     //Cheese solution is to sort array and return the center element TC: O(n log n)
@@ -79,14 +78,4 @@ public class MajorityElement {
          */
         return nums[nums.length / 2];
     }
-
-    private static void main(String[] args) {
-
-        //The fastest approach is Moore's Algorithm since we constantly do O(1) operations O(n) times
-        int[] arr = {3, 2, 3};
-
-        System.out.println(majorityElementNonNeg(arr));
-    }
-
-
 }

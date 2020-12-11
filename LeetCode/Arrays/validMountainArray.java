@@ -21,32 +21,36 @@ public class validMountainArray {
             Output: true
      */
 
-    public boolean validMountainArray(int[] A) {
-        if (A.length < 3) {
+    private boolean validMountainArray(int[] arr) {
+        if (arr.length < 3) {
             return false;
         }
         int i = 0;
 
-        //All values before the peek need be increasing, the moment we see a duplicate value we return false
-        while (i < A.length - 1 && A[i] < A[i + 1]) {
-            if (A[i] == A[i + 1]) {
+        //find the peak of the array
+        while (i < arr.length - 1 && arr[i] < arr[i + 1]) {
+            //if we are not strictly increasing, return false
+            if (arr[i] == arr[i + 1]) {
                 return false;
             }
             i++;
         }
-        //if the given array is reverse, we check if i is still at 0 or if the array had no peak
-        if (i == A.length - 1 || i == 0) {
+
+        //"i" should now be at the peak, if its at the end or at the start if the array is descending, arr is not a valid mountain
+        if (i == arr.length - 1 || i == 0) {
             return false;
         }
 
-        //the latter half of the array should be in decending order
-        while (i < A.length - 1 && A[i] > A[i + 1]) {
-            if (A[i] == A[i + 1]) {
+        //We now check the latter half of the array so see if its decreasing
+        while (i < arr.length - 1 && arr[i] > arr[i + 1]) {
+            //if we are not strictly increasing, return false
+            if (arr[i] == arr[i + 1]) {
                 return false;
             }
             i++;
         }
-        //if we made it to the end, i should be at the end so we make a check for that
-        return i == A.length - 1;
+
+        //we should be at the end if the array is a valid mountain
+        return i == arr.length - 1;
     }
 }

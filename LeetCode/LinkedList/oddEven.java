@@ -12,33 +12,29 @@ public class oddEven {
         Output: 2->3->6->7->1->5->4->NULL
      */
 
-    public ListNode oddEvenList(ListNode head) {
+    private ListNode oddEvenList(ListNode head) {
         if (head == null) {
             return null;
         }
+        //an even node is always next to an odd node, so we traverse the list by twos making unique odds and evens lists
+        ListNode odds = head;   //list is 1 indexed so the first odd node is head
+        ListNode odds_list = odds;
 
-        //List of odd nodes
-        ListNode odd = head;
-        ListNode ans = odd;
+        ListNode evens = head.next;
+        ListNode evens_list = evens;
 
-        //List of even Nodes
-        ListNode even = odd.next;
+        while (odds.next != null && evens.next != null) {
+            //The next node in odds will be the next of evens and vise versa
+            odds.next = evens.next;
+            odds = odds.next;
 
-        //head of the evens used for reconnection to odds
-        ListNode evenHead = even;
-
-        while (odd.next != null && even.next != null) {
-            //Point the odd node to the node after the even node and move its pointer forward
-            odd.next = even.next;
-            odd = odd.next;
-
-            //The even nodes next node will be the node next to the odd so we point it there
-            even.next = odd.next;
-            even = even.next;
+            evens.next = odds.next;
+            evens = evens.next;
         }
-        //connect the end of the odds to the start of the even list
-        odd.next = evenHead;
 
-        return ans;
+        //connect the two lists, if we wanted the even nodes first, evens.next = odds_list, and return evens_list
+        odds.next = evens_list;
+
+        return odds_list;
     }
 }
