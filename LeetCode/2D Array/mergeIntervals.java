@@ -32,7 +32,8 @@ public class mergeIntervals {
         Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
 
         List<int[]> list = new ArrayList<>();   //make an arraylist of arrays to hold the intervals
-        //add the first interval
+
+        //add the first interval to the list so we can reference the last interval at every current interval
         list.add(intervals[0]);
 
         /*
@@ -40,7 +41,7 @@ public class mergeIntervals {
             if the start time is less than or equal to the end time of the previous interval, make the
             end time of the previous interval the max end time of the current interval or the previous
         */
-        int j = 0;  //used to get the previous interval values in the list
+        int j = 0;  //pointer to refer to the previous interval since not all intervals will be added
         for (int i = 1; i < intervals.length; i++) {
             int start_time = intervals[i][0];
             int[] prev_interval = list.get(j);
@@ -52,8 +53,8 @@ public class mergeIntervals {
             }
         }
 
+        //convert the list to a matrix
         int[][] merged = new int[list.size()][];
-
         for (int i = 0; i < merged.length; i++) {
             merged[i] = list.get(i);
         }

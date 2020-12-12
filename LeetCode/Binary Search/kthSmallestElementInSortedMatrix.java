@@ -45,6 +45,7 @@ public class kthSmallestElementInSortedMatrix {
         return min;
     }
 
+    //Method to return the integer position of the given target value in the matrix
     private static int findPos(int[][] matrix, int target) {
         int i = 0;
         int j = matrix.length - 1;
