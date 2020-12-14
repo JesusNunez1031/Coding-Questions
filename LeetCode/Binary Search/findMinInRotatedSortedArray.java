@@ -13,27 +13,23 @@ public class findMinInRotatedSortedArray {
         Input: [4,5,6,7,0,1,2]
         Output: 0
      */
-    public int findMin(int[] nums) {
-        int low = 0;
-        int high = nums.length - 1;
+    private int findMin(int[] nums) {
+        int left = 0;
+        int right = nums.length - 1;
 
-        //special case, the array is still sorted, then return the result directly
-        if (nums[low] < nums[high]) {
-            return nums[low];
-        }
-
-        while (low + 1 < high) {
-
-            int mid = low + (high - low) / 2;
-            //mid is at a sorted index, move right
-            if (nums[mid] > nums[low]) {
-                low = mid;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            /*
+                if the current number at mid is greater than the value at the right of it, we need to move right since
+                the rotated part is to the right, otherwise the rotated part is more to the left
+            */
+            if (nums[mid] > nums[right]) {
+                left = mid + 1;
             } else {
-                //move mid left since there can be a smaller value
-                high = mid;
+                right = mid;
             }
         }
-        //return the smallest value
-        return Math.min(nums[low], nums[high]);
+        //left will be at the smallest index in the array after the search ends
+        return nums[left];
     }
 }

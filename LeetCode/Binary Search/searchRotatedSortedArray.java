@@ -42,15 +42,17 @@ public class searchRotatedSortedArray {
                 right = mid;    //otherwise, we want to move the right pointer to the left since the smallest value is to the left
             }
         }
-
-        int start = left;      //save the reference of left index
+        /*
+            We now have the start of the rotated part of the array so we check for which side the we need to search for the target,
+            if the target is in the range of the rotated part, we search in that segment, otherwise the start index of the rotated
+            array becomes the upperbound of the regular search
+        */
+        int start = left;  //save the reference so we can use it in case we need to search the rotated array
+        //reset pointers
         left = 0;
         right = nums.length - 1;
 
-        /*
-            if the target is less than the value at the end and greater than or equal to the nums[start], we have a
-            sorted segment of the array, this lets us find out what side of the array we want to perform a search on
-         */
+
         if (target >= nums[start] && target <= nums[right]) {
             left = start;   //set the left index to the start
         } else {
@@ -76,7 +78,7 @@ public class searchRotatedSortedArray {
 
     public static void main(String[] args) {
         int[] arr = {4, 5, -10, -3, -1, 1, 2};
-
-        System.out.println(search(arr, -10));
+        int target = -10;
+        System.out.println(search(arr, target));
     }
 }
