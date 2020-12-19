@@ -1,4 +1,3 @@
-import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.Random;
 
@@ -67,26 +66,29 @@ public class findKthLargestElement {
 
     public static int partition(int[] arr, int left, int right, int pivotIndex) {
         int pivotValue = arr[pivotIndex];
-        int lesserItemsTailIndex = left;    //index of the last value smaller than the pivot
+        int tail_of_lesser_values = left;    //index of the last value smaller than the pivot
 
-        /*
-            since we don't want to modify the pivot value, we swap it with the value at the right
-         */
+        //since we don't want to modify the pivot value, we swap it with the value at the right
         swap(arr, pivotIndex, right);
 
         for (int i = left; i < right; i++) {
+            /*
+                if the current value is less than the initial pivot value, we need to swap it with the tail of the last
+                value that was less than the pivot value and increase the tail
+             */
             if (arr[i] < pivotValue) {
-                swap(arr, i, lesserItemsTailIndex);
-                lesserItemsTailIndex++;
+                swap(arr, i, tail_of_lesser_values);
+                tail_of_lesser_values++;
             }
         }
 
         /*
-        the initial right value is now the tail of all the items less than the pivot, so we swap it with the pivot value
-        and now the pivot value is in its sorted position
+        the initial right value is now the tail of all the items less than the pivot, so we swap it back with the pivot
+        value and now the pivot value is in its sorted position so we return its index
          */
-        swap(arr, right, lesserItemsTailIndex);
-        return lesserItemsTailIndex;
+        swap(arr, right, tail_of_lesser_values);
+
+        return tail_of_lesser_values;
     }
 
     public static void swap(int[] arr, int i, int j) {

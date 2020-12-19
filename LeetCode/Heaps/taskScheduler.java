@@ -61,6 +61,8 @@ public class taskScheduler {
         PriorityQueue<Integer> heap = new PriorityQueue<>(Collections.reverseOrder());
         heap.addAll(map.values());  //add all the tasks to the heap
 
+
+
         int time = 0;   //the least number of time that it takes the cpu to finish all tasks
 
         /*
