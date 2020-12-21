@@ -33,22 +33,21 @@ public class maximumSubarray {
     public int maxSubArray(int[] nums) {
         //set the max sum to the first value and the current sum to the max sum
         int max_sum = nums[0];
-        int current_sum = max_sum;
+        int running_sum = max_sum;
 
         for (int i = 1; i < nums.length; i++) {
             /*
-                running sum ak current_sum is updated at every index, do we add the current value at nums[i] to it
-                or do we start a new sub-array from nums[i] since its value is larger than the current running sum.
-                the current sum is either the current value plus the current_sum if the integer is not a burden ergo
-                extending the sub-array, or we start a new sub-array from the current value since its value is larger
-                than the previous sub-array values summed
+                running_sum is updated at every index, do we add the current value at nums[i] to it or do we start a new
+                sub-array from nums[i] since its value is larger than the current running sum. the current sum is either
+                the current value plus the running_sum if the integer is not a burden ergo extending the sub-array, or we
+                start a new sub-array from the current value since its value is larger than the previous sub-array values
+                summed
              */
-
-            current_sum = Math.max(nums[i] + current_sum, nums[i]);
+            running_sum = Math.max(nums[i] + running_sum, nums[i]);
 
             //check if the max_sum has to be updated
-            if(current_sum > max_sum) {
-                max_sum = current_sum;
+            if(running_sum > max_sum) {
+                max_sum = running_sum;
             }
         }
         return max_sum;

@@ -32,9 +32,11 @@ public class singleNumber {
     /*
      Basic definition of XOR: "If there's a difference then give me the difference and if we're the same we're going to cancel out and result to 0"
 
-    Example with [2,2,1]
-    the first iteration 0^2 gives us 2, however, when we visit the next 2, this value cancels back out to 0. When we visit the one, we get a value of 1 which is the value we want, and since the problem states
-    that we are ensured at least one unique value, we just have to do one pass and all duplicate values will cancel each other out resulting in the only non duplicate value
+        Ex: nums = [2,2,1]
+        the first iteration 0^2 gives us 2, however, when we visit the next 2, this value cancels back out to 0. When we
+        visit the one, we get a value of 1 which is the value we want, and since the problem states that we are ensured at
+        least one unique value, we just have to do one pass and all duplicate values will cancel each other out resulting in
+        the only non duplicate value
      */
     public static int singleNumberOp(int[] nums) {
         int single = 0;

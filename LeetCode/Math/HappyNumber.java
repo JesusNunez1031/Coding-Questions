@@ -25,15 +25,10 @@ public class HappyNumber {
      */
     //TC:O(n) and constant space used
     private boolean isHappy(int n) {
-        while (n != 0) {
-            int sum = 0;
-            while (n != 0) {
-                int last_digit = n % 10;
-                sum += last_digit * last_digit;
-                n /= 10;
-            }
+        while (true) {
+            int sum = squareSum(n);
 
-            //if the current value is a single digit
+            //if the square sum of n is a single digit
             if (sum / 10 == 0) {
                 /*
                     we check if the sum == 1 or 7 since taking the squares of 7 eventually converges to 1
@@ -49,7 +44,6 @@ public class HappyNumber {
             }
             n = sum;    //reset n to the sum
         }
-        return false;
     }
     /*
         Using Floyd's cycle detection algorithm, we compute the square sum of n for a slow pointer and the square sum of the

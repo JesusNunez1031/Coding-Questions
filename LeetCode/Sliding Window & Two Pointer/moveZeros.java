@@ -10,15 +10,20 @@ public class moveZeros {
             You must do this in-place without making a copy of the array.
             Minimize the total number of operations.
      */
-    public void moveZeroes(int[] nums) {
-        int j = 0;
+    private void moveZeroes(int[] nums) {
+        int zero = 0;   //index where there is a zero
 
+        /*
+            using two pointers, i and zero, for every value that is not a zero, we swap it with the index
+            where there is a zero,
+        */
         for (int i = 0; i < nums.length; i++) {
+            //swap the index of the non-zero value with the index of a zero value
             if (nums[i] != 0) {
                 int temp = nums[i];
-                nums[i] = nums[j];
-                nums[j] = temp;
-                j++;
+                nums[i] = nums[zero];
+                nums[zero] = temp;
+                zero++;
             }
         }
     }
