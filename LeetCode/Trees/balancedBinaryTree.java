@@ -16,36 +16,30 @@ public class balancedBinaryTree {
         Input: root = []
         Output: true
      */
-    public boolean isBalanced(TreeNode root) {
+    //TC: O(n) and space
+    private boolean balanced = true;
+    private boolean isBalanced(TreeNode root) {
+        //the empty tree is considered balanced
         if (root == null) {
             return true;
         }
-
-        //Get the depth of the left tree and right
-        int left = getHeight(root.left);
-        int right = getHeight(root.right);
-
-        //Conditional to store the status if a tree is balanced or not
-        boolean isB = false;
-
-        //If the difference in height is 1 or less, it is balanced
-        if (Math.abs(left - right) <= 1) {
-            isB = true;
-        }
-
-        //Preform the above operations on every subtree in tree
-        return isB && isBalanced(root.left) && isBalanced(root.right);
-
+        checkHeights(root);
+        return balanced;
     }
 
-    public int getHeight(TreeNode root) {
+    //method to get the depths of each subtrees in the given tree
+    private int checkHeights(TreeNode root) {
         if (root == null) {
             return 0;
         }
 
-        int left = getHeight(root.left);
-        int right = getHeight(root.right);
+        int left = checkHeights(root.left);
+        int right = checkHeights(root.right);
 
+        //if the difference in heights between the left and right subtrees is greater than 1, the tree is not balanced
+        if (Math.abs(left - right) > 1) {
+            balanced = false;
+        }
         return Math.max(left, right) + 1;
     }
 }
