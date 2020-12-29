@@ -41,6 +41,7 @@ public class minimumHeightTrees {
         All the pairs (ai, bi) are distinct.
         The given input is guaranteed to be a tree and there will be no repeated edges.
      */
+    //TC:O(|V|) where v is the number of nodes in the graph
     public static List<Integer> findMinHeightTrees(int n, int[][] edges) {
         List<Integer> nodes = new ArrayList<>();    //list to hold MHT roots
 
@@ -102,8 +103,63 @@ public class minimumHeightTrees {
                 }
             }
         }
-        //the after BFS, the queue will hold all the roots with degree of 1 so add them to the nodes list
+        //after BFS, the queue will hold all the roots with degree of 1 so add them to the nodes list
         nodes.addAll(q);
+        return nodes;
+    }
+
+    private List<Integer> findMinHeightTreesEz(int n, int[][] edges) {
+        List<Integer> nodes = new ArrayList<>();
+        if(n <= 0) {
+            return nodes;
+        }
+
+        //if there is only one node
+        if(n == 1) {
+            nodes.add(0);
+            return nodes;
+        }
+        ArrayList[] graph = new ArrayList[n];
+        int[] degree = new int[n];
+
+        //initialize the graph to hold n nodes
+        for(int i = 0;i < n;i++) {
+            graph[i] = new ArrayList<>();
+        }
+
+        for(int[] e : edges) {
+            degree[e[0]]++;
+            degree[e[1]]++;
+            graph[e[0]].add(e[1]);
+            graph[e[1]].add(e[0]);
+        }
+
+        Queue<Integer> queue = new LinkedList<>();
+
+        //add all the nodes with degree of 1 to the queue
+        for(int i = 0; i < degree.length;i++) {
+            if(degree[i] == 1) {
+                queue.add(i);
+            }
+        }
+
+        while(n > 2) {
+            int size = queue.size();
+            n -= size;
+
+            while(size-- > 0) {
+                int value = queue.remove();
+                for(int i = 0; i < graph[value].size();i++) {
+                    int ptr = (int) graph[value].get(i);
+                    degree[ptr]--;
+                    if(degree[ptr] == 1) {
+                        queue.add(ptr);
+                    }
+                }
+            }
+        }
+        nodes.addAll(queue);
+
         return nodes;
     }
 
