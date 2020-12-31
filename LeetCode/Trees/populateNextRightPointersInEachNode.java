@@ -1,4 +1,7 @@
-public class populatingNextRightPointersInEachNode {
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class populateNextRightPointersInEachNode {
     /*
     You are given a perfect binary tree where all leaves are on the same level, and every parent has two children.
     The binary tree has the following definition:
@@ -61,6 +64,41 @@ public class populatingNextRightPointersInEachNode {
         connect(root.left);
         connect(root.right);
 
+        return root;
+    }
+
+    private Node connectBFS(Node root) {
+        if(root == null) {
+            return null;
+        }
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+
+        while(!queue.isEmpty()) {
+            int size = queue.size();
+
+            for(int i = 0; i < size;i++) {
+                Node current = queue.remove();
+
+                //if the current node has a right, we set its left.next to the right node
+                if(current.right != null) {
+                    current.left.next = current.right;
+                    //point the right of the current node to the left of the node .next to the current node
+                    if(current.next != null) {
+                        current.right.next = current.next.left;
+                    }
+                }
+
+                if(current.left != null) {
+                    queue.add(current.left);
+                }
+
+                if(current.right != null) {
+                    queue.add(current.right);
+                }
+            }
+        }
         return root;
     }
 

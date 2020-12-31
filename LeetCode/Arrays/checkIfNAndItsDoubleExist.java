@@ -27,7 +27,7 @@ public class checkIfNAndItsDoubleExist {
         Explanation: In this case does not exist N and M, such that N = 2 * M.
      */
 
-    public boolean checkIfExist(int[] arr) {
+    private boolean checkIfExist(int[] arr) {
         HashSet<Integer> set = new HashSet<>();
 
         for (int val : arr) {

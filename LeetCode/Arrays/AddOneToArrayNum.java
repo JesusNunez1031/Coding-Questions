@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class AddOneToArrayNum {
-    public static int[] addOneToArray(int[] nums) {
+    private static int[] addOneToArray(int[] nums) {
         int carry = 1;
         int total;
         int[] result = new int[nums.length];

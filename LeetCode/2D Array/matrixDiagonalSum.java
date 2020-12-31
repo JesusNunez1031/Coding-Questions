@@ -22,7 +22,7 @@ public class matrixDiagonalSum {
         Input: mat = [[5]]
         Output: 5
      */
-    public int diagonalSum(int[][] mat) {
+    private int diagonalSum(int[][] mat) {
         int rows = mat.length;
         int col = mat[0].length;
         int sum = 0;
@@ -42,9 +42,5 @@ public class matrixDiagonalSum {
             }
         }
         return sum;
-    }
-
-    public static void main(String[] args) {
-
     }
 }
