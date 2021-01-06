@@ -20,11 +20,13 @@ public class MergeTwoSortedLists extends ListNode {
             Both l1 and l2 are sorted in non-decreasing order.
      */
 
-    //Method splices nodes together
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    //Method splices nodes together TC: O(n)
+    private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        //if both lists are null, return null
         if (l1 == null && l2 == null) {
             return null;
         }
+
         //check if one list is empty, return the one that isn't
         if(l1 == null || l2 == null) {
             return l1 == null ? l2 : l1;
@@ -43,6 +45,7 @@ public class MergeTwoSortedLists extends ListNode {
 
         ListNode iter = merged; //reference var used to modify merged
 
+        //add values to the merged list as they come in order
         while (l1 != null && l2 != null) {
             if (l1.val <= l2.val) {
                 iter.next = l1;
@@ -64,8 +67,8 @@ public class MergeTwoSortedLists extends ListNode {
         return merged;
     }
 
-    //Method creates a new list and adds nodes in order
-    public static ListNode mergeTwoListsEz(ListNode l1, ListNode l2) {
+    //Method creates a new list and adds nodes in order TC: O(n)
+    private static ListNode mergeTwoListsEz(ListNode l1, ListNode l2) {
         ListNode newList = new ListNode(0);
         ListNode head = newList;
 

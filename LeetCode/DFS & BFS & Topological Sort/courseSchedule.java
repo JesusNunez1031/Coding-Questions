@@ -52,7 +52,7 @@ public class courseSchedule {
             degree[prerequisite[1]]++;
         }
 
-        //add all the courses with a degree of 0 to the queue to be proccessed
+        //add all the courses with a degree of 0 to the queue to be processed
         for (int i = 0; i < degree.length; i++) {
             if (degree[i] == 0) {
                 queue.add(i);

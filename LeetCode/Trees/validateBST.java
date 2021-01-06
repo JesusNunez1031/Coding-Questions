@@ -26,25 +26,37 @@ public class validateBST {
         Output: false
         Explanation: The root node's value is 5 but its right child's value is 4.
      */
-
-    public boolean isValidBST(TreeNode root) {
+    //TC: O(n) and space due to recursive stack
+    private boolean isValidBST(TreeNode root) {
+        //an empty tree is a valid tree
+        if (root == null) {
+            return true;
+        }
         return validate(root, null, null);
     }
 
-    public boolean validate(TreeNode root, Integer max, Integer min) {
+    private boolean validate(TreeNode root, Integer max, Integer min) {
         //An empty tree is considered valid
         if (root == null) {
             return true;
-            //at every step we check if the given subtree is a valid BST
-        } else if (max != null && root.val >= max || min != null && root.val <= min) {
-            return false;
-        } else {
-            /*
-                check the left side subtree where the all values have to be less than the max which is the root node after every call
-
-                then check the right of the tree where all nodes have to be greater than the min which is the root node after every call
-             */
-            return validate(root.left, root.val, min) && validate(root.right, max, root.val);
         }
+
+        /*
+            at every step we check if the given subtree is a valid BST
+                - when checking the left, the largest possible value we can find is the root of the tree since all values
+                  to the left need to be less than the root, anything larger makes the tree invalid
+
+                - when checking the right, the smallest possible value we can see is the root, since all values on the
+                  right have to be greater than the root, anything smaller makes the tree invalid
+         */
+        if (max != null && root.val >= max || min != null && root.val <= min) {
+            return false;
+        }
+        /*
+            when checking the left, the largest possible value is the root value
+
+            when checking the right, the smallest possible value is the root value
+         */
+        return validate(root.left, root.val, min) && validate(root.right, max, root.val);
     }
 }
