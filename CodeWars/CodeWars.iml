@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Stacks" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Math" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Strings" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Arrays" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

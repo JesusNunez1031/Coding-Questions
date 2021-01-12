@@ -94,4 +94,10 @@ public class rangeSumQueryMutable {
             return sum(j) - sum(i - 1);
         }
     }
+
+    public static void main(String[] args) {
+        int[] arr = {0,8};
+        NumArray tree = new NumArray(arr);
+        System.out.println(tree.sumRange(1, 0));
+    }
 }
