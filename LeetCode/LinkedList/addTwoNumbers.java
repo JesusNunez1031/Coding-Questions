@@ -32,15 +32,17 @@ public class addTwoNumbers {
             //current_sum % 10 gets us the last digit
             l3.next = new ListNode(current_sum % 10);
 
+            //only increase l1 or l2 if the list has a next node
             if (l1 != null) {
                 l1 = l1.next;
             }
             if (l2 != null) {
                 l2 = l2.next;
             }
+
             l3 = l3.next;
         }
-
+        //if the carry is larger than 0, the number must be 10, 100, 1000, etc. so we add a new node(carry)
         if (carry > 0) {
             l3.next = new ListNode(carry);
         }
