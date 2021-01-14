@@ -48,19 +48,18 @@ public class containerWithMostWater {
             return Math.min(height[0], height[1]);
         }
 
-        int i = 0;
-        int j = height.length - 1;
+        int i = 0;                  //first rod
+        int j = height.length - 1;  //last rod
         int area = 0;
 
         while (i < j) {
             /*
-                the area between i and j, is the minimum value of the vertical line of i and j * the distance between i and j
+                the area between i and j, is the minimum value of the vertical line of i and j * the distance between i
+                and j, or length * width. We take the min value of i and j since the lowest value is the cap of the water
              */
             area = Math.max(area, Math.min(height[i], height[j]) * (j - i));
 
-            /*
-                if the value if rod i is greater then j, we move j in, otherwise we move i out
-             */
+            //if the value of rod i is greater then j, we move j in, otherwise we move i out
             if (height[i] > height[j]) {
                 j--;
             } else {
