@@ -78,16 +78,15 @@ public class backspaceStringCompare {
     }
 
     //Another method to get the modified string only using a string builder
-    private String genString(String str) {
+    private String generateString(String str) {
         StringBuilder sb = new StringBuilder();
 
-        for(int i = 0; i < str.length();i++) {
-            char c = str.charAt(i);
-            if(c == '#') {
-                int newLen = sb.length() - 1;
-                sb.setLength(Math.max(newLen, 0));
-            } else {
+        for(char c : str.toCharArray()) {
+            //Append c if its not a backspace, if it is, remove the last character in sb
+            if(c != '#') {
                 sb.append(c);
+            } else {
+                sb.setLength(Math.max(0, sb.length() - 1));
             }
         }
         return sb.toString();

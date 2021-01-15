@@ -17,46 +17,60 @@ public class minStack {
         top() -- Get the top element.
         getMin() -- Retrieve the minimum element in the stack.
      */
-    private static class Node {
-        int val;
+    //StackNode holds the min value at the current node, the nodes integer value, and a reference to its next node
+    static class StackNode {
         int min;
-        Node next;
+        int value;
+        StackNode next;
 
-        private Node(int val, int min) {
-            this(val, min, null);
+        public StackNode(int value, int min) {
+            this.value = value;
+            this.min = min;
         }
 
-        private Node(int val, int min, Node next) {
-            this.val = val;
+        public StackNode(int value, int min, StackNode next) {
+            this.value = value;
             this.min = min;
             this.next = next;
         }
     }
 
-    private Node head;
+    //Head node, or top of the stack
+    StackNode head;
 
-    public void push(int x) {
-        if (head == null)
-            //Adding for the first time, min is the current value
-            head = new Node(x, x);
-        else
-            //min is the lowest value btw the new value and the min prior
-            head = new Node(x, Math.min(x, head.min), head);
+    //Initialize an empty stack
+    public minStack() {
+        head = null;
     }
 
-    //Move head one step forward
+    //Adds a new node of value x to stack
+    public void push(int x) {
+        //if the stack is empty, make the top of the stack a new node x
+        if (head == null) {
+            head = new StackNode(x, x);
+        } else {
+            /*
+                if the stack is not empty, make a new node of value x with a min value of the smallest value between x
+                and the current min. The top of the stack becomes this new node and its next is the old top
+             */
+            head = new StackNode(x, Math.min(x, head.min), head);
+        }
+    }
+
     public void pop() {
+        //point the head to its next
         head = head.next;
     }
 
     public int top() {
-        return head.val;
+        //return the head's value
+        return head.value;
     }
 
     public int getMin() {
+        //return the current min at the head
         return head.min;
     }
-
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------*/
