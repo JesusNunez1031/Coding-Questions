@@ -19,7 +19,7 @@ public class productOfArrayExceptSelf {
         each index, the value will be the result of the total product / nums[index]
         TC: O(n) and constant space, however we use division
      */
-    public int[] productExceptSelf(int[] nums) {
+    private int[] productExceptSelf(int[] nums) {
         int[] res = new int[nums.length];
         int product = 1;
         int zeros = 0;  //counter to check for zeros
@@ -111,6 +111,7 @@ public class productOfArrayExceptSelf {
 
         //find the left products of each value in nums
         for (int i = 1; i < n; i++) {
+            //product left to ith value is the product of all values before i * value before i in nums
             res[i] = res[i - 1] * nums[i - 1];
         }
 

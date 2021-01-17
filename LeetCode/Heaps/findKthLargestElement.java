@@ -15,9 +15,12 @@ public class findKthLargestElement {
      */
 
     //RT is O(n log k) to build the heap and space is O(n) where n is the length of the array
-    public static int findKthLargest(int[] nums, int k) {
-        //Since we are using a minHeap, when we are done processing all values in array, the heap will have all the kth largest values, so the root
-        //will be the kth largest value, everything after that will be larger than it so we return the root.
+    private static int findKthLargest(int[] nums, int k) {
+        /*
+            Since we are using a minHeap, when we are done processing all values in array, the heap will have all the kth
+            largest values, so the root will be the kth largest value, everything after that will be larger than it so
+            we return the root.
+        */
         //PriorityQueue<Integer> minHeap = new PriorityQueue<>(Collections.reverseOrder());  // turn a minheap to maxheap, reverse the order to get the kth smallest
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
@@ -31,7 +34,7 @@ public class findKthLargestElement {
     }
 
     //RT O(n) & O(n^2) worst time, O(1) space using quick-select algorithm
-    public static int kthLargest(int[] arr, int k) {
+    private static int kthLargest(int[] arr, int k) {
         int n = arr.length;
         int left = 0;
         int right = n - 1;
@@ -43,15 +46,15 @@ public class findKthLargestElement {
             int sortedIndexOfPivot = partition(arr, left, right, chosenPivotIndex);    //returns the final index of the pivot, final as in if the array was sorted, this is the index the pivot would be in
 
             /*
-              if the sortedIndexOfPivot is equal to n - k, then we have found the kth largest value since if we
-              assume a sorted array then arr[length of array - k] is the index of the kth largest value.
+              if the sortedIndexOfPivot is equal to n - k, then we have found the kth largest value since if we assume a
+              sorted array then arr[length of array - k] is the index of the kth largest value.
              */
             if (sortedIndexOfPivot == n - k) {
                 return arr[sortedIndexOfPivot];
             }
             /*
-                if the sortedIndexOfPivot is greater than n - k, then we overshot and need to go
-                left so we reduce the right bound
+                if the sortedIndexOfPivot is greater than n - k, then we overshot and need to go left so we reduce the
+                right bound
              */
             else if (sortedIndexOfPivot > n - k) {
                 right = sortedIndexOfPivot - 1;
@@ -65,7 +68,7 @@ public class findKthLargestElement {
     }
 
     public static int partition(int[] arr, int left, int right, int pivotIndex) {
-        int pivotValue = arr[pivotIndex];
+        int pivotValue = arr[pivotIndex];    //value at the index of pivotIndex
         int tail_of_lesser_values = left;    //index of the last value smaller than the pivot
 
         //since we don't want to modify the pivot value, we swap it with the value at the right
@@ -88,10 +91,12 @@ public class findKthLargestElement {
          */
         swap(arr, right, tail_of_lesser_values);
 
+        //return the sorted index of pivotValue
         return tail_of_lesser_values;
     }
 
-    public static void swap(int[] arr, int i, int j) {
+    //Swaps values in nums
+    private static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
