@@ -70,7 +70,7 @@ public class longestPalindromicSubstring {
 
         TC: O(n^2) time and constant space is used
     */
-    private String longestPalindrome2(String s) {
+    private static String longestPalindrome2(String s) {
         if (s.length() <= 1) {
             return s.length() == 0 ? "" : s;
         }
@@ -80,23 +80,30 @@ public class longestPalindromicSubstring {
         int end = 0;
 
         for (int i = 0; i < s.length() - 1; i++) {
-            /*
-                the length of the palindrome, if any, is the max starting from the character and on, or
-                starting from +1 of the character
-                Ex:
-                given the string abaaba and when we get to i = 2
-                    1. the first search sets i and j to 2 and that returns 1 - 1 = 0
-                    2. second search sets i to 2 and j to 3, this returns 5 - 1 = 4
-            */
-            int len = Math.max(searchOut(s, i, i), searchOut(s, i, i + 1));
+            //call method twice starting from i and again from i to i + 1 to consider both odd and even length palindromes
+            int odd = searchOut(s, i, i);
+            int even = searchOut(s, i, i + 1);
 
-            /*
-                to check if the length of the new found substring is longer than one already found, we compare it to the
-                value of end - start, this gives us the length of the current found palindrome
-            */
-            if (len > end - start) {
-                start = i - ((len - 1) / 2);
-                end = i + (len / 2);
+            int length = Math.max(odd, even);
+
+            if(length > end - start) {
+                /*
+                    for an even palindrome of length 6,
+                    Ex: substring is a[abaccab]e
+                        abaccab
+                           ^^ -> i and i + 1
+
+                        abaccab
+                        ^     ^
+                start=i-2     end=i+3
+
+                start = 3 - (6 - 1 / 2) = 3 - 2 = 1
+
+                */
+                start = i - ((length - 1) / 2);
+
+                //end is just the half of the substrings length
+                end = i + length / 2;
             }
 
             //if the substring found is s, then we directly return s
@@ -107,19 +114,24 @@ public class longestPalindromicSubstring {
         return s.substring(start, end + 1);
     }
 
-    private int searchOut(String s, int i, int j) {
-        if (i > j) {
+    /*
+        given a start left and right, method searches out from s[left] and s[right] as long as characters match, returns
+        the length of the palindrome substring in s
+     */
+    private static int searchOut(String s, int left, int right) {
+        if(left > right) {
             return 0;
         }
-        while (i >= 0 && j < s.length() && s.charAt(i) == s.charAt(j)) {
-            i--;
-            j++;
+        while(left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+            left--;
+            right++;
         }
-        return j - i - 1;
+        //-1 to account for the extra increment before loop termination
+        return right - left - 1;
     }
 
     public static void main(String[] args) {
-        String s = "acabbaab";
-        System.out.println(longestPalindrome(s));
+        String s = "babad";
+        System.out.println(longestPalindrome2(s));
     }
 }
