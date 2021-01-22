@@ -39,6 +39,7 @@ public class LRUCache {
         0 <= value <= 104
         At most 3 * 104 calls will be made to get and put.
      */
+    //A Node has a key-value pair, and a reference to the next and previous node
     private static class Node {
         private Node next;
         private Node prev;
@@ -83,10 +84,12 @@ public class LRUCache {
         }
     }
 
+    //map used to check if a key exists in the cache in constant time
     private final Map<Integer, Node> cache;
     private final DoublyLinkedList list = new DoublyLinkedList();   //we use a DLL to make deletion constant
     private final int CAPACITY;
 
+    //initialize a cache of size capacity
     public LRUCache(int capacity) {
         cache = new HashMap<>(capacity);
         this.CAPACITY = capacity;
