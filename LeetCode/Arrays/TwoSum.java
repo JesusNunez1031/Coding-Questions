@@ -54,6 +54,22 @@ public class TwoSum {
         return new int[]{-1, -1};
     }
 
+    public int[] twoSumEzz(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            //if the map contains the difference, a pair was found and return the index of nums[i] and the difference
+            int diff = target - nums[i];
+            if (map.containsKey(diff)) {
+                return new int[]{i, map.get(diff)};
+            }
+
+            //add the current number and index to the map
+            map.put(nums[i], i);
+        }
+        return new int[]{-1, -1};
+    }
+
     /*
         TC: O(n) time and constant space using two pointers. At every step, we check if nums[i] + nums[j] > or < than target, if the
         result is greater, then we decrement j, if its less, we increase i. if i == j, then there is no solution
@@ -64,12 +80,12 @@ public class TwoSum {
 
         int i = 0, j = nums.length - 1;
 
-        while(i < j) {
-            if(nums[i] + nums[j] == target) {
+        while (i < j) {
+            if (nums[i] + nums[j] == target) {
                 return new int[]{i, j};
             }
 
-            if(nums[i] + nums[j] > target) {
+            if (nums[i] + nums[j] > target) {
                 j--;
             } else {
                 i++;
