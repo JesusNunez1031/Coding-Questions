@@ -22,6 +22,7 @@ public class bstToGreaterSumTree {
         Input: root = [3,2,4,1]
         Output: [7,9,4,10]
      */
+    //TC: O(n)
     public TreeNode bstToGst(TreeNode root) {
         inOrderReversed(root, 0);
         return root;

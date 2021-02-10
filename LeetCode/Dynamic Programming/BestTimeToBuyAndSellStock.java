@@ -13,6 +13,7 @@ public class BestTimeToBuyAndSellStock {
                  Not 7-1 = 6, as selling price needs to be larger than buying price.
      */
 
+    //TC: O(n)
     public static int maxProfit(int[] prices) {
         //there is no possible chance to make profit
         if(prices == null || prices.length <= 1) {
@@ -22,15 +23,18 @@ public class BestTimeToBuyAndSellStock {
         int cheapestStock = Integer.MAX_VALUE;
         int max_profit = 0;
 
-        for (int price : prices) {
-            /*Get the smallest value possible as we iterate through array, if the array happens to be in descending order, there is no way to get a max_profit,
-              since we would always sell for a loss
+        for (int stock : prices) {
+            /*
+                if the current stock has a lower price than the current cheapest_stock seen, update the cheapest to the
+                current stock
              */
-            if (price < cheapestStock) {
-                cheapestStock = price;
-                //If the current value is - our current cheapestStock is greater than the current max profit, make that subtraction our new max
-            } else if (price - cheapestStock > max_profit) {
-                max_profit = price - cheapestStock;
+            if (stock < cheapestStock) {
+                cheapestStock = stock;
+                /*
+                    check if the current stock - the cheapest stock yield a larger profit than the profit we've already made
+                 */
+            } else if (stock - cheapestStock > max_profit) {
+                max_profit = stock - cheapestStock;
             }
         }
         return max_profit;

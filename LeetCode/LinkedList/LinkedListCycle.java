@@ -17,7 +17,7 @@ public class LinkedListCycle {
         ListNode fast = head;
 
         /*
-            move the fast two times faster than the slow pointer, if there is a cycle, eventually, the slow will
+            move the fast pointer 2x faster than the slow pointer, if there is a cycle, eventually, the slow will
             catch up to fast, otherwise fast will just terminate loop
          */
         while (fast != null && fast.next != null) {

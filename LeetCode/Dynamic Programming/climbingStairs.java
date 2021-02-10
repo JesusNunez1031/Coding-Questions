@@ -23,7 +23,7 @@ public class climbingStairs {
      */
 
     public int climbStairs(int n) {
-        //there is only 1 way given 1, and 2 ways given 2
+        //there is only 1 way given 1 stair, and 2 ways given 2 stairs
         if (n == 1 || n == 2) {
             return n;
         }
@@ -34,7 +34,7 @@ public class climbingStairs {
 
         int i = 3;
         while (i <= n) {
-            //the solution to n is the solution of the previous 2 ways
+            //the solution to ith stair is the solution of the previous 2 ways
             dp[i] = dp[i - 1] + dp[i - 2];
             i++;
         }

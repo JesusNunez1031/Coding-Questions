@@ -17,6 +17,7 @@ public class middleOfLinkedList {
     Since the list has two middle nodes with values 3 and 4, we return the second one.
      */
 
+    //TC: O(n)
     public ListNode middleNode(ListNode head) {
         if (head == null) {
             return null;
@@ -26,8 +27,8 @@ public class middleOfLinkedList {
         ListNode fast = head;
 
         /*
-            use two pointers, fast traverses the list two times faster than slow, therefore when it reaches the
-            end, slow will be at the middle
+            use two pointers, fast traverses the list 2x faster than slow, therefore when it reaches the end, slow will
+            be at the middle
          */
         while (fast != null && fast.next != null) {
             slow = slow.next;
