@@ -8,6 +8,7 @@ public class RemoveLinkedListElements {
     Output: 1->2->3->4->5
      */
 
+    //TC: O(n)
     public static ListNode removeElements(ListNode head, int val) {
         if (head == null) {
             return null;
@@ -33,23 +34,33 @@ public class RemoveLinkedListElements {
         return head;
     }
 
-    public static void main(String[] args) {
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(2);
-        head.next.next.next = new ListNode(1);
-//        head.next.next.next.next = new ListNode(4);
-//        head.next.next.next.next.next = new ListNode(6);
-
-        removeElements(head, 2);
-
-        while (head != null) {
-            if (head.next == null) {
-                System.out.printf("%d ", head.val);
-            } else {
-                System.out.printf("%d -> ", head.val);
-            }
+    //TC: O(n)
+    public ListNode removeElementsEz(ListNode head, int val) {
+        if (head == null) {
+            return null;
+        }
+        //start by getting rid of any nodes at the start with the value val
+        while (head != null && head.val == val) {
             head = head.next;
         }
+
+        ListNode iter = head;
+        //to make it easier to delete nodes, save the reference to the current nodes previous node
+        ListNode prev = null;
+
+        while (iter != null) {
+            /*
+                when val is encountered, set the previous nodes to the .next of the val node and move the
+                iter pointer to the next node, otherwise, traverse the list normally
+            */
+            if (iter.val == val) {
+                prev.next = iter.next;
+                iter = prev.next;
+            } else {
+                prev = iter;
+                iter = iter.next;
+            }
+        }
+        return head;
     }
 }
