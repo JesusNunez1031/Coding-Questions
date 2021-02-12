@@ -15,7 +15,10 @@ public class ListNode {
         this.val = value;
     }
 
-    //Print the values in the list
+    /**
+     * Method prints the list starting from the given {@code head}
+     * @param head head of list
+     */
     public void print(ListNode head) {
         ListNode iter = head;
         while (iter != null) {
@@ -28,7 +31,11 @@ public class ListNode {
         }
     }
 
-    //method to return a generic list given a size
+    /**
+     * Method returns the head of a list of length {@code size}, list starts from 1
+     * @param size size of list
+     * @return A list starting from 1 up the {@code size} length
+     */
     public ListNode makeList(int size){
         ListNode head = new ListNode(1);
         ListNode iter = head;

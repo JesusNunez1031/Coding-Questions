@@ -1,4 +1,4 @@
-public class ReverseLinkedList {
+public class reverseLinkedList {
 
     /*
     Reverse a singly linked list.
@@ -11,17 +11,17 @@ public class ReverseLinkedList {
     A linked list can be reversed either iteratively or recursively. Could you implement both?
      */
 
-
-    //Iterative solution
+    //Iterative solution TC/S: O(n) and constant space used
     public static ListNode reverseListIter(ListNode head) {
         if (head == null) {
             return null;
         }
 
+        //To easily reverse list, save a reference to the previous node
         ListNode prev = null;   //reference to the previous node
 
         while (head != null) {
-            //Temp variable to hold reference to the head.next
+            //Temp variable to hold reference to the next node to current node
             ListNode next = head.next;
             //Set the new next of current head to the previous node
             head.next = prev;
@@ -30,10 +30,11 @@ public class ReverseLinkedList {
             //Head of the list is now the the next value in list
             head = next;
         }
+        //when the list is reversed, the new head node is at the end of the list so we return prev
         return prev;
     }
 
-    //Recursive solution
+    //Recursive solution TC/S: O(n)
     public static ListNode reverseListRec(ListNode head) {
         if (head == null) {
             return null;
@@ -56,15 +57,11 @@ public class ReverseLinkedList {
     }
 
     public static void main(String[] args) {
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(4);
-        head.next.next.next.next = new ListNode(5);
-        head.next.next.next.next.next = new ListNode(6);
+        //make a new list of size 5
+        ListNode list = new ListNode().makeList(5);
 
         //since reverseList return prev, we make a new list with the new returned head
-        ListNode reverse = reverseListRec(head);
+        ListNode reverse = reverseListIter(list);
 
        reverse.print(reverse);
     }

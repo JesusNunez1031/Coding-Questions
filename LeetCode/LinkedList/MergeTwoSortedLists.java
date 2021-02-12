@@ -21,32 +21,29 @@ public class MergeTwoSortedLists extends ListNode {
      */
 
     //Method splices nodes together TC: O(n)
-    private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        //if both lists are null, return null
-        if (l1 == null && l2 == null) {
-            return null;
-        }
-
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         //check if one list is empty, return the one that isn't
-        if(l1 == null || l2 == null) {
+        if (l1 == null || l2 == null) {
             return l1 == null ? l2 : l1;
         }
 
-        ListNode merged;    //merged will hold merged nodes from l1 and l2
+        //new list to hold the merged lists l1 and l2
+        ListNode l3;
 
-        //if the first node in l1 is less than l2 first, make merged l1, otherwise make l2 merged
-        if (l1.val <= l2.val) {
-            merged = l1;
+        //set l3 to list with the smallest start value
+        if (l1.val < l2.val) {
+            l3 = l1;
             l1 = l1.next;
         } else {
-            merged = l2;
+            l3 = l2;
             l2 = l2.next;
         }
 
-        ListNode iter = merged; //reference var used to modify merged
+        //pointer to update l3
+        ListNode iter = l3;
 
-        //add values to the merged list as they come in order
         while (l1 != null && l2 != null) {
+            //set the .next in l3 to the smaller node between l1 and l2
             if (l1.val <= l2.val) {
                 iter.next = l1;
                 l1 = l1.next;
@@ -57,14 +54,16 @@ public class MergeTwoSortedLists extends ListNode {
             iter = iter.next;
         }
 
-        //after adding nodes, if one list finished before the other, add remaining nodes
+        //if one list finished before the other, set the .next of l3 to the remaining nodes
         if (l1 != null && l2 == null) {
             iter.next = l1;
         }
-        if (l1 == null && l2 != null) {
+
+        if (l2 != null && l1 == null) {
             iter.next = l2;
         }
-        return merged;
+
+        return l3;
     }
 
     //Method creates a new list and adds nodes in order TC: O(n)

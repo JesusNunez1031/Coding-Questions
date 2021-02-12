@@ -10,38 +10,33 @@ public class RemoveDuplicatesFromList {
     Input: 1->1->2->3->3
     Output: 1->2->3
      */
-    //Method to preform deletion in place using two Pointers
+    //TC: O(n) - Method preforms deletion in place using two Pointers
     public static ListNode deleteDuplicates(ListNode head) {
         if (head == null) {
             return null;
         }
-
-        //set will hold all unique values and is used to modify head
-        ListNode set = head;
-        ListNode iter = head.next;  //pointer used to traverse the list
+        //to make de-referencing of duplicate nodes we save the previous of each node and only update its .next when its not a duplicate
+        ListNode prev = head;
+        ListNode iter = head.next;
 
         while (iter != null) {
             /*
-                if the value in set does not equal the value in iter, we want to point the next to it to dereference
-                all duplicates in between set and iter
-             */
-            if (set.val != iter.val) {
-                set.next = iter;
-                set = set.next;
+                if the previous node == current node, check if the next is null, if so that means the last duplicate
+                is at the end so we dereference it by setting the .next of prev to null, then we move to the next node
+            */
+            if (prev.val == iter.val) {
+                if (iter.next == null) {
+                    prev.next = null;
+                }
             } else {
                 /*
-                    if the values are equal, we fist check if the next is null, if it is, the last duplicate is
-                    at the end so we just set the next in set to null
+                    if the nodes value don't match, point the previous node .next to the current node, all duplicate nodes
+                    after prev will be dereference, prev then becomes the current node and we move to the next node
                  */
-                if (iter.next == null) {
-                    set.next = null;
-                }
-                //otherwise we move the iter pointer forward by one
-                iter = iter.next;
+                prev.next = iter;
+                prev = prev.next;
             }
-        }
-        if (set.val == head.val) {
-            set.next = null;
+            iter = iter.next;
         }
         return head;
     }
