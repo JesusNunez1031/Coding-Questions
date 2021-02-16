@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.PriorityQueue;
 
 public class thekWeakestRowsInMatrix {
     /*
@@ -78,8 +79,34 @@ public class thekWeakestRowsInMatrix {
         return res;
     }
 
+    //Method using PriorityQueue to order the rows TC: O(n log n) and O(n) space used to store the rows into the queue
+    public static int[] kWeakestRowsEz(int[][] mat, int k) {
+        /*
+            minheap stores the weakest row in mat at the root
+            int[] = 0 -> num of soldiers 1 -> index of row
+            a, b --> if the number of soldiers in the arrays are not equal, place the array with the least soldiers
+                     at the top, otherwise, place the array with the lower value of the row at top
+         */
+        PriorityQueue<int[]> queue = new PriorityQueue<>((a, b) -> a[0] != b[0] ? a[0] - b[0] : a[1] - b[1]);
+
+        for (int i = 0; i < mat.length; i++) {
+            //search method returns the index of the first civilian, so if there are only 2 solders, the first index of a civilian is 2
+            int soldiers = binarySearch(mat[i]); //if there are no civilians, the number of soldiers is the length of the row
+            queue.add(new int[]{soldiers, i});
+        }
+
+        int[] weakest = new int[k];
+        int i = 0;
+
+        //the top k rows in the queue hold the weakest rows
+        while (k-- > 0) {
+            weakest[i++] = queue.remove()[1];
+        }
+        return weakest;
+    }
+
     //returns the index of the first civilian
-    private int binarySearch(int[] nums) {
+    private static int binarySearch(int[] nums) {
         int left = 0;
         int right = nums.length;
 
@@ -94,5 +121,11 @@ public class thekWeakestRowsInMatrix {
             }
         }
         return right;
+    }
+
+    public static void main(String[] args) {
+        //int[][] mat = {{1, 1, 0, 0, 0}, {1, 1, 1, 1, 0}, {1, 0, 0, 0, 0}, {1, 1, 0, 0, 0}, {1, 1, 1, 1, 1}};
+        int[][] mat = {{1, 1, 1, 1, 1}, {1, 0, 0, 0, 0}, {1, 1, 0, 0, 0}, {1, 1, 1, 1, 0}, {1, 1, 1, 1, 1}};
+        System.out.println(Arrays.toString(kWeakestRowsEz(mat, 3)));
     }
 }
