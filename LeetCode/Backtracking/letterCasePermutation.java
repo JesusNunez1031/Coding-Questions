@@ -26,7 +26,10 @@ public class letterCasePermutation {
         S will be a string with length between 1 and 12.
         S will consist only of letters or digits.
      */
-    //TC: O((2^m) * n) where m is the number of letters in the string and n is the size of string, 2^m since all letters have 2 cases each
+    /*
+        TC/S: O(2^n) is the number of possible permutations where n is the number of characters in the string and
+        O((2^n) * n) space is used where n is the number of letters in the string since we store the string n times
+     */
     private static List<String> letterCasePermutation(String S) {
         List<String> res = new ArrayList<>();
 
@@ -36,6 +39,7 @@ public class letterCasePermutation {
     }
 
     private static void generatePermutations(List<String> result, StringBuilder sb, char[] s, int index) {
+        //when the current generated string sb is of equal length of s, add it to the list
         if (sb.length() == s.length) {
             result.add(sb.toString());
             return;
@@ -64,8 +68,8 @@ public class letterCasePermutation {
         }
     }
 
-    //i == 0, turn character to lowercase
-    //i == 1 turn character to uppercase
+    //flag == 0, turn character to lowercase
+    //flag == 1 turn character to uppercase
     private static char convertLetterCase(char c, int flag) {
         if (!Character.isLetter(c)) {
             return c;

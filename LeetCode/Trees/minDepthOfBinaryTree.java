@@ -21,7 +21,7 @@ public class minDepthOfBinaryTree {
         -1000 <= Node.val <= 1000
      */
 
-    //O(n) time and space recursive solution
+    //O(n) time and space recursive solution [DFS]
     private int minDepth(TreeNode root) {
         if (root == null) {
             return 0;
@@ -46,9 +46,9 @@ public class minDepthOfBinaryTree {
         much more intuitive solution is to perform a level order traversal, at every level we add 1 to the min_depth
         visited. At the first encounter of a leaf node, we know that's the shortest path so we return the min_depth
      */
-    //TC: O(n) time and space, much faster than the recursive solution since this does not traverse the entire tree
+    //TC: O(n) time and space, much faster than the recursive solution since this does not traverse the entire tree [BFS]
     private int minDepthBFS(TreeNode root) {
-        if(root == null) {
+        if (root == null) {
             return 0;
         }
 
@@ -60,17 +60,17 @@ public class minDepthOfBinaryTree {
             int size = queue.size();
             min_depth++;
 
-            for(int i = 0; i < size;i++) {
+            for (int i = 0; i < size; i++) {
                 TreeNode current = queue.remove();
 
                 //if the current is a leaf node, we have reached the shortest path
-                if(current.left == null && current.right == null) {
+                if (current.left == null && current.right == null) {
                     return min_depth;
                 }
-                if(current.left != null) {
+                if (current.left != null) {
                     queue.add(current.left);
                 }
-                if(current.right != null) {
+                if (current.right != null) {
                     queue.add(current.right);
                 }
             }

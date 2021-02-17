@@ -21,7 +21,7 @@ public class averageOfLevels {
 
     //O(n) runtime and O(n) space for the queue size
     private List<Double> averageOfLevels(TreeNode root) {
-        List<Double> averages = new ArrayList<>();  //list to hold the averages at each level
+        List<Double> averages = new LinkedList<>();  //list to hold the averages at each level
 
         if (root == null) {
             return averages;
@@ -48,6 +48,7 @@ public class averageOfLevels {
                     queue.add(current.right);
                 }
             }
+            //the average of a level in the tree is the sum of values in a specific level divided by the number of nodes in the level
             averages.add(sum / size);
         }
         return averages;

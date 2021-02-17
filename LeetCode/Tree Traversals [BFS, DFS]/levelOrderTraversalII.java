@@ -64,4 +64,36 @@ public class levelOrderTraversalII {
         }
         return result;
     }
+
+    //Similar method as above except without the use of a stack to reverse levels
+    public List<List<Integer>> levelOrderBottomEz(TreeNode root) {
+        List<List<Integer>> levels = new LinkedList<>();
+        if (root == null) {
+            return levels;
+        }
+
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+
+        while (!q.isEmpty()) {
+            int size = q.size();
+            List<Integer> level = new LinkedList<>();
+
+            for (int i = 0; i < size; i++) {
+                TreeNode curr = q.remove();
+                level.add(curr.val);
+
+                if (curr.left != null) {
+                    q.add(curr.left);
+                }
+
+                if (curr.right != null) {
+                    q.add(curr.right);
+                }
+            }
+            //add the current level to the front of the list, therefore the last level ends up at the start
+            levels.add(0, level);
+        }
+        return levels;
+    }
 }
