@@ -1,5 +1,4 @@
 public class mergeTwoBinaryTrees {
-
     /*
     Given two binary trees and imagine that when you put one of them to cover the other, some nodes of the two trees
     are overlapped while the others are not.
@@ -22,10 +21,13 @@ public class mergeTwoBinaryTrees {
           / \   \
          5   4   7
 
+    Example 2:
+    Input: root1 = [1], root2 = [1,2]
+    Output: [2,2]
 
     Note: The merging process must start from the root nodes of both trees.
      */
-
+    //TC/S: O(n) and O(n) space due to dfs recursion
     private TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
         if (t1 == null && t2 == null) {
             return null;
@@ -35,6 +37,7 @@ public class mergeTwoBinaryTrees {
     }
 
     private TreeNode merge(TreeNode t1, TreeNode t2) {
+        //if one of the trees is null, return the other
         if (t1 == null) {
             return t2;
         }
@@ -42,7 +45,7 @@ public class mergeTwoBinaryTrees {
             return t1;
         }
 
-        //when both trees have a node, we have to add the node's values
+        //when both trees have a node, add the value of t2's node to t1's node
         t1.val += t2.val;
 
         //if the left or right of t1 is null and t2 isn't, we set the value t1 to the value in t2
