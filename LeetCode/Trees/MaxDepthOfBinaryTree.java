@@ -5,8 +5,7 @@ public class MaxDepthOfBinaryTree {
 
     Note: A leaf is a node with no children.
 
-    Example:
-
+    Example 1:
     Given binary tree [3,9,20,null,null,15,7],
 
         3
@@ -15,8 +14,21 @@ public class MaxDepthOfBinaryTree {
         /  \
        15   7
     return its depth = 3.
+
+    Example 2:
+    Input: root = [1,null,2]
+    Output: 2
+
+    Example 3:
+    Input: root = []
+    Output: 0
+
+    Example 4:
+    Input: root = [0]
+    Output: 1
      */
 
+    //TC/S: O(n) and O(n) space
     private int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;

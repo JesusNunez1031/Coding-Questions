@@ -26,6 +26,7 @@ public class lowestCommonAncestor {
             p and q will exist in the BST.
      */
 
+    //TC/S: O(n) and O(n) space due to DFS
     private TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         //if both p and q are less than the root value, check in the left subtree
         if (p.val < root.val && q.val < root.val) {

@@ -73,11 +73,10 @@ public class TwoSum {
     /*
         TC: O(n) time and constant space using two pointers. At every step, we check if nums[i] + nums[j] > or < than target, if the
         result is greater, then we decrement j, if its less, we increase i. if i == j, then there is no solution
+        Note: This solution is only valid if nums has no duplicates and is sorted
     */
     public int[] twoSumEz(int[] nums, int target) {
-        int[] clone = nums.clone();
-
-
+        //int[] clone = nums.clone();
         int i = 0, j = nums.length - 1;
 
         while (i < j) {

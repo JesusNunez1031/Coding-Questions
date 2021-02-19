@@ -4,23 +4,20 @@ import java.util.Queue;
 public class invertBinaryTree {
 
     /*
-        Invert a binary tree.
-            Example:
-
-            Input:
-
-                 4
-               /   \
-              2     7
-             / \   / \
-            1   3 6   9
-            Output:
-
-                 4
-               /   \
-              7     2
-             / \   / \
-            9   6 3   1
+       Invert a binary tree.
+        Example:
+        Input:
+             4
+           /   \
+          2     7
+         / \   / \
+        1   3 6   9
+        Output:
+             4
+           /   \
+          7     2
+         / \   / \
+        9   6 3   1
      */
 
     //Recursive approach O(h) time where h is the height of the tree and O(n) space
@@ -29,9 +26,11 @@ public class invertBinaryTree {
             return null;
         }
 
+        //save the left subtree to "left" and right subtree to "right"
         TreeNode right = invertTree(root.right);
         TreeNode left = invertTree(root.left);
 
+        //to invert trees, set the left subtree to the right subtree and right to left
         root.left = right;
         root.right = left;
 
@@ -53,7 +52,7 @@ public class invertBinaryTree {
 //        return root;
 //    }
 
-    //Iterative approach, O(n) time
+    //Iterative approach, O(n) time BFS
     public TreeNode invertTreeIter(TreeNode root) {
         if (root == null) {
             return null;
