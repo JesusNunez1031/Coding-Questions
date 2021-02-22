@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class squaresOfSortedArray {
     /*
     Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also
@@ -19,25 +21,29 @@ public class squaresOfSortedArray {
 
     //TC: O(n) time and constant space, the returned array does not count as spaced used
     public int[] sortedSquares(int[] a) {
+        if (a.length == 0) {
+            return new int[]{};
+        }
         int[] squares = new int[a.length];
 
-        //pointer to the first and last value in the array
+        //pointer to the first and last values in the array
         int i = 0, j = a.length - 1;
 
-        //elements are added from the rear
+        //pointer used to add elements to the rear of the array
         int z = a.length - 1;
 
         while (i <= j) {
             /*
-                since the array can have negative values, we check if the first lowest value squared is greater than the
-                last value in the array, if so we add the first value to the end of the new array, otherwise we add the
-                last value squared
+                take the square of a[i] and a[j] and place the larger value at a[z] and increment or decrement the pointer
+                of the larger value used
              */
-            if (a[i] * a[i] > a[j] * a[j]) {
-                squares[z] = a[i] * a[i];
+            int s = a[i] * a[i];
+            int e = a[j] * a[j];
+            if (s > e) {
+                squares[z] = s;
                 i++;
             } else {
-                squares[z] = a[j] * a[j];
+                squares[z] = e;
                 j--;
             }
             z--;
