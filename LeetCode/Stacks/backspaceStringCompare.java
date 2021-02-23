@@ -135,7 +135,7 @@ public class backspaceStringCompare {
                 }
             }
 
-            //check if the character at the current pointer s is equal to the one in t, if they arent, the strings don't match
+            //check if the character at both pointers are equal, if they arent, the strings don't match
             if (s_ptr >= 0 && t_ptr >= 0 && s.charAt(s_ptr) != t.charAt(t_ptr)) {
                 return false;
             }
