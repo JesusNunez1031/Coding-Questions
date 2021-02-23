@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MajorityElement {
+public class majorityElement {
     /*
     Given an array of size n, find the majority element. The majority element is the element that appears more than
     ⌊ n/2 ⌋ times.
@@ -46,7 +46,7 @@ public class MajorityElement {
         Note: here we don't do a second iteration since the majority element is guaranteed
     */
 
-    //TC: O(2n) == O(n) and constant space
+    //TC: O(2n) if the majority is not guaranteed so we need to check nums again, O(n) if the majority element is guaranteed and constant space
     private static int findMajority(int[] nums) {
         int counter = 1;
         int majority_element = nums[0];
@@ -59,13 +59,13 @@ public class MajorityElement {
                 counter--;
             }
 
-            //if the counter reaches 0, reset values
+            //if the counter reaches 0, reset count and pick new majority
             if (counter == 0) {
                 counter = 1;
                 majority_element = val;
             }
         }
-        //"majority element" is guarenteed so we dont have to check if its occurance is > ⌊ n/2 ⌋
+        //"majority element" is guaranteed so we don't have to check if its occurrence is > ⌊ n/2 ⌋
         return majority_element;
     }
 

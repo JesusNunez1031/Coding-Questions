@@ -28,7 +28,10 @@ public class searchIn2DMatrixII {
             return false;
         }
 
-        //since rows and columns are sorted, we can search through through the matrix using a normal binary search
+        /*
+            start at the last column of the first row and move either left if current value is greater than the target,
+            or down if its less than
+        */
         int row = 0;
         int column = matrix[0].length - 1;
 
@@ -36,7 +39,7 @@ public class searchIn2DMatrixII {
             if (matrix[row][column] == target) {
                 return true;
             } else {
-                //if the last value in the row is less than the target, we search in the next row otherwise we search backwards in the same row
+                //if the current value is less than the target, we search in the next row otherwise we search backwards in the same row
                 if (matrix[row][column] < target) {
                     row++;
                 } else {

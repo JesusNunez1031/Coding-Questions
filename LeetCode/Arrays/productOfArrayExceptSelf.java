@@ -109,7 +109,7 @@ public class productOfArrayExceptSelf {
         //since there is nothing before the first value, we set the first value to 1
         res[0] = 1;
 
-        //find the left products of each value in nums
+        //find the product of all values left of each value in nums
         for (int i = 1; i < n; i++) {
             //product left to ith value is the product of all values before i * value before i in nums
             res[i] = res[i - 1] * nums[i - 1];
