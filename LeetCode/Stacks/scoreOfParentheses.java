@@ -27,6 +27,7 @@ public class scoreOfParentheses {
         S is a balanced parentheses string, containing only ( and ).
         2 <= S.length <= 50
      */
+    //TC: O(n) and O(n) space used
     public int scoreOfParentheses(String S) {
         int score = 0;
         Stack<Integer> stack = new Stack<>();

@@ -72,8 +72,9 @@ public class setMatrixZeros {
             if (matrix[i][0] == 0) {
                 firstCol = true;
             }
+            //we check the first cell of each row so we start at j = 1
             for (int j = 1; j < matrix[i].length; j++) {
-                //if the current value is 0, we set the first value in the specific row and column to 0
+                //if the current value is 0, mark the first cell in the specific row and column to 0
                 if (matrix[i][j] == 0) {
                     matrix[i][0] = 0;
                     matrix[0][j] = 0;
@@ -85,8 +86,8 @@ public class setMatrixZeros {
         /*
             for every value after the first row and the first index of the row, we check if there is a 0 in the row, we skip
             the first row since "firstCol" will let us know if the there was a zero at the start of the first row, if there was,
-            we will later turn the entire row and column to 0. At any given index, we check if the start of the row has a zero, or the
-            top of the column is a 0, if either of these is true, we convert the current index to 0
+            we will later turn the entire row and column to 0. At every cell, we check if the start of the row has a zero, or the
+            top of the column is a 0, if either of these is true, we convert the current cell to 0
         */
         for (int i = 1; i < matrix.length; i++) {
             for (int j = 1; j < matrix[i].length; j++) {
