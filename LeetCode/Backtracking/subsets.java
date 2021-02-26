@@ -21,9 +21,8 @@ public class subsets {
     //TC: O(n * 2^n) and space where n is the size of array
     private static List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> powerSet = new ArrayList<>();
-        List<Integer> subset = new ArrayList<>();
 
-        generatePowerSet(nums, subset, powerSet, 0);
+        generatePowerSet(nums, new ArrayList<>(), powerSet, 0);
 
         return powerSet;
     }
@@ -32,6 +31,10 @@ public class subsets {
         //At evey call, we add the current subset since the method will generate all possible permutations of the array nums including the empty set
         powerSet.add(new ArrayList<>(subset));
 
+        /*
+            add the current number at nums[i] to the subset list, when the last value in nums is reached, backtrack to
+            moving to index + 1
+         */
         for (int i = index; i < nums.length; i++) {
             subset.add(nums[i]);
             generatePowerSet(nums, subset, powerSet, i + 1);

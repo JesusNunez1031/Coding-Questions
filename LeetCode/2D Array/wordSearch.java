@@ -29,6 +29,7 @@ public class wordSearch {
         1 <= word.length <= 10^3
         board and word consists only of lowercase and uppercase English letters.
      */
+    //TC: O(m * n) and O(m) space used due to recursive stack
     public boolean exist(char[][] board, String word) {
         /*
             iterate through the board and once we encounter the first letter in the word, we do a DFS search to
