@@ -67,6 +67,8 @@ public class divideTwoIntegers {
                 1. 6 >= 4 [break, times doubled = 0]
                 result += 1
                 dividend = 1 [break, 1 - 3 < 0]
+
+                ***we perform multiplication through bit manipulation by shifting bits left***
          */
         while (dividend - divisor >= 0) {
             int count = 0;
