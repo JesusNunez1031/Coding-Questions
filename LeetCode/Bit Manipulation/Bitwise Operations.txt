@@ -1,0 +1,94 @@
+Notes on the various bitwise operators in Java and how they work
+    Source: https://www.geeksforgeeks.org/bitwise-operators-in-java/
+
+Example numbers used for the operations are:
+    Decimal | Binary
+       2       0010
+       5       0101
+
+- Bitwise OR (|)
+    The OR operator denoted by '|', returns 1 if either of the bits is 1, else 0 if all are 0
+
+    0010
+  | 0101
+    0111 => 7 [Decimal]
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+- Bitwise AND (&)
+    The AND operator denoted by '&' returns 1 if both bits are 1, and 0 otherwise
+
+     0010
+   & 0101
+     0000 => 0 [Decimal]
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+- Bitwise XOR (^)
+    The XOR operator denoted by '^' returns 1 if the two bits are different, and 0 if both of the bits are equal.
+    i.e., One or the other but not both.
+
+    0010
+  ^ 0101
+    0111 = 7 [Decimal]
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+- Bitwise Complement (~)
+    The complement operator denoted by '~' returns the one's compliment of the input value, i.e. all the bits inverted,
+    meaning all 1's turn to 0 and all 0's to 1's.
+    Note: Java compiler will give the twos's complement of the resulting number, i.e. 2's compliment of 13 will be 1110 = -3
+
+    ~ 0010
+      1101 = 13 [Decimal]
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Shift Operators: These operators are used to shift bits of a number left or right thereby multiplying or dividing the number
+by 2 respectively. They can be used when multiplication or division by 2 is needed.
+
+- Singed Right shift operator (>>)
+    Shifts the bits of the number to the right and fills the voids left with the sign bit (1 in case of negative number
+    and 0 in case of positive number). The leftmost bit and the the resulting value after the shift depends on the sign of
+    the initial number. **[Similar effect as of dividing the number with some power of two]**.
+    In laymen terms, shifts the bits of a value right and preserves the sign of the original value.
+
+    Ex 1:
+        2 >> 1 ==> 0001 = 1 [Decimal]
+
+    Ex 2:
+        -2 >> 1 ==> 1111 = -1 [Decimal]
+
+    Ex 3:
+        5 >> 1 ==> 0010 = 2 [Decimal]
+
+    Ex 4:
+        -5 >> 1 ==> 1110 = 2 [Decimal]
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+- Unsigned Right Shift operator (>>>)
+    Shifts the bits of a number to the right and fills 0 on voids left as a result. The leftmost bit is set to 0. (>>>) is
+    unsigned-shift; it'll insert 0. Unlike signed, this operator DOES NOT preserve the sign.
+
+    Ex 1:
+        2 >>> 1 ==> 0001 = 1 [Decimal]
+
+    Ex 2:
+        -2 >> 1 ==> 1111 = 2147483647 [Decimal]
+
+    Ex 3:
+        5 >> 1 ==> 0010 = 2 [Decimal]
+
+    Ex 4:
+        -5 >> 1 ==> 1101 = 2147483645 [Decimal]
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+- Left shift operator (<<)
+    shifts the bits of the number to the left and fills 0 on voids left as a result.
+    **[Similar effect as of multiplying the number with some power of two]**
+
+    Ex 1:
+       a = 2 = 0000 0010
+       b = -5 = 1111 1011
+
+       Ex 1:
+           a << 1 = 0000 0100
+           a << 2 = 0000 1000
+
+       Ex 2:
+           b << 1 = 1111 0110 = -10
+           b << 2 = 1110 1100 = -20
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+- Unsigned LEft shift operator (<<<)
+    unlike unsigned Right Shift, there is no '<<<' operator in Java, because the logical (<<) and arithmetic left-shift
+    (<<<) operations are identical, i.e. << === <<<
