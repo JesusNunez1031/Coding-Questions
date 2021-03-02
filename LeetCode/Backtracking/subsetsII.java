@@ -20,6 +20,7 @@ public class subsetsII {
       []
     ]
      */
+    //TC: O(n log n + (n * 2^n)) where n is the length of nums, 2^n possible combinations
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         //sort the array so all duplicates are close to each other
         Arrays.sort(nums);
