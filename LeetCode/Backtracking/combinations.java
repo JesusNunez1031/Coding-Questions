@@ -30,7 +30,7 @@ public class combinations {
         List<List<Integer>> combinations = new ArrayList<>();   //list to hold all combinations
 
         List<Integer> pairs = new ArrayList<>();    //list to store the current combination
-        generateCombinations(n, k, combinations, pairs, 1);
+        generateCombinationsEff(n, k, combinations, pairs, 1);
 
         return combinations;
     }
@@ -66,6 +66,12 @@ public class combinations {
             return;
         }
 
+        /*
+            reduce the values that can be placed at the start by using n - k + 1, e.g. if n = 4 and k = 2, then
+            1, 2, 3 will be in the fist position, then 2, 3, 4 in the second position. This avoid unnecessary work because
+            at any point we can put only the numbers in the range of [start, n - k + 1] at any position and any recursive
+            calls beyond this range will not produce valid combinations that will be discarded ultimately.
+         */
         for (int i = start; i <= n - k + 1; i++) {
             pairs.add(i);
             generateCombinationsEff(n, k - 1, combinations, pairs, i + 1);
