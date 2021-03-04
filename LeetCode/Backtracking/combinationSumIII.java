@@ -49,7 +49,7 @@ public class combinationSumIII {
         List<List<Integer>> combinations = new ArrayList<>();
 
         //since all values from 1 - 9 can only be used once, the max possible sum generated using all values is 45
-        if(n > 45) {
+        if (n > 45) {
             return combinations;
         }
 
@@ -76,6 +76,31 @@ public class combinationSumIII {
                 sum -= i;
                 runningSum.remove(runningSum.size() - 1);
             }
+        }
+    }
+
+    //Method without the used of sum variable, we just update n and k
+    private void generateCombinations(int k, int n, int index, List<Integer> runningSum, List<List<Integer>> combinations) {
+        //when both n and k are 0 we know there are k values in runningSum that sum up to n
+        if (k == 0 && n == 0) {
+            combinations.add(new ArrayList<>(runningSum));
+            return;
+        }
+
+        /*
+            we only want to use a new value if we can still use a new value, i.e., k > 0, and if the summing of current
+            values hasn't exceeded the target, i.e. n > 0
+         */
+        for (int i = index; i <= 9 && n > 0 && k > 0; i++) {
+            runningSum.add(i);
+            //subtract from the target n the value i and 1 from k to show we've used a new value
+            n -= i;
+            k -= 1;
+            generateCombinations(k, n, i + 1, runningSum, combinations);
+            //when backtracking add the values back to n and k
+            n += i;
+            k += 1;
+            runningSum.remove(runningSum.size() - 1);
         }
     }
 }

@@ -57,7 +57,7 @@ public class palindromePartition {
              */
             if (isPalindrome(s, start, i)) {
                 partition.add(s.substring(start, i + 1));
-                System.out.println("Partitions: " + partition.toString() + "\nRemaining characters in s: " + s.substring(start + 1));  //see all the partitions being formed so far
+                //System.out.println("Partitions: " + partition.toString() + "\nRemaining characters in s: " + s.substring(start + 1));  //see all the partitions being formed so far
                 generatePartitions(s, palindromes, partition, i + 1);
                 partition.remove(partition.size() - 1);
             }

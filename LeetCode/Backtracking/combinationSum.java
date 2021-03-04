@@ -43,6 +43,7 @@ public class combinationSum {
         All elements of candidates are distinct.
         1 <= target <= 500
      */
+    //TC: O(n ^ m) where n is the length of the candidate array and m is the target, we can choose n values target times
     private static List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> combinations = new ArrayList<>();
 
@@ -95,6 +96,27 @@ public class combinationSum {
                 sum -= candidates[i];
                 runningSum.remove(runningSum.size() - 1);
             }
+        }
+    }
+
+    //Method without the use of a sum variable
+    private void generateCombinations(int[] candidates, int index, int target, List<Integer> combination, List<List<Integer>> combinationSum) {
+        //add the current combination to the list of combinationSums when the target == 0 since all values subtracted from target == 0
+        if (target == 0) {
+            combinationSum.add(new ArrayList<>(combination));
+            return;
+        }
+
+        /*
+            we don't want to subtract any more values from the target if its not greater than 0, so we check if target > 0,
+            this avoids extra work
+         */
+        for (int i = index; i < candidates.length && target > 0; i++) {
+            combination.add(candidates[i]);
+            target -= candidates[i];
+            generateCombinations(candidates, i, target, combination, combinationSum);
+            target += candidates[i];
+            combination.remove(combination.size() - 1);
         }
     }
 

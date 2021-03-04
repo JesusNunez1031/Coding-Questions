@@ -31,6 +31,7 @@ public class combinationSumII {
         1 <= candidates[i] <= 50
         1 <= target <= 30
      */
+    //TC: O(n log n + 2 ^ n) we sort the candidates and there are 2 ^ n possible combinations to sum to target, n is the length of the candidates array
     private static List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> combinations = new ArrayList<>();
         //sort the array so duplicates are close and can be skipped
@@ -67,6 +68,30 @@ public class combinationSumII {
                 sum -= candidates[i];
                 runningSum.remove(runningSum.size() - 1);
             }
+        }
+    }
+
+    //Method without the use of a sum variable to track the sum of values chosen
+    private void generateCombinations(int[] candidates, int target, int index, List<Integer> combination, List<List<Integer>> combinations) {
+        //when the target == 0, we know all values in the current combination will sum up to target
+        if (target == 0) {
+            combinations.add(new ArrayList<>(combination));
+            return;
+        }
+
+        /*
+            only add values to the combination list as long as they are not a duplicate and their sum does not exceed
+            target, i.e. target > 0
+         */
+        for (int i = index; i < candidates.length && target > 0; i++) {
+            if (i > index && candidates[i] == candidates[i - 1]) {
+                continue;
+            }
+            combination.add(candidates[i]);
+            target -= candidates[i];
+            generateCombinations(candidates, target, i + 1, combination, combinations);
+            target += candidates[i];
+            combination.remove(combination.size() - 1);
         }
     }
 

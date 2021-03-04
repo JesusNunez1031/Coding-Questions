@@ -32,7 +32,7 @@ public class targetSum {
      */
     private static int dfs(int[] nums, int sum, int target, int i) {
         if (i == nums.length) {
-            if(sum == target) {
+            if (sum == target) {
                 return 1;
             }
         }
@@ -43,6 +43,24 @@ public class targetSum {
 
         //Search the right adding to the sum and then do the same but subtracting from the sum
         return dfs(nums, sum + nums[i], target, i + 1) + dfs(nums, sum - nums[i], target, i + 1);
+    }
+
+    //Method without the use of a sum variable
+    private int dfs(int[] nums, int i, int target) {
+        //when we reach the end of the array, if the target == 0, one way has been found
+        if (i == nums.length) {
+            if (target == 0) {
+                return 1;
+            }
+        }
+
+        //check for bounds
+        if (i < 0 || i >= nums.length || nums[i] < 0) {
+            return 0;
+        }
+
+        //look to the right of the array adding and subtracting from target
+        return dfs(nums, i + 1, target + nums[i]) + dfs(nums, i + 1, target - nums[i]);
     }
 
     public static void main(String[] args) {
