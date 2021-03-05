@@ -34,7 +34,7 @@ public class coinChange {
      */
     //TC: O(n * m) where n is the amount and m is the number of given coins, linear space is used to store the sub-problems
     private static int coinChange(int[] coins, int amount) {
-        Arrays.sort(coins);     //sort the coins array to ensure we dont compare coins of values larger than a target
+        Arrays.sort(coins);     //sort the coins array to ensure we don't compare coins of values larger than a target
 
         //0 indexed so we need to have amount + 1 indexes to access the index at amount
         int[] dp = new int[amount + 1];

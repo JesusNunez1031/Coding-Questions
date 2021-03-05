@@ -28,6 +28,7 @@ public class houseRobberII {
         1 <= nums.length <= 100
         0 <= nums[i] <= 1000
      */
+    //TC: O(n)
     public int rob(int[] nums) {
         if (nums.length == 0) {
             return 0;
@@ -36,9 +37,12 @@ public class houseRobberII {
             return nums[0];
         }
 
-        //calculate the total money made from robbing starting from house 1 and house 2, then compare which has larger pay
-
-        // if we rob the first house, we cannot rob the last house since they are considered to be adjacent
+        /*
+            since houses can be visualized as a circular array, we can either start by robbing the house [0 - n-2], or
+            rob house [1 - n-1], i.e. if we rob the first house, nums[0], we cannot rob the last house since they are
+            considered to be adjacent so we only go up to nums[n - 2], if we start from the 2nd house, nums[1] we can only
+            go up to nums[n - 1], therefore we calculate both of these cases and return the highest yield
+        */
         int house1 = robHouse(nums, 0, nums.length - 2);
         int house2 = robHouse(nums, 1, nums.length - 1);
 
@@ -46,6 +50,7 @@ public class houseRobberII {
     }
 
     private int robHouse(int[] nums, int start, int end) {
+        //if the array is of size 2
         if (start == end) {
             return nums[start];
         }

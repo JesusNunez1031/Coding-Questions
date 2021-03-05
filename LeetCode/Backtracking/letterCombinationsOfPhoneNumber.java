@@ -79,16 +79,17 @@ public class letterCombinationsOfPhoneNumber {
             combinations.add(sb.toString());
         } else {
             /*
-                every row holds all the letters that can be made given a specific digit, so we extract the first digit from
-                digits to get the specific row and then iterate through the list of letters to make the combinations
+                every digit in the keypad, i.e. rows in the char array, holds all the letters that can be made given a
+                specific digit, we extract the first digit from "digits" to get the specific row and then iterate
+                through the list of letters to make the combinations
 
                 Ex: given "23"
                     we take the digit "2" and its first letter, we append all the letters in row "3" to it
                     then we backtrack to the second letter in row "2", append all letters in "3", and repeat
              */
-            int row = Integer.parseInt(digits.substring(0, 1));
-            char[] letters = keypad[row];
-            for (char letter : letters) {
+            int digit = Integer.parseInt(digits.substring(0, 1));
+            char[] row = keypad[digit];
+            for (char letter : row) {
                 sb.append(letter);
                 //System.out.println(sb.toString());      //see all combinations made
                 generateCombinations(digits.substring(1), combinations, sb);
