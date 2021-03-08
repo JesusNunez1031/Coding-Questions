@@ -84,10 +84,10 @@ public class shortEncodingOfWords {
                 //if a new node needs to be added, we make a new level
                 if (iter.children == null) {
                     newLevel = true;
-                    iter.children = new TrieNode[26];
+                    iter.children = new TrieNode[26]; //make the new node for c
                 }
 
-                //add the new node for c if its not present
+                //initialize the new node for c if its not present
                 if (iter.children[c - 'a'] == null) {
                     //if the c exists in the trie, then we are branching out to make a new word
                     if (!newLevel) {
