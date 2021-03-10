@@ -32,7 +32,7 @@ public class longestIncreasingSubsequence {
 
     //TC: O(n^2) since we compare n values in nums n times to see if the longest subsequence increases from up to every value
     private static int lengthOfLIS(int[] nums) {
-        if(nums.length <= 1) {
+        if (nums.length <= 1) {
             return nums.length == 0 ? 0 : 1;
         }
 
@@ -47,14 +47,14 @@ public class longestIncreasingSubsequence {
         */
         Arrays.fill(dp, 1);
 
-        for(int i = 1; i < nums.length;i++) {
-            for(int j = 0; j < i;j++) {
+        for (int i = 1; i < nums.length; i++) {
+            for (int j = 0; j < i; j++) {
                 /*
                     if the current value we are at i is greater than the value at j, then we want to add it to the longest
                     sequence since it is increasing, so we compare the current longest sequence at i which originally should
                     be 1, to 1 + the longest sequence at j.
                  */
-                if(nums[i] > nums[j]) {
+                if (nums[i] > nums[j]) {
                     dp[i] = Math.max(dp[i], 1 + dp[j]);
                 }
             }
@@ -62,6 +62,58 @@ public class longestIncreasingSubsequence {
             largest_sequence = Math.max(largest_sequence, dp[i]);
         }
         return largest_sequence;
+    }
+
+    //TC: O(n log n)
+    public int lengthOfLISBS(int[] nums) {
+        //the dp array will not hold the LIS, it holds the length of the LIS
+        int[] dp = new int[nums.length];
+
+        int longest_sequence = 0;
+
+        for (int num : nums) {
+            //returns the index where num belongs in dp
+            int i = binarySearch(dp, 0, longest_sequence, num);
+
+            /* if num is not found, flip i to a new insertion point
+             if(i < 0) {
+                 i = -(i + 1);
+             }
+              */
+
+            /*
+                if the "num" is largest, we add it to the end of the dp array
+                if "num" is not the largest, we want to keep it and replace the previous ith value in the dp array with it
+                We do this because even if this new num does not directly increase the LIS, it gives us a better chance to
+                build a longer LIS, e.g. if the LIS is currently [0, 4, 5, 10] and "num" = 6, we want to replace the 10
+                with 6, that way if we encounter any value from 7-10, we increase the LIS by 1, rather than keep it at
+                length 4
+                All elements before this ith position will be the best(smallest) LIS so far
+            */
+            dp[i] = num;
+            /*
+                if we insert "num" at the index of longest_sequence, we've added a value at the end of the LIS so we increase
+                it by 1 so if next time "num" is larger, LIS will increase by 1 again, otherwise, it will remain the same
+                since ith value was just replaced
+             */
+            if (i == longest_sequence) {
+                longest_sequence++;
+            }
+        }
+        return longest_sequence;
+    }
+
+    //returns the index of target in dp array
+    private int binarySearch(int[] dp, int left, int right, int target) {
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (dp[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        return left;
     }
 
     public static void main(String[] args) {

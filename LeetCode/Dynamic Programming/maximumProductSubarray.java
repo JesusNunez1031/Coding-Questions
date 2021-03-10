@@ -16,7 +16,7 @@ public class maximumProductSubarray {
     public int maxProduct(int[] nums) {
         int final_max = nums[0];
         int current_max = nums[0];
-        int min = nums[0];
+        int min = nums[0]; //since values can be negative, we need to save all negative values since the product of two negatives can be large
 
         for (int i = 1; i < nums.length; i++) {
             //save reference to the current_max since we update it before using it
