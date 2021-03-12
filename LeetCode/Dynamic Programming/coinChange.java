@@ -32,14 +32,17 @@ public class coinChange {
         1 <= coins[i] <= 2^31 - 1
         0 <= amount <= 10^4
      */
-    //TC: O(n * m) where n is the amount and m is the number of given coins, linear space is used to store the sub-problems
+    //TC: O(n * m) and O(n) space is used to store the sub-problems, where n is the amount and m is the number of given coins
     private static int coinChange(int[] coins, int amount) {
         Arrays.sort(coins);     //sort the coins array to ensure we don't compare coins of values larger than a target
 
         //0 indexed so we need to have amount + 1 indexes to access the index at amount
         int[] dp = new int[amount + 1];
 
-        //fill in the array of dp with the amount + 1 to use as a placeholder to compare
+        /*
+            fill in all values with amount + 1, this is a flag, so if we cant make "amount" with given coins, we'll know
+            since dp[amount] = amount + 1, so -1 will be returned
+         */
         Arrays.fill(dp, amount + 1);
 
         //zeros ways to make up the value 0 with coins
