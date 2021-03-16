@@ -88,7 +88,7 @@ public class palindromicSubstrings {
         if (left > right) {
             return 0;
         }
-
+        //count is the number of times s[left] == s[right] since single letters are palindromes
         int count = 0;
 
         while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
