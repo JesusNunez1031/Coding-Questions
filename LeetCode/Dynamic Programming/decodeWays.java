@@ -44,7 +44,8 @@ public class decodeWays {
         dp[i - 1] and dp[i - 2] assuming the substring s of (i - 1, i) is not zero and substring s of (i - 2, i) is
         greater than or equal to 10 and less than or equal to 26. substring of s(i - 1, i) is one digit and s(i - 2, i)
         is two digits.
-     5. The number of ways to decode s, will be dp[s.length()]
+     5. The number of ways to decode s, will be dp[s.length()] which is the number of ways to decode a string of length
+        s
 
      */
 
@@ -81,7 +82,7 @@ public class decodeWays {
     }
 
     public static void main(String[] args) {
-        String s = "226";
+        String s = "225";
         System.out.println(numDecodings(s));
     }
 }

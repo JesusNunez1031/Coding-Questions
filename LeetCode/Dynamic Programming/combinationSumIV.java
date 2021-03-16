@@ -41,6 +41,9 @@ public class combinationSumIV {
                     6. Finally, the number of ways to make up the target value of 5, is the sum of all the solutions of
                     values less than it in nums                                                                         ==> dp [1, 1, 2, 4, 8, 15]
 
+                    int short, the number of ways to make ith value is the solution to the number of ways to make up all
+                    previous values summed. We only add to dp[i] of the ith value is >= to num since there is no way to
+                    sum up to ith value using a larger value than ith value.
                  */
                 if (i >= num) {
                     dp[i] += dp[i - num];
