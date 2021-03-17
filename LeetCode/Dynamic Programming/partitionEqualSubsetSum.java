@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class partitionEqualSubsetSum {
     /*
     Given a non-empty array nums containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.
@@ -47,12 +50,63 @@ public class partitionEqualSubsetSum {
             for (int j = sum; j >= i; j--) {
                 dp[j] = dp[j] | dp[j - i];
                 //if dp[sum] is turned true, that means there are a set of values that sum up to it so we can return true
-                if(dp[sum]) {
+                if (dp[sum]) {
                     return true;
                 }
             }
         }
         return dp[sum];
+    }
+
+    //TC: O(n) and O(n) space to store state of all possible partitions
+    public boolean canPartitionHM(int[] nums) {
+        //get the total sum of all numbers in nums, this will later help us determine if a partition is possible
+        int total_sum = 0;
+
+        for (int num : nums) {
+            total_sum += num;
+        }
+
+        //if the sum is odd, there is no way for an equal partition
+        if (total_sum % 2 != 0) {
+            return false;
+        }
+
+        /*
+            search through nums making all subsets through a running sum and check if the running sum * 2 == total_sum.
+            We use a HashMap to store previously seen partitions and avoid extra work, i.e. Dynamic Programming
+        */
+        return possiblePartition(nums, 0, 0, total_sum, new HashMap<String, Boolean>());
+    }
+
+    private boolean possiblePartition(int[] nums, int index, int sum, int total_sum, Map<String, Boolean> map) {
+        /*
+            the current partition is where in nums we are parting values and the sum of the respective values, if the map
+            contains this partition, we simply return the truth value for it
+        */
+        String current_partition = index + "" + sum;
+        if (map.containsKey(current_partition)) {
+            return map.get(current_partition);
+        }
+
+        //when we encounter a partition where its sum doubled is the total_sum, nums can be partitioned into two subsets of equal sum
+        if (sum * 2 == total_sum) {
+            return true;
+        }
+
+        //we don't care to add more to the sum if we exceeded half the total_sum with the current partition or if we've checked all values in nums
+        if (sum > total_sum / 2 || index >= nums.length) {
+            return false;
+        }
+
+        //for each partition, we can include nums[index] or not into the sum, we check both and store the result for the given partition into the map
+        boolean foundPartition = possiblePartition(nums, index + 1, sum + nums[index], total_sum, map)
+                || possiblePartition(nums, index + 1, sum, total_sum, map);
+
+        //save the state of the current partition to the map so we avoid extra work
+        map.put(current_partition, foundPartition);
+
+        return foundPartition;
     }
 
     public static void main(String[] args) {

@@ -45,11 +45,11 @@ public class numberOfLongestIncreasingSubsequence {
         if (nums.length <= 1) {
             return n;
         }
-        int[] length = new int[n];  //list to hold the length of the longest subsequence that can be made
+        int[] length = new int[n];  //list to hold the length of the longest subsequence that can be made up to ith index
         int[] count = new int[n];   //will hold how many longest subsequences end at each index
         /*
-            by default, all values alone have a max increasing subsequence of 1 so we initialize all values to 1 and improve
-            the values as we iterate through the list
+            by default, all values alone have a max increasing subsequence of 1 so we initialize all values to 1 and
+            increase this value if increasing subsequences are found
          */
         Arrays.fill(length, 1);
         Arrays.fill(count, 1);
