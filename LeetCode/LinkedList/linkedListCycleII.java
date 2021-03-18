@@ -43,7 +43,7 @@ public class linkedListCycleII {
         /*
             Using two pointers, move "slow" one step at a time while "fast" traverses the list 2x faster than slow
             If there is a cycle in the list, the slow pointer will eventually meet with the fast pointer and when that
-            happens, we break out of the loop
+            happens, we mark hasCycle to true and break out of the loop
         */
         while (fast != null && fast.next != null) {
             slow = slow.next;
@@ -60,7 +60,7 @@ public class linkedListCycleII {
         }
        /*
             The reason we don't just return the next from where slow and fast meet, is because that is just used to
-            confirm that there is a cycle. slow and fast might meet up at the node where cycle starts, therefore, to
+            confirm that there is a cycle. slow and fast might not meet up at the node where cycle starts, therefore, to
             accurately find the start of the cycle, we reset either slow or fast to the head, and have them traverse one
             node at the time, when slow and fast finally meet again, both will be at the start of the cycle
         */
@@ -69,7 +69,7 @@ public class linkedListCycleII {
             slow = slow.next;
             fast = fast.next;
         }
-        //if there was a cycle, either slow or fast will be at the start of the cycle
+        //either slow or fast will be at the start of the cycle
         return slow;
     }
 }
