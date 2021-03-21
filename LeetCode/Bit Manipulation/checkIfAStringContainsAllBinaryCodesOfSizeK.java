@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class CheckIfAStringContainsAllBinaryCodesOfSizeK {
+public class checkIfAStringContainsAllBinaryCodesOfSizeK {
     /*
     Given a binary string s and an integer k.
     Return True if every binary code of length k is a substring of s. Otherwise, return False.
