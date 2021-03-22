@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class ContainsDuplicatesII {
+public class containsDuplicatesII {
     public boolean containsNearbyDuplicate(int[] nums, int k) {
         if (nums.length < 2 || k <= 0) {
             return false;

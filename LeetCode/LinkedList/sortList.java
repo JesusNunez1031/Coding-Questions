@@ -25,10 +25,8 @@ public class sortList {
     Constraints:
         The number of nodes in the list is in the range [0, 5 * 104].
         -10^5 <= Node.val <= 10^5
-
-
      */
-    //TC: O(n log n) and constant space, unless merged using recursion
+    //TC: O(n log n) and O(n) space due to recursive stack
     private static ListNode sortList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
@@ -49,7 +47,7 @@ public class sortList {
         }
           /*
             the fist time we split the list in half, we set the tail.next to null to cut off the second half of the list
-            we do this recursively for every sub list
+            we do this recursively for every sublist
         */
         tail.next = null;
 
@@ -63,20 +61,20 @@ public class sortList {
         ListNode merged = new ListNode(-1);
         ListNode l3 = merged;
 
-        while(l1 != null && l2 != null) {
-            if(l1.val < l2.val) {
-                l3.next = new ListNode(l1.val);
+        while (l1 != null && l2 != null) {
+            if (l1.val < l2.val) {
+                l3.next = l1;
                 l1 = l1.next;
             } else {
-                l3.next = new ListNode(l2.val);
+                l3.next = l2;
                 l2 = l2.next;
             }
             l3 = l3.next;
         }
-        if(l1 != null) {
+        if (l1 != null) {
             l3.next = l1;
         }
-        if(l2 != null) {
+        if (l2 != null) {
             l3.next = l2;
         }
         return merged.next;
@@ -84,13 +82,13 @@ public class sortList {
 
     //Merge two lists using recursion
     private static ListNode mergeListsRec(ListNode l1, ListNode l2) {
-        if(l1 == null) {
+        if (l1 == null) {
             return l2;
         }
-        if(l2 == null) {
+        if (l2 == null) {
             return l1;
         }
-        if(l2.val > l1.val) {
+        if (l2.val > l1.val) {
             return new ListNode(l1.val, mergeListsRec(l1.next, l2));
         } else {
             return new ListNode(l2.val, mergeListsRec(l1, l2.next));

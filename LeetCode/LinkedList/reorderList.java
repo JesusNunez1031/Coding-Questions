@@ -33,7 +33,11 @@ public class reorderList {
             slow = slow.next;
             fast = fast.next.next;
         }
+
+        //reverse the latter half of the list
         ListNode rev = reverseList(slow);
+
+        //to make a first half, we cut off the first half from the second half
         tail.next = null;
 
         reorder(head, rev);

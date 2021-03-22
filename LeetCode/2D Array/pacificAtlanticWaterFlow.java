@@ -43,6 +43,10 @@ public class pacificAtlanticWaterFlow {
 
         boolean[][] pacific = new boolean[m][n];
         boolean[][] atlantic = new boolean[m][n];
+        /*
+            placeholder value as the first smallest value, we don't set it to MAX_VALUE otherwise first case will always
+            be true in dfs and no values will be checked
+         */
         int minVal = Integer.MIN_VALUE;
 
         //traverse the row of each specific sea and mark all cells we can reach at every point
