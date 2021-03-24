@@ -19,26 +19,26 @@ public class reverseLinkedListII {
             be joined to reversed list
          */
         ListNode prev = null;
-        ListNode current_node = head;
+        ListNode iter = head; //node pointer to the current node
 
         //move to the start "m" of the list section to be reversed
         while (m > 1) {
-            prev = current_node;
-            current_node = current_node.next;
+            prev = iter;
+            iter = iter.next;
             m--;
             //decrease n so that when m == 1, n will be n - m places from the end, hence n will be the length of the list to be reversed
             n--;
         }
 
         ListNode connection = prev;     //connection holds the node just before the node m
-        ListNode tail = current_node;   //tail points the to node at m which after reversed will be come the tail of list
+        ListNode tail = iter;   //tail points the to node at m which after reversed will be come the tail of list
 
-        //reverse the inner list from m to n, current_node will be at the node n + 1 when loop ends
+        //reverse the inner list from m to n, iter will be at the node n + 1 when loop ends
         while (n > 0) {
-            ListNode nextNode = current_node.next;
-            current_node.next = prev;
-            prev = current_node;
-            current_node = nextNode;
+            ListNode nextNode = iter.next;
+            iter.next = prev;
+            prev = iter;
+            iter = nextNode;
             n--;
         }
 
@@ -46,14 +46,14 @@ public class reverseLinkedListII {
             if the connection is null, then the whole list was reversed so we point the head to the reversed list, otherwise
             we just connect the first part to the reversed list
         */
-        if (connection != null) {
-            connection.next = prev;
-        } else {
+        if (connection == null) {
             head = prev;
+        } else {
+            connection.next = prev;
         }
 
         //connect the end of the reversed list to the rest of the list
-        tail.next = current_node;
+        tail.next = iter;
 
         return head;
     }
