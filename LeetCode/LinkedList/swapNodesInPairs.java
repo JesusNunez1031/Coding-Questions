@@ -53,12 +53,12 @@ public class swapNodesInPairs {
         ListNode swapped = new ListNode(-1);
         swapped.next = head;    //append the entire list to the next of swapped
 
-        ListNode current = swapped;
+        ListNode current = swapped; //list iterator
 
         //Move through list two nodes at a time
         while (current.next != null && current.next.next != null) {
 
-            //Get the two nodes to be swapped
+            //Get the two nodes to be swapped [Node: initially current == -1, current.next = first node in head]
             ListNode first_node = current.next;
             ListNode second_node = current.next.next;
 

@@ -46,7 +46,7 @@ public class rotateLinkedListKSteps {
        5 -> 1 -> 2 -> 3 -> 4 -> 5 -> 1 -> 2 -> 3 -> 4 -> 5 -> ... (values repeat)
        ↑              ↑                                  ↑
       tail         new tail                             cycle
-    4. then we set the head to the .next of the new_tail so the list becomes 4 -> 5 -> 1 -> 2 -> 3 -> 4 -> 5
+    4. then we set the head to the .next of the new_tail so the list becomes 4 -> 5 -> 1 -> 2 -> 3 -> 4 -> 5 -> ...
                                                                              ↑                   ↑
                                                                             head              new tail
     5. Finally, we get rid of the excess, we set the .next of new_tail to null so the final list becomes, 4 -> 5 -> 1 -> 2 -> 3 -> NULL
@@ -93,7 +93,7 @@ public class rotateLinkedListKSteps {
         //create the cycle in the list
         tail.next = head;
 
-        //the .next of the ith node, "new_tail" is the new head of the reversed list, so we set the head to this node
+        //the .next of the ith node, "new_tail" is the new head of the reversed list since the first node after the "new_tail" must be the head
         head = new_tail.next;
 
         //now we get rid of the cycle by deleting all nodes after the new_tail
