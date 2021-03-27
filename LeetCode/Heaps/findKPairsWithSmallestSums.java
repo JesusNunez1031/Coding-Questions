@@ -45,7 +45,6 @@ public class findKPairsWithSmallestSums {
     public List<List<Integer>> kSmallestPairsS(int[] nums1, int[] nums2, int k) {
         PriorityQueue<SumObject> minHeap = new PriorityQueue<>((a, b) -> a.getSum() - b.getSum());
         List<List<Integer>> pairs = new ArrayList<>();
-        int count = 0;
         for (int num1 : nums1) {
             for (int num2 : nums2) {
                 SumObject pair = new SumObject(Arrays.asList(num1, num2), num1 + num2);
@@ -58,6 +57,8 @@ public class findKPairsWithSmallestSums {
         return pairs;
     }
 
+    /******************************************************************************************************************/
+
     //TC: since its take n log n time to make a heap, the time complexity here is O((n + m) log (n + m))
     private List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {
         List<List<Integer>> pairs = new ArrayList<>();
@@ -68,30 +69,31 @@ public class findKPairsWithSmallestSums {
             return pairs;
         }
 
-        //we want to heap to store the arrays by order of the smallest sums the index pairs make
+        //we want to order the heap in a way where the smallest sums are at the very top, hence we sort heap by smallest sums
         PriorityQueue<int[]> minHeap = new PriorityQueue<>((a, b) -> (a[3]) - (b[3]));
 
         /*
             add all the values in nums1 with the first value in nums2 to the queue so as to make sure we add all the
             smallest pairs first, we only iterate to the smallest value k or the length of n1, if k is < than n1, we don't
-            want to add unnecessary arrays to the queue since they would be ignored
+            want to add unnecessary arrays to the queue since they would be ignored, hence ignoring extra work
          */
         for (int i = 0; i < Math.min(n1, k); i++) {
             /*
                 we add the value of nums1, nums2, and the index used in nums2, this will help iterate through nums2 later
-                we also make the third index to the sum of num1 + nums2 so the heap inserts it in the proper place
+                we also make the third index the sum of num1 + nums2 so the heap inserts it in the proper place
             */
             minHeap.add(new int[]{nums1[i], nums2[0], 0, nums1[i] + nums2[0]});
         }
 
         /*
-            we now go through each of the list in the heap and add the smallest pairs while k > 0. for every new list
+            we now go through each of the lists in the heap and add the smallest pairs while k > 0. for every new list
             taken from the heap, we also add one iff the index from nums2 can be incremented by 1 so as to make a new pair
             using a new value from nums2
          */
         while (!minHeap.isEmpty() && k-- > 0) {
-            int[] list = minHeap.remove();  //remove the top array from the heap
-            pairs.add(Arrays.asList(list[0], list[1])); //add the two indexes to the final result
+            int[] list = minHeap.remove();  //remove the top array from the heap, i.e. the current smallest sum pair
+
+            pairs.add(Arrays.asList(list[0], list[1])); //add the pair indexes to the resulting array
 
             //nums2_index is the index of nums2 used in the current list
             int nums2_index = list[2];
@@ -99,7 +101,7 @@ public class findKPairsWithSmallestSums {
             /*
                 we check if the nums2_index + 1 is still the in range of the length of nums2, if so we add the current
                 value in the nums1 which is list[0], and the new nums2_index + 1 value from nums2 with the new index used
-                as nums2_index + 1
+                as nums2_index + 1. This makes a new pair using a new index from nums2
             */
             if (nums2_index + 1 < n2) {
                 minHeap.add(new int[]{list[0], nums2[nums2_index + 1], nums2_index + 1, list[0] + nums2[nums2_index + 1]});
