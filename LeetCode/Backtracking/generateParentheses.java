@@ -2,8 +2,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class generateParentheses {
+    /*
+    Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+
+    Example 1:
+    Input: n = 3
+    Output: ["((()))","(()())","(())()","()(())","()()()"]
+
+    Example 2:
+    Input: n = 1
+    Output: ["()"]
+
+    Constraints:
+        1 <= n <= 8
+     */
     //TC: O(4^n / sqrt(n)) and space
-    private static List<String> generateParenthesis(int n) {
+    public List<String> generateParenthesis(int n) {
         List<String> parentheses = new ArrayList<>();
 
         generateValidParenthesis(n, parentheses, new StringBuilder(), 0, 0);
@@ -11,7 +25,7 @@ public class generateParentheses {
         return parentheses;
     }
 
-    private static void generateValidParenthesis(int n, List<String> parentheses, StringBuilder sb, int open, int close) {
+    private void generateValidParenthesis(int n, List<String> parentheses, StringBuilder sb, int open, int close) {
         /*
             A valid set of parenthesis has an equal counter part count for every opening brace, Ex: if we have "(("
             then we also need "))" to make it a valid set. So we check if the length of the current string is double that
@@ -28,7 +42,7 @@ public class generateParentheses {
         if (open < n) {
             sb.append("(");
             open += 1;
-            System.out.println(sb.toString());  //see the current parenthesis being formed
+            //System.out.println(sb.toString());  //see the current parenthesis being formed
             generateValidParenthesis(n, parentheses, sb, open, close);
             open -= 1;
             sb.setLength(sb.length() - 1);
@@ -36,14 +50,14 @@ public class generateParentheses {
         if (close < open) {
             sb.append(")");
             close += 1;
-            System.out.println(sb.toString());  //see the current parenthesis being formed
+            //System.out.println(sb.toString());  //see the current parenthesis being formed
             generateValidParenthesis(n, parentheses, sb, open, close);
             sb.setLength(sb.length() - 1);
         }
     }
 
     public static void main(String[] args) {
-        int n = 3;
-        System.out.println(generateParenthesis(n).toString());
+        generateParentheses t = new generateParentheses();
+        System.out.println(t.generateParenthesis(4).toString());
     }
 }

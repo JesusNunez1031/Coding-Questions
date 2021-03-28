@@ -57,7 +57,7 @@ public class isGraphBipartite {
         */
         int[] color = new int[graph.length]; //array holds the colors of each node in graph
 
-        //for each node in the graph, color it if its not colored, then visit all adjacent nodes and color them the oppisite color, this is done using a BFS search of the nodes
+        //for each node in the graph, color it if its not colored, then visit all adjacent nodes and color them the opposite color, this is done using a BFS search of the nodes
         for (int i = 0; i < graph.length; i++) {
             //only color a node if its not colored yet
             if (color[i] == 0) {

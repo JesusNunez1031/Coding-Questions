@@ -24,6 +24,7 @@
       <sourceFolder url="file://$MODULE_DIR$/DFS &amp; BFS &amp; Topological Sort" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Graphs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Heaps" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
