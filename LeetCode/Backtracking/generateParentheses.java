@@ -58,6 +58,6 @@ public class generateParentheses {
 
     public static void main(String[] args) {
         generateParentheses t = new generateParentheses();
-        System.out.println(t.generateParenthesis(4).toString());
+        System.out.println(t.generateParenthesis(1).toString());
     }
 }
