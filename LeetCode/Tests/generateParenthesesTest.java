@@ -3,13 +3,13 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class generateParenthesesTest {
 
     generateParentheses driver = new generateParentheses();
 
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("Generate all possible parentheses combinations using n = 1")
     void generateOne() {
         List<String> parentheses = driver.generateParenthesis(1);
@@ -17,7 +17,7 @@ class generateParenthesesTest {
         System.out.println("N = 1: " + parentheses.toString());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("Generate all possible parentheses combinations using n = 2")
     void generateTwo() {
         List<String> parentheses = driver.generateParenthesis(2);
@@ -25,7 +25,7 @@ class generateParenthesesTest {
         System.out.println("N = 2: " + parentheses.toString());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("Generate all possible parentheses combinations using n = 3")
     void generateThree() {
         List<String> parentheses = driver.generateParenthesis(3);
