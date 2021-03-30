@@ -28,7 +28,7 @@ public class nonOverlappingIntervals {
      */
 
     //TC/S: O(n) time and constant space used since we just use a reference to the previous non-overlapping intervals end time
-    private int eraseOverlapIntervals(int[][] intervals) {
+    public int eraseOverlapIntervals(int[][] intervals) {
         if (intervals.length == 0) {
             return 0;
         }
