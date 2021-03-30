@@ -4,7 +4,8 @@ import java.util.List;
 
 public class mergeIntervals {
     /*
-    Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
+    Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an
+    array of the non-overlapping intervals that cover all the intervals in the input.
 
     Example 1:
     Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
@@ -23,7 +24,7 @@ public class mergeIntervals {
         0 <= starti <= endi <= 10^4
      */
     //TC: O(n log n) since we sort the intervals and space is O(n)
-    public static int[][] merge(int[][] intervals) {
+    public int[][] merge(int[][] intervals) {
         //if there is only one interval, we have no intervals to merge
         if (intervals.length == 1) {
             return intervals;
@@ -37,17 +38,26 @@ public class mergeIntervals {
         list.add(intervals[0]);
 
         /*
-            for every interval, compare the start time to the end time of the previous interval
-            if the start time is less than or equal to the end time of the previous interval, make the
-            end time of the previous interval the max end time of the current interval or the previous
+            for every interval, compare the start time to the end time of the previous interval if the start time is less
+            than or equal to the end time of the previous interval, make the end time of the previous interval the max
+            end time of the current interval or the previous
         */
         int j = 0;  //pointer to refer to the previous interval since not all intervals will be added
         for (int i = 1; i < intervals.length; i++) {
             int start_time = intervals[i][0];
-            int[] prev_interval = list.get(j);
+            int[] prev_interval = list.get(j); //get the previous interval j
+
+            /*
+                if the start time of the current interval is less than or equal to the end time of the previous interval,
+                then the end time of the previous interval becomes the larger end time of the two intervals
+             */
             if (start_time <= prev_interval[1]) {
                 prev_interval[1] = Math.max(prev_interval[1], intervals[i][1]);
             } else {
+                /*
+                    if the intervals cant be merged, then add the current interval to the list and increase j so it
+                    becomes the previous interval during the next comparison
+                 */
                 list.add(intervals[i]);
                 j++;
             }
@@ -65,6 +75,5 @@ public class mergeIntervals {
     public static void main(String[] args) {
         //int[][] intervals = {{1, 3}, {2, 6}, {5, 10}, {9, 18}};
         int[][] intervals = {{0, 4}, {1, 4}};
-        System.out.println(Arrays.deepToString(merge(intervals)));
     }
 }
