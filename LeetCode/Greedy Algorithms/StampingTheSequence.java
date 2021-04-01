@@ -52,19 +52,19 @@ public class StampingTheSequence {
 
         while (count != tchar.length) {
             //checks if we can stamp target, if false, the current target cant be stamped
-            boolean didchange = false;
+            boolean stamped = false;
 
             //check all substrings in target to see if we can stamp it or not
             for (int i = 0; i <= tchar.length - schar.length; i++) {
                 /*
                     if the current index has not been checked and we can stamp the target, i.e. we can place '?' of stamp
-                    length into target, then we update the count mark the index as visited, mark didchange as true as we
+                    length into target, then we update the count mark the index as visited, mark stamped as true as we
                     could stamp and add the index to the list of stamped indexes
                 */
                 if (!visited[i] && canReplace(tchar, i, schar)) {
                     count = replace(tchar, i, schar.length, count);
                     visited[i] = true;
-                    didchange = true;
+                    stamped = true;
                     res.add(i);
 
                     //when the count == target length, that means all stamps in target are complete
@@ -74,7 +74,7 @@ public class StampingTheSequence {
                 }
             }
             //if we could not stamp at an index, target cant be made by stamp string
-            if (!didchange) {
+            if (!stamped) {
                 return new int[0];
             }
         }
