@@ -16,7 +16,7 @@ public class PalindromeLinkedList {
         Could you do it in O(n) time and O(1) space?
      */
     //TC: O(n) and constant space
-    public static boolean isPalindrome(ListNode head) {
+    public boolean isPalindrome(ListNode head) {
         if (head == null) {
             return true;
         }
@@ -51,7 +51,7 @@ public class PalindromeLinkedList {
     }
 
     //Method to reverse a list given the first node
-    public static ListNode reverseList(ListNode head) {
+    private ListNode reverseList(ListNode head) {
         //prev is used to save the previous node of a node in the list
         ListNode prev = null;
         while (head != null) {
@@ -87,16 +87,5 @@ public class PalindromeLinkedList {
             iter2 = iter2.next;
         }
         return true;
-    }
-
-    public static void main(String[] args) {
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(3);
-        head.next.next.next.next = new ListNode(2);
-        head.next.next.next.next.next = new ListNode(1);
-        System.out.println(isPalindrome(head));
-
     }
 }
