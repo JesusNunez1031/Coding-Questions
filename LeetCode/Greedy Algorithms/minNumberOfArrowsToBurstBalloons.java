@@ -48,7 +48,7 @@ public class minNumberOfArrowsToBurstBalloons {
 
         int arrows = 1; //at least one arrow will be shot if there are > 0 balloons
 
-        //sort balloons by the value of the end
+        //sort balloons by their end values, this makes it easier to shoot arrows from the end values
         Arrays.sort(points, (a, b) -> Integer.compare(a[1], b[1]));
 
         int position_of_arrow = points[0][1]; //arrow fires from the end to cover max distance
