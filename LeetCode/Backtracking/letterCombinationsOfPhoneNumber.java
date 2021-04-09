@@ -53,7 +53,7 @@ public class letterCombinationsOfPhoneNumber {
             {'w', 'x', 'y', 'z'}};  //Digit 9
 
     //TC & space: O(3^n * 4^m) where n is all the rows with 3 letters and m is all the rows with 4 letters
-    private static List<String> letterCombinations(String digits) {
+    public List<String> letterCombinations(String digits) {
         List<String> combinations = new ArrayList<>();
         if (digits == null || digits.length() == 0) {
             return combinations;
@@ -64,7 +64,7 @@ public class letterCombinationsOfPhoneNumber {
         return combinations;
     }
 
-    private static void generateCombinations(String digits, List<String> combinations, StringBuilder sb) {
+    private void generateCombinations(String digits, List<String> combinations, StringBuilder sb) {
         /*
             when we call the method, we always hit 0 once we've made one combination
             Ex: given "234"
@@ -98,8 +98,8 @@ public class letterCombinationsOfPhoneNumber {
         }
     }
 
-    public static void main(String[] args) {
-        String digit = "234";
-        System.out.println(letterCombinations(digit));
-    }
+//    public static void main(String[] args) {
+//        String digit = "234";
+//        System.out.println(letterCombinations(digit));
+//    }
 }
