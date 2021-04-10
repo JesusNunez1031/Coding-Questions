@@ -23,7 +23,9 @@ public class verifyAlienDictionary {
     Example 3:
     Input: words = ["apple","app"], order = "abcdefghijklmnopqrstuvwxyz"
     Output: false
-    Explanation: The first three characters "app" match, and the second string is shorter (in size.) According to lexicographical rules "apple" > "app", because 'l' > '∅', where '∅' is defined as the blank character which is less than any other character (More info).
+    Explanation: The first three characters "app" match, and the second string is shorter (in size.) According to
+    lexicographical rules "apple" > "app", because 'l' > '∅', where '∅' is defined as the blank character which is
+    less than any other character (More info).
 
 
     Constraints:
@@ -34,7 +36,7 @@ public class verifyAlienDictionary {
      */
 
     //TC: O(C) where c is the number of words and constant space since we use a map only to store 26 letters
-    public static boolean isAlienSorted(String[] words, String order) {
+    public boolean isAlienSorted(String[] words, String order) {
 
         //map to hold the lexicographical order of the letters in "order"
         Map<Character, Integer> map = new HashMap<>();
@@ -85,7 +87,7 @@ public class verifyAlienDictionary {
         return true;
     }
 
-    private static boolean isValid(String word, Map<Character, Integer> map) {
+    private boolean isValid(String word, Map<Character, Integer> map) {
         if (word.length() == 1) {
             return true;
         }
@@ -96,12 +98,5 @@ public class verifyAlienDictionary {
             }
         }
         return true;
-    }
-
-    public static void main(String[] args) {
-        String[] words = {"hello", "leetcode"};
-        String order = "hlabcdefgijkmnopqrstuvwxyz";
-
-        System.out.println(isAlienSorted(words, order));
     }
 }
