@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class BeautifulArrangement {
     /*
     Suppose you have n integers from 1 to n. We define a beautiful arrangement as an array that is constructed by these
