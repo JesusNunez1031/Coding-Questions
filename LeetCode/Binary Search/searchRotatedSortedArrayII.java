@@ -19,7 +19,7 @@ public class searchRotatedSortedArrayII {
      */
 
     //TC: O(n) and O(1)
-    private boolean search(int[] nums, int target) {
+    public boolean search(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
 
@@ -32,9 +32,14 @@ public class searchRotatedSortedArrayII {
                 since the array is shifted, all values on the left will be in ascending order
              */
             } else if (nums[left] < target) {
+                //skip any duplicates
                 while (left < right && nums[left + 1] == nums[left]) {
                     left++;
                 }
+                /*
+                    duplicates or not, we need to move left forward, if there was duplicates, left will be at the last
+                    duplicate so we move it to the next index.
+                 */
                 left++;
             /*
                 same applies to the right, if the value at right is greater than the target, move right left while
@@ -46,11 +51,13 @@ public class searchRotatedSortedArrayII {
                     right--;
                 }
                 right--;
+            }
             //if left and right are equal break out and return false, the target was not found
-            } else {
+            else {
                 break;
             }
         }
+        //target not found
         return false;
     }
 }

@@ -24,7 +24,7 @@ public class searchRotatedSortedArray {
         -10^4 <= target <= 10^4
      */
     //TC: O(log n)
-    private static int search(int[] nums, int target) {
+    public int search(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
 
@@ -33,8 +33,8 @@ public class searchRotatedSortedArray {
             int mid = left + (right - left) / 2;
 
             /*
-            if the value at the center is greater than the last value, we want to move right so we set the left to
-            mid + 1 since mid is in the reversed part, therefore the smaller value must be to the right
+                if the value at the center is greater than the last value, we want to move right so we set the left to
+                mid + 1 since mid is in the reversed part, therefore the smaller value must be to the right
              */
             if (nums[mid] > nums[right]) {
                 left = mid + 1;
@@ -54,9 +54,9 @@ public class searchRotatedSortedArray {
 
 
         if (target >= nums[start] && target <= nums[right]) {
-            left = start;   //set the left index to the start
+            left = start;   //search the rotated half
         } else {
-            right = start;  //if the target is not in the range, we want to set the end of the search bound to start
+            right = start;  //if the target is not in the range, we search the un-rotated part
         }
 
         //now that we have a sorted segment of the array, we can do a normal search
@@ -73,12 +73,7 @@ public class searchRotatedSortedArray {
                 }
             }
         }
+        //target not found
         return -1;
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {4, 5, -10, -3, -1, 1, 2};
-        int target = -10;
-        System.out.println(search(arr, target));
     }
 }
