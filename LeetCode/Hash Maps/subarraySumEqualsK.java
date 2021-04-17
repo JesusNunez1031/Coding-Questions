@@ -42,7 +42,7 @@ public class subarraySumEqualsK {
             the Sum[0, i-1] of our future values.
 
             Then if we want to see if our current sum can make a subarray that equals K, we can check our map to see if
-            there exists a sum that equals: Sum[0,j] - K. If there is, that must mean there must be atleast one subarray
+            there exists a sum that equals: Sum[0,j] - K. If there is, that must mean there must be at least one subarray
             from index i to j that equals K.
             */
             if (map.containsKey(sum - k)) {
