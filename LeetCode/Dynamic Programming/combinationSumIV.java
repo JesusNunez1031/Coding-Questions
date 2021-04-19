@@ -14,12 +14,31 @@ public class combinationSumIV {
     (2, 1, 1)
     (2, 2)
     (3, 1)
-
     Note that different sequences are counted as different combinations.
-    Therefore the output is 7.
+
+    Example 2:
+    Input: nums = [9], target = 3
+    Output: 0
+
+    Constraints:
+        1 <= nums.length <= 200
+        1 <= nums[i] <= 1000
+        All the elements of nums are unique.
+        1 <= target <= 1000
+
+     Follow up: What if negative numbers are allowed in the given array? How does it change the problem? What limitation
+                we need to add to the question to allow negative numbers?
      */
-    //TC: O(n * m) for every number "n" in the range of target, we check the list of "m" nums for values less than it to get the number of solutions
-    private static int combinationSum4(int[] nums, int target) {
+    /*
+        TC: O(n * m) for every number "n" in the range of target, we check the list of "m" nums for values less than it
+            to get the number of solutions
+        Follow up: The use of negative numbers opens up the chance of an infinite loop since there can be infinite number
+                   of ways to sum up to a target, e.g. if target == 5 and nums = [5, -5], we can always make target by
+                   using 5, and an infinite number of combinations of (5,-5), so (5, (-5,5)). To allow negatives and an
+                   infinite loop, we must add limitations to the number of times numbers in "nums" can be used.
+     */
+    public int combinationSum4(int[] nums, int target) {
+        //dp array holds all the number of ways to sum up to ith value including target using values in nums
         int[] dp = new int[target + 1];
 
         //there is one way of making zero by having no values
@@ -42,7 +61,7 @@ public class combinationSumIV {
                     values less than it in nums                                                                         ==> dp [1, 1, 2, 4, 8, 15]
 
                     int short, the number of ways to make ith value is the solution to the number of ways to make up all
-                    previous values summed. We only add to dp[i] of the ith value is >= to num since there is no way to
+                    previous values summed. We only add to dp[i] if the ith value is >= to num since there is no way to
                     sum up to ith value using a larger value than ith value.
                  */
                 if (i >= num) {
@@ -51,11 +70,5 @@ public class combinationSumIV {
             }
         }
         return dp[target];
-    }
-
-    public static void main(String[] args) {
-        int[] nums = {1, 2, 3, 4};
-        int target = 5;
-        System.out.println(combinationSum4(nums, target));
     }
 }
