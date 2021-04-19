@@ -14,8 +14,13 @@ public class removeNthNodeFromEnd {
         Example 3:
         Input: head = [1,2], n = 1
         Output: [1]
-     */
 
+        Constraints:
+            The number of nodes in the list is sz.
+            1 <= sz <= 30
+            0 <= Node.val <= 100
+            1 <= n <= sz
+     */
 
     //Method runs in O(n + n) or O(n) O(1) space
     public ListNode removeNthFromEnd(ListNode head, int n) {
