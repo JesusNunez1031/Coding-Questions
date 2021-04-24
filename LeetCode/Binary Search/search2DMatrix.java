@@ -29,7 +29,7 @@ public class search2DMatrix {
         TC: O(m log n), we search through m rows to check which row we will search for the target in, once a row is
         found we do a binary search through the n columns for the target
      */
-    private boolean searchMatrix(int[][] matrix, int target) {
+    public boolean searchMatrix(int[][] matrix, int target) {
         if (matrix.length == 0 || matrix[0].length == 0) {
             return false;
         }
@@ -49,7 +49,7 @@ public class search2DMatrix {
         }
 
         //if the target is not in the range of the given row values, the target does not exist in matrix
-        if (!(matrix[row][0] <= target && target <= matrix[row][n - 1])) {
+        if (!(target >= matrix[row][0] && target <= matrix[row][n - 1])) {
             return false;
         }
 
@@ -79,7 +79,7 @@ public class search2DMatrix {
         if we find a row where its first value is less than the target, the target might be there so we avoid searching
         all cells taking O(N^2) time. This is much less efficient than doing a binary search
      */
-    private boolean searchMatrixEz(int[][] matrix, int target) {
+    public boolean searchMatrixEz(int[][] matrix, int target) {
         if (matrix.length == 0 || matrix[0].length == 0) {
             return false;
         }
