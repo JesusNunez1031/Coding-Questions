@@ -25,6 +25,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Graphs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Heaps" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Trie" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
