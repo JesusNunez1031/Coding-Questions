@@ -92,7 +92,12 @@ public class constructTargetArrayWithMultipleSums {
 
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> (b - a));
 
-        //find the index of the largest value in the array while also finding the total sum of array
+        /*
+            find the sum of all values in the array and add all the values to the maxHeap PQ. We use the PQ to process
+            all the highest values and reduce them depending on what the sum is at every step. Once the top of the queue
+            is 1, we know all values were able to be turned to 1. Negatives and 0's are not allowed into the queue hence
+            if we ever make a 0 or negative after an update, we return false.
+         */
         for (int num : target) {
             sum += num;
             maxHeap.offer(num);
