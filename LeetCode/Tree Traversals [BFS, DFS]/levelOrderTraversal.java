@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class levelOrderTraversal {
 
@@ -21,14 +18,12 @@ public class levelOrderTraversal {
           [15,7]
         ]
      */
-
-
+    //TC/S: O(n)
     public List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> result = new ArrayList<>();
-
         if (root == null) {
-            return result;
+            return Collections.emptyList();
         }
+        List<List<Integer>> levels = new ArrayList<>();
 
         Queue<TreeNode> queue = new LinkedList<>();
         //add the root of tree to the queue
@@ -36,7 +31,7 @@ public class levelOrderTraversal {
 
         //we need to process all values in the queue
         while (!queue.isEmpty()) {
-            int size = queue.size();
+            int size = queue.size(); //number of nodes we need to process for the current level
 
             //List to store all the values in the current level
             List<Integer> currentLevel = new ArrayList<>();
@@ -53,8 +48,39 @@ public class levelOrderTraversal {
                     queue.add(current.right);
                 }
             }
-            result.add(currentLevel);
+            //add the level to list of levels
+            levels.add(currentLevel);
         }
-        return result;
+        return levels;
+    }
+
+    List<List<Integer>> levels = new ArrayList<>();
+
+    //recursive function
+    public List<List<Integer>> levelOrderRec(TreeNode root) {
+        if (root == null) {
+            return levels;
+        }
+        levelOrderTraverse(root, 0);
+        return levels;
+    }
+
+    //helper method for recursive function
+    private void levelOrderTraverse(TreeNode root, int level) {
+        if (root == null) {
+            return;
+        }
+
+        //if the levels list matches the level we are in, we need a new list for the current level
+        if (levels.size() == level) {
+            levels.add(new ArrayList<>());
+        }
+
+        //add the current node "root" to the list of the current level
+        levels.get(level).add(root.val);
+
+        //process left and right subtrees by add 1 to the level
+        levelOrderTraverse(root.left, level + 1);
+        levelOrderTraverse(root.right, level + 1);
     }
 }
