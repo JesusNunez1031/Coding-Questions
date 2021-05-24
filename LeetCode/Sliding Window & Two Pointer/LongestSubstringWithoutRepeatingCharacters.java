@@ -2,7 +2,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class LongestSubstringWithoutRepeatingCharacters {
-
     /*
         Given a string s, find the length of the longest substring without repeating characters.
 
@@ -39,7 +38,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
     private int lengthOfLongestSubstring(String s) {
         int n = s.length();
         //check for a valid string
-        if(n == 0) {
+        if (n == 0) {
             return 0;
         }
         //pointer to the start of the substring, "start", pointer to end of substring, "end", and variable to hold max length
@@ -63,6 +62,33 @@ public class LongestSubstringWithoutRepeatingCharacters {
                  */
                 set.remove(s.charAt(start++));
             }
+        }
+        return longest;
+    }
+
+    //TC: O(n) and O(min(n, m)) n being the length of the string and m being the size of alphabet
+    public int lengthOfLongestSubstringEz(String s) {
+        int i = 0, j = 0; //window j: start | i: end
+        int[] freq = new int[128];
+        int longest = 0; //length of largest substring s with no repeating characters
+
+        while (i < s.length()) {
+            //add to the frequency of the new character at the end
+            char c = s.charAt(i);
+            freq[c]++;
+
+            //reduce window if we've added a duplicate character to the sequence, i.e. current character count > 1
+            while (freq[c] > 1) {
+                freq[s.charAt(j++)]--;
+            }
+
+            //update longest if new window is larger in size
+            if (longest < i - j + 1) {
+                longest = i - j + 1;
+            }
+
+            //move to the next character
+            i++;
         }
         return longest;
     }

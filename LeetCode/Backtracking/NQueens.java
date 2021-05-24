@@ -39,11 +39,14 @@ public class NQueens {
             return;
         }
 
+        //j are the columns in the current ith row
         for (int j = 0; j < board.length; j++) {
             //we can place a queen of there is no other queen on the left or right diagonal, or directly above or below it
             if (!diagonal.contains(i + j) && !diagonal2.contains(j - i) && !vertical.contains(j)) {
                 //setting the board index to 1 is equivalent to placing a queen at the index
                 board[i][j] = 1;
+
+                //add the current diagonals and column position to the sets so we can use them to check for a valid position of the next queen
                 diagonal.add(i + j);
                 diagonal2.add(j - i);
                 vertical.add(j);
@@ -56,6 +59,7 @@ public class NQueens {
         }
     }
 
+    //Converts a board where 1's are queens and 0's are dots to a string matrix of Q's and ...'s
     private void addToResult(int[][] board) {
         List<String> qBoard = new ArrayList<>();
         for (int[] rows : board) {
