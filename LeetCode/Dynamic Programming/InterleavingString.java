@@ -41,9 +41,12 @@ public class InterleavingString {
                 if (i == 0 && j == 0) {
                     dp[i][j] = true;
                 }
+                //compare the first row
                 else if (i == 0) {
                     dp[i][j] = dp[i][j - 1] && s2.charAt(j - 1) == s3.charAt(i + j - 1);
-                } else if (j == 0) {
+                }
+                //compare the first column
+                else if (j == 0) {
                     dp[i][j] = dp[i - 1][j] && s1.charAt(i - 1) == s3.charAt(i + j - 1);
                 }
                 /*
@@ -57,9 +60,11 @@ public class InterleavingString {
               c (dbbc) |  F |   |       |         |          |
              a (dbbca) |  F |   |       |         |          |
 
-                   dp[1][1] is true since we consider a and d with s3.charAt(i + j - 1), if either of these match, then
-                   the cell is true.
-                   The same applies for the rest, at dp[1][2] we consider aa and db, since a == a we set to T
+                  - dp[1][1] is true since we consider a and d with s3.charAt(i + j - 1), if either of these match, then
+                    the cell is true.
+                  - The same applies for the rest, at dp[1][2] we consider aa and db, since a == a we set to T
+                  - at every new row, we compare the character at s3.charAt(rowValue) where rowValue = i + j - 1, by the
+                    time the last index is reached, the entire s3 string will be compared to s1 and s2.
                  */
                 else {
                     dp[i][j] = dp[i][j - 1] && s2.charAt(j - 1) == s3.charAt(i + j - 1) || dp[i - 1][j] && s1.charAt(i - 1) == s3.charAt(i + j - 1);
