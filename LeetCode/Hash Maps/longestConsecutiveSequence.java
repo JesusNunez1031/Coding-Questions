@@ -132,7 +132,7 @@ public class longestConsecutiveSequence {
         for (int num : nums) {
             /*
                 to avoid an O(n^2) solution, we avoid extra work by only looking for a sequence when "num" is the start
-                of the sequence meaning num - 1 is not in the set
+                of the sequence meaning num - 1 is not in the set avoiding the need to re-check previous sequences
              */
             if (!set.contains(num - 1)) {
                 int sequence = 1;
