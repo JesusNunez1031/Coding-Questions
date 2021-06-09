@@ -79,6 +79,7 @@ public class sortCharactersByFrequency {
         //store the highest index value to avoid iteration of entire array if possible
         int maxIndex = -1;
 
+        //store the frequency of each character in s and also update the largest char index seen
         for (int c : s.toCharArray()) {
             if (c > maxIndex) {
                 maxIndex = c;
@@ -100,6 +101,7 @@ public class sortCharactersByFrequency {
 
     //Method the get the index with the highest value in the frequency array
     public static int getMax(int[] freq, int range) {
+        //max holds the largest frequency seen so far, index holds the index of the largest frequency
         int max = -1, index = 0;
         for (int i = 0; i <= range; i++) {
             if (freq[i] > max) {

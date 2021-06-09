@@ -53,10 +53,13 @@ public class topKFrequentElements {
 
     //TC:O(n log n)
     public int[] topKFrequentEz(int[] nums, int k) {
+        //holds a key-value pair where the key is a num in nums and value is the frequency of num in nums
         Map<Integer, Integer> map = new HashMap<>();
 
+        //maxHeap of map entries, the entries at the top are values with highest frequencies
         PriorityQueue<Map.Entry<Integer, Integer>> heap = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
 
+        //add the frequency of each value to the map
         for (int num : nums) {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
@@ -64,6 +67,7 @@ public class topKFrequentElements {
         //add all the entries in the map to the heap, the top most entries in the heap will be the most frequent values
         heap.addAll(map.entrySet());
 
+        //add the first k highest frequencies to the result
         int[] result = new int[k];
         for (int i = 0; i < k; i++) {
             result[i] = heap.remove().getKey();
