@@ -43,9 +43,10 @@ public class findKthLargestElement {
         Random randy = new Random(0);
 
         while (left <= right) {
-            int chosenPivotIndex = left + randy.nextInt(right - left + 1);      //pick a random pivot in the array
-            int sortedIndexOfPivot = partition(arr, left, right, chosenPivotIndex);    //returns the final index of the pivot, final as in if the array was sorted, this is the index the pivot would be in
+            int chosenPivotIndex = left + randy.nextInt(right - left + 1); //pick a random pivot in the array
 
+            //returns the sorted index of the value at chosenPivotIndex, i.e. the index the value would be in if nums was sorted
+            int sortedIndexOfPivot = partition(arr, left, right, chosenPivotIndex);
             /*
               if the sortedIndexOfPivot is equal to n - k, then we have found the kth largest value since if we assume a
               sorted array then arr[length of array - k] is the index of the kth largest value.
@@ -69,16 +70,20 @@ public class findKthLargestElement {
     }
 
     public static int partition(int[] arr, int left, int right, int pivotIndex) {
-        int pivotValue = arr[pivotIndex];    //value at the index of pivotIndex
+        int pivotValue = arr[pivotIndex];    //value of the random chosen index
         int tail_of_lesser_values = left;    //index of the last value smaller than the pivot
 
-        //since we don't want to modify the pivot value, we swap it with the value at the right
+        //since we don't want to modify the position of the pivot value, we swap it with the value at the right
         swap(arr, pivotIndex, right);
 
         for (int i = left; i < right; i++) {
             /*
                 if the current value is less than the initial pivot value, we need to swap it with the tail of the last
-                value that was less than the pivot value and increase the tail
+                value that was less than the pivot value so that its position is to the left of the pivotVal
+
+                increase the tail by one so next time we find a new value less than pivotValue, we can swap it to this
+                index, or if no other values are left to swap, the pivotIndex value can be placed in its sorted index,
+                i.e. all values before it will be less than it
              */
             if (arr[i] < pivotValue) {
                 swap(arr, i, tail_of_lesser_values);
@@ -87,8 +92,8 @@ public class findKthLargestElement {
         }
 
         /*
-        the initial right value is now the tail of all the items less than the pivot, so we swap it back with the pivot
-        value and now the pivot value is in its sorted position so we return its index
+            the position of the pivotIndex value is at the right, so to place the value in its sorted index, we swap it
+            with the tail index which is the index +1 from the last smallest value less than pivotVal
          */
         swap(arr, right, tail_of_lesser_values);
 
