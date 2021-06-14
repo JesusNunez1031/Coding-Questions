@@ -101,6 +101,18 @@ public class PalindromePairs {
         class TrieNode {
             TrieNode[] children = new TrieNode[26];
             int index = -1;
+            /*
+                holds the indexes of the word that is the reverse of the current observed word
+                e.g. given ["abcd", "dcba", "lls", "s", "sssll"]
+                - if abcd has been added to the trie, its final node d, will have the index where the word is found which is
+                  0 and a list will be made in d since it is a palindrome.
+
+                - When dcba is added, a will have index of 1 and a list with value 1
+
+                - when we search for a pair for dcba, abcd will be searched for since we start from the end of the string.
+                  on the last character d, we will find a pair since d is a palindrome and since the index of node d is
+                  not -1, this means a previous word ended in this character aswell indicating the reverse was found.
+             */
             List<Integer> palindromes = null;
         }
 
@@ -122,8 +134,8 @@ public class PalindromePairs {
                         iter.palindromes = new ArrayList<>();
                     }
                     /*
-                        if the substring is a palindrome, add the index of word to the list of palindromes
-                        for the current node "iter".
+                        if the substring is a palindrome, add the index of word to the list of palindromes for the
+                        current node "iter".
                     */
                     iter.palindromes.add(index);
                 }
@@ -136,6 +148,8 @@ public class PalindromePairs {
                 iter = iter.children[ch - 'a'];
                 i++;
             }
+
+            //set the index of the last character node to the index to indicate the words end
             iter.index = index;
         }
 
@@ -143,23 +157,33 @@ public class PalindromePairs {
             TrieNode iter = root;
             int n = word.length();
 
+            /*
+                search the trie for the reverse of the current word, if the reverse exists, the index of iter will not
+                be -1 and the substring from 0 to i will be a palindrome
+             */
             for (int i = n - 1; i >= 0; i--) {
                 if (iter.index != -1 && isPalindrome(word, 0, i)) {
                     pairs.add(Arrays.asList(iter.index, index));
                 }
-                char ch = word.charAt(i);
-                if (iter.children[ch - 'a'] == null) {
+
+                //if the current character does not exit, there is no point in searching the rest of the word
+                iter = iter.children[word.charAt(i) - 'a'];
+                if (iter == null) {
                     return;
                 }
-
-                iter = iter.children[ch - 'a'];
             }
 
+            /*
+                if the last checked node iter has a list of palindromes, check the list of reversed words inside word
+                that are palindromes and add them to the list
+             */
             if (iter.palindromes != null) {
                 for (Integer indx : iter.palindromes) {
                     pairs.add(Arrays.asList(indx, index));
                 }
             }
+
+            //if the complete reverse of word is present and its not at the same index of the current word, another pair was found
             if (iter.index != -1 && iter.index != index) {
                 pairs.add(Arrays.asList(iter.index, index));
             }
@@ -174,7 +198,7 @@ public class PalindromePairs {
         }
     }
 
-    //TC: O(n * k) where k is the average length of words in array and n is the number of words in words
+    //TC: O(n * k^2) where k is the average length of words in array and n is the number of words in words
     public static List<List<Integer>> palindromePairsTrie(String[] words) {
         List<List<Integer>> pairs = new ArrayList<>();
 
