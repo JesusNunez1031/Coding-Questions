@@ -216,6 +216,6 @@ public class PalindromePairs {
 
     public static void main(String[] args) {
         String[] words = {"abcd", "dcba", "lls", "s", "sssll"};
-        palindromePairsTrie(words);
+        System.out.println(palindromePairsTrie(words));
     }
 }
