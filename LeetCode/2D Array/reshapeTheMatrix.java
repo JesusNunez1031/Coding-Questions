@@ -102,31 +102,35 @@ public class reshapeTheMatrix {
         return reshape;
     }
 
-    public int[][] matrixReshapeEz(int[][] nums, int r, int c) {
-        int m = nums.length;
-        int n = nums[0].length;
+    //TC: O(m * n)
+    public int[][] matrixReshapeEz(int[][] mat, int r, int c) {
+        int m = mat.length;
+        int n = mat[0].length;
 
-        if (m * n < r * c) {
-            return nums;
+        //verify the reshaped matrix is of equal size to the current matrix
+        if (m * n != r * c) {
+            return mat;
         }
 
         int[][] reshape = new int[r][c];
-        int count = 0;
-
+        int cell = 0; // number of cells in the matrix
         /*
-            a 2-D array is stored as a 1-D in main memory, i.e. nums[i][j] is represented in the form of a one dimensional
-            array by using the index in the form: nums[n * i + j], where n is the number of columns in the given matrix.
+            a 2-D array is stored as a 1-D in main memory, i.e. mat[i][j] is represented in the form of a one dimensional
+            array by using the index in the form: mat[n * i + j], where n is the number of columns in the given matrix.
             This is the one way of converting 2-d indices into one 1-d index.
 
-            Therefore while putting values into the reshaped matrix we can make use of a count variable which increases for
-            every value traversed and gets added as if placed into a 1-D array. To convert the count back into 2-D matrix
-            indices with a column count of c, indices are obtained as reshape[count / c][count % c] where count / c is
-            the row number and count % c is the column number
+            Therefore while putting values into the reshaped matrix we can make use of a cell variable which increases for
+            every value traversed and gets added as if placed into a 1-D array. To convert the cell back into 2-D matrix
+            indices with a column cell of c, indices are obtained as reshape[cell / c][cell % c] where cell / c is
+            the row number and cell % c is the column number
+
+            for each num array in matrix mat, loop through the values in the row and add them to the reshape matrix by
+            extracting the indices based on the number of cells already seen
         */
-        for (int[] num : nums) {
+        for (int[] num : mat) {
             for (int j = 0; j < n; j++) {
-                reshape[count / c][count % c] = num[j];
-                count++;
+                reshape[cell / c][cell % c] = num[j];
+                cell++;
             }
         }
         return reshape;
