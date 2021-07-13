@@ -1,5 +1,5 @@
 public class RobotBoundedInCircle {
-    class Robot {
+    static class Robot {
         //position coordinates of robot
         int x;
         int y;
