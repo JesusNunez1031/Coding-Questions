@@ -37,10 +37,11 @@ public class shuffleAnArray {
      */
 
     //TC: O(n) and space since we clone the original array multiple times
-    private int[] original;
+    private final int[] original;
     private int[] nums;
 
     public shuffleAnArray(int[] nums) {
+        //save a copy of nums onto original so we can reference it on resets
         this.original = nums.clone();
         this.nums = nums;
     }
@@ -49,9 +50,10 @@ public class shuffleAnArray {
      * Resets the array to its original configuration and return it.
      */
     public int[] reset() {
-        this.nums = original;
-        original = original.clone();
-        return original;
+        //copy the original array to the nums and return nums
+        this.nums = original.clone();
+
+        return nums;
     }
 
     /**
@@ -77,7 +79,7 @@ public class shuffleAnArray {
         for (int i = nums.length - 1; i > 0; i--) {
             int index = rand.nextInt(i + 1);
 
-            //swap values
+            //swap values nums[index] with nums[i]
             int temp = nums[index];
             nums[index] = nums[i];
             nums[i] = temp;
