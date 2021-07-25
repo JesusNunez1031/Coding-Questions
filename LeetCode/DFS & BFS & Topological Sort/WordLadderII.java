@@ -33,6 +33,7 @@ public class WordLadderII {
         beginWord != endWord
         All the words in wordList are unique.
      */
+    //TC: O(26 * l * n + VE) 26 possible characters in a word, where l is the length of words and n is the number of words in list, VE is all possible paths in DFS
     public static List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
         Map<String, List<String>> adjList = new HashMap<>(); //adjacency list for each string in wordList
         Set<String> dictionary = new HashSet<>();
