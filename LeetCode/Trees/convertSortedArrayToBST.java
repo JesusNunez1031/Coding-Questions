@@ -35,41 +35,44 @@ public class convertSortedArrayToBST {
         return root;
     }
 
-//    public static TreeNode sortedArrayToBSTIter(int[] nums) {
-//        if (nums.length == 0) {
-//            return null;
-//        }
-//        int left = 0;
-//        int right = nums.length - 1;
-//        int mid = left + (right - left) / 2;
-//
-//        TreeNode root = new TreeNode(nums[mid]);
-//
-//        while (left <= mid - 1) {
-//            int m = left + ((mid - 1) - left) / 2;
-//            root = addToTree(root, nums[m]);
-//            left++;
-//        }
-//
-//        int j = mid + 1;
-//        while (j <= nums.length - 1) {
-//            int m = j + (right - j) / 2;
-//            root = addToTree(root, nums[m]);
-//            j++;
-//        }
-//        return root;
-//    }
-//
-//    public static TreeNode addToTree(TreeNode root, int value) {
-//        if (root == null) {
-//            return new TreeNode(value);
-//        }
-//        if (value < root.val) {
-//            root.left = addToTree(root.left, value);
-//        } else if (value > root.val) {
-//            root.right = addToTree(root.right, value);
-//        }
-//
-//        return root;
-//    }
+    //TC: O(n) iteratively
+    public static TreeNode sortedArrayToBSTIter(int[] nums) {
+        if (nums.length == 0) {
+            return null;
+        }
+        int left = 0;
+        int right = nums.length - 1;
+        int mid = left + (right - left) / 2;
+
+        // make the root of the tree from the center value in the array
+        TreeNode root = new TreeNode(nums[mid]);
+
+        //make the left subtree
+        while (left <= mid - 1) {
+            int m = left + ((mid - 1) - left) / 2;
+            root = addToTree(root, nums[m]);
+            left++;
+        }
+
+        // make the right subtree
+        int j = mid + 1;
+        while (j <= nums.length - 1) {
+            int m = j + (right - j) / 2;
+            root = addToTree(root, nums[m]);
+            j++;
+        }
+        return root;
+    }
+
+    public static TreeNode addToTree(TreeNode root, int value) {
+        if (root == null) {
+            return new TreeNode(value);
+        }
+        if (value < root.val) {
+            root.left = addToTree(root.left, value);
+        } else if (value > root.val) {
+            root.right = addToTree(root.right, value);
+        }
+        return root;
+    }
 }
