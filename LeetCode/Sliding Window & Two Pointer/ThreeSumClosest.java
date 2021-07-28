@@ -19,7 +19,7 @@ public class ThreeSumClosest {
     public int threeSumClosest(int[] nums, int target) {
         int closest = (int) 1e3; //largest possible value in nums
 
-        //sort the array so we can skip calculating sums for duplicate values
+        //sort the array, so we can skip calculating sums for duplicate values
         Arrays.sort(nums);
 
         for (int i = 0; i < nums.length - 2; i++) {
@@ -43,7 +43,10 @@ public class ThreeSumClosest {
                         closest = sum;
                     }
 
-                    //if the sum is less than the target, move "left" pointer right, else move "right" pointer left
+                    /*
+                        if the sum is less than the target, move "left" pointer right to use a larger value, else move
+                        "right" pointer left to use smaller value
+                     */
                     if (sum < target) {
                         left++;
                         //skip any duplicate values from left
