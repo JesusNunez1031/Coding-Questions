@@ -22,9 +22,9 @@ public class TwoSum {
     Output: [0,1]
 
     Constraints:
-        2 <= nums.length <= 103
-        -109 <= nums[i] <= 109
-        -109 <= target <= 109
+        2 <= nums.length <= 10^3
+        -10^9 <= nums[i] <= 10^9
+        -10^9 <= target <= 10^9
         Only one valid answer exists.
      */
 
@@ -54,8 +54,9 @@ public class TwoSum {
         return new int[]{-1, -1};
     }
 
+    //TC/S: O(n)
     public int[] twoSumEzz(int[] nums, int target) {
-        Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>(); //map stores each of the values in nums with its index as the value
 
         for (int i = 0; i < nums.length; i++) {
             //if the map contains the difference, a pair was found and return the index of nums[i] and the difference
