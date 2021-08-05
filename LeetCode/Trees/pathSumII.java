@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class pathSumII {
@@ -23,42 +24,37 @@ public class pathSumII {
        [5,8,4,5]
     ]
      */
-
-    private List<List<Integer>> paths = new ArrayList<>();  //list to hold all the paths to the target sum
     //TC: O(n) and O(n) space since we store the paths to every node
-    public List<List<Integer>> pathSum(TreeNode root, int sum) {
+    public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
         if (root == null) {
-            return paths;
+            return Collections.emptyList();
         }
+        List<List<Integer>> paths = new ArrayList<>(); //list to hold all the paths to the target sum
 
-        //pre-order traversal to check for all paths to the given sum
-        searchPaths(root, sum, new ArrayList<>());
+        searchForPaths(root, paths, new ArrayList<>(), targetSum);
 
         return paths;
     }
 
-    private void searchPaths(TreeNode root, int sum, List<Integer> path_sums) {
+    private void searchForPaths(TreeNode root, List<List<Integer>> paths, List<Integer> path, int targetSum) {
         if (root == null) {
             return;
         }
 
-        sum -= root.val;
-        path_sums.add(root.val);
+        // reduce the total sum by the current node value and add it to the path
+        targetSum -= root.val;
+        path.add(root.val);
 
-        /*
-            if we are at a leaf node, we check if the current path sums to the given sum, in this case, since we subtract
-            the current values from the sum, we know the sum has been made if it is 0
-         */
-        if (root.left == null && root.right == null && sum == 0) {
-            paths.add(path_sums);
+        // add the path if the current node is a leaf and if the path sums up to the total sum, i.e. sum == 0
+        if (root.left == null && root.right == null && targetSum == 0) {
+            paths.add(new ArrayList<>(path));
         }
 
-        /*
-            we call the method back using a deep copy of the paths_sums array so that at every recursive stack call we
-            get the reference of the array as it was prior to the current stack call and backtrack, so we avoid adding on to
-            the same array
-        */
-        searchPaths(root.left, sum, new ArrayList<>(path_sums));
-        searchPaths(root.right, sum, path_sums);
+        //search left and right subtrees using the current path and sum up to the current node
+        searchForPaths(root.left, paths, path, targetSum);
+        searchForPaths(root.right, paths, path, targetSum);
+
+        path.remove(path.size() - 1); //backtrack by removing nodes from the path on new iterations
+
     }
 }
