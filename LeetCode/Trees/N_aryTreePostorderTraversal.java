@@ -3,13 +3,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
-public class n_aryTreePreorderTraversal {
+public class N_aryTreePostorderTraversal {
     /*
-        Given the root of an n-ary tree, return the preorder traversal of its nodes' values.
+        Given the root of an n-ary tree, return the postorder traversal of its nodes' values.
 
         Nary-Tree input serialization is represented in their level order traversal. Each group of children is separated
         by the null value (See examples)
-
 
         Example 1:
                             [1]
@@ -18,7 +17,7 @@ public class n_aryTreePreorderTraversal {
                     /     \
                   [5]     [6]
         Input: root = [1,null,3,2,4,null,5,6]
-        Output: [1,3,5,6,2,4]
+        Output: [5,6,3,2,4,1]
 
         Example 2:
                      __________[1]___________
@@ -31,7 +30,7 @@ public class n_aryTreePreorderTraversal {
                               |
                              [14]
         Input: root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
-        Output: [1,2,3,6,7,11,14,4,8,12,5,9,13,10]
+        Output: [2,6,14,11,7,3,12,8,4,13,9,10,5,1]
 
         Constraints:
             The number of nodes in the tree is in the range [0, 10^4].
@@ -40,55 +39,62 @@ public class n_aryTreePreorderTraversal {
 
         Follow up: Recursive solution is trivial, could you do it iteratively?
      */
-
     //TC: O(n) if skewed tree or O(max(height of tree))
-    public List<Integer> preorder(Node root) {
-        return preorderHelper(root, new ArrayList<>());
+    public List<Integer> postorder(Node root) {
+        return postOrderHelper(root, new ArrayList<>());
     }
 
-    private List<Integer> preorderHelper(Node root, List<Integer> list) {
+    public List<Integer> postOrderHelper(Node root, List<Integer> list) {
         if (root == null) {
             return list;
         }
-
-        //process root first
-        list.add(root.val);
-
-        //then search through all the children
+        //process all children first
         for (Node child : root.children) {
-            preorderHelper(child, list);
+            postOrderHelper(child, list);
         }
+
+        //postorder so left is processed first, then right, then finally root
+        list.add(root.val);
 
         return list;
     }
 
-    //Follow up | TC/S: O(n) since we use a stack to simulate recursion
-    public List<Integer> preorderIter(Node root) {
+    //Follow up | TC/S: O(n)
+    public List<Integer> postorderIter(Node root) {
         if (root == null) {
             return Collections.emptyList();
         }
 
-        //list to hold preorder values
+        //list to hold postorder values
         List<Integer> list = new ArrayList<>();
 
         //stack to simulate recursion through iteration
         Stack<Node> stack = new Stack<>();
 
-        //add the first node to the stack
+        //add the first node into the stack
         stack.push(root);
 
         while (!stack.isEmpty()) {
-            Node curr = stack.pop();
-
-            //preorder so we process the root first
-            list.add(curr.val);
+            /*
+                we only pop a node from the stack if its been visited already, so to get the current node we peek the top
+                of the stack
+             */
+            Node curr = stack.peek();
 
             /*
-                since preorder is root, left, then right, we have to add child nodes in reverse order so after adding
-                all "curr" children nodes to the stack, the top node will be the left-most node
-            */
-            for (int i = curr.children.size() - 1; i >= 0; i--) {
-                stack.push(curr.children.get(i));
+                if the current node has children process the children by adding them to the stack in reverse order since
+                postorder is left, right, then root hence the leftmost node will be at the top
+             */
+            if (curr.children != null) {
+                for (int i = curr.children.size() - 1; i >= 0; i--) {
+                    stack.push(curr.children.get(i));
+                }
+
+                //once the current nodes children have been processed, erase its children to avoid repeat nodes
+                curr.children = null;
+            } else {
+                //if a node has no children, it must have been processed already so we add it to the list
+                list.add(stack.pop().val);
             }
         }
         return list;
