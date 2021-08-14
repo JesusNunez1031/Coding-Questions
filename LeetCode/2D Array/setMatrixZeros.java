@@ -68,11 +68,11 @@ public class setMatrixZeros {
         boolean firstCol = false;
 
         for (int i = 0; i < matrix.length; i++) {
-            //if the first index in the first row is a zero, we mark firstCol as true so later we can convert row and column to 0
+            //if the first cell in the row is a zero, we mark firstCol as true, so later we can convert row and column to 0
             if (matrix[i][0] == 0) {
                 firstCol = true;
             }
-            //we check the first cell of each row so we start at j = 1
+            //we check the first cell of each row, so we start at j = 1
             for (int j = 1; j < matrix[i].length; j++) {
                 //if the current value is 0, mark the first cell in the specific row and column to 0
                 if (matrix[i][j] == 0) {
