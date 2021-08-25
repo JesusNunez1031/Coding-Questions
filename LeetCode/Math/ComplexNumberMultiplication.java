@@ -19,7 +19,7 @@ public class ComplexNumberMultiplication {
     Constraints:
         num1 and num2 are valid complex numbers.
      */
-    // complex number object to store real and imaginary parts of a complex number
+    // complex number object to store real and imaginary parts of an actual complex number
     static class ComplexNumber {
         int real;
         int imaginary;
@@ -32,8 +32,8 @@ public class ComplexNumberMultiplication {
 
     //TC:O(len(num1) + len(num2))
     public String complexNumberMultiply(String num1, String num2) {
-        ComplexNumber n1 = parse(num1);
-        ComplexNumber n2 = parse(num2);
+        ComplexNumber n1 = parseComplexNum(num1);
+        ComplexNumber n2 = parseComplexNum(num2);
 
         /*
             Multiplication of Complex numbers:
@@ -56,7 +56,7 @@ public class ComplexNumberMultiplication {
         return productRealNum + "+" + productImagNum + "i";
     }
 
-    private ComplexNumber parse(String num) {
+    private ComplexNumber parseComplexNum(String num) {
         int i = 0;
         int real = 0; // the real number of the num
         boolean isRealNegative = false;
