@@ -6,7 +6,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class n_aryTreePreorderTraversalTest {
-    n_aryTreePreorderTraversal driver = new n_aryTreePreorderTraversal();
+    N_aryTreePreorderTraversal driver = new N_aryTreePreorderTraversal();
 
     @Test
     @DisplayName("Tree 1")
