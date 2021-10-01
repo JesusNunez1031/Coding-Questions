@@ -20,7 +20,7 @@ public class partitionToKEqualSumSubsets {
             total_sum += num;
         }
 
-        //if total_sum divided by k is not 0, we cant make k subsets since one or more subsets would have float values
+        //if total_sum divided by k is not 0, we can't make k subsets since one or more subsets would have float values
         if (total_sum % k != 0) {
             return false;
         }
@@ -39,7 +39,10 @@ public class partitionToKEqualSumSubsets {
             return false;
         }
 
-        //when the sum of a bucket == the target bucket_sum of total_sum / k, a bucket has been made so we now have k - 1 buckets left to fill
+        /*
+            when the sum of a bucket == the target bucket_sum of total_sum / k, a bucket has been made, so we now have
+            k - 1 buckets left to fill
+        */
         if (sum == bucket_sum) {
             return canPartition(nums, 0, 0, k - 1, bucket_sum, used);
         }
