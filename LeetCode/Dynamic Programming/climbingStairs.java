@@ -21,7 +21,7 @@ public class climbingStairs {
     Constraints:
         1 <= n <= 45
      */
-
+    //TC: O(n)
     public int climbStairs(int n) {
         //there is only 1 way given 1 stair, and 2 ways given 2 stairs
         if (n == 1 || n == 2) {
