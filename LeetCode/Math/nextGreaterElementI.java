@@ -28,6 +28,7 @@ public class nextGreaterElementI {
         All elements in nums1 and nums2 are unique.
         The length of both nums1 and nums2 would not exceed 1000.
      */
+    //TC: O(n * m) where n is the length of nums1 and m is the length of nums2
     private int[] nextGreaterElement(int[] nums1, int[] nums2) {
         //array to hold the indexes of the next greatest value in nums2 for every value in nums1
         int[] next = new int[nums1.length];
