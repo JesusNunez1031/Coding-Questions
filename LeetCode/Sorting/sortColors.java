@@ -55,9 +55,8 @@ public class sortColors {
     //Dutch sorting algorithm TC: O(n) and constant space used
     private void sortColors(int[] nums) {
         /*
-            3 pointers, left for 0's, mid for 1's, and right for 2's. All values of 0 will be at the
-            start of the array, all values of 1 will be at the center of the array, and all values of
-            2 will be at the end of the array
+            3 pointers, left for 0's, mid for 1's, and right for 2's. All values of 0 will be at the start of the array,
+            all values of 1 will be at the center of the array, and all values of 2 will be at the end of the array
         */
         int left = 0;
         int mid = 0;
@@ -67,7 +66,10 @@ public class sortColors {
         while (mid <= right) {
             //0's are swapped with the start pointer
             if (nums[mid] == 0) {
-                //swap mid with left and increase both pointers
+                /*
+                    swap mid with left, and increase both pointers since we want mid to move to the next value, and the
+                    current 0 is now at its proper location of nums[left]
+                 */
                 swap(nums, left, mid);
                 left++;
                 mid++;
@@ -79,7 +81,7 @@ public class sortColors {
             //2's are meant to be at the end so swap them with the end pointer
             else if (nums[mid] == 2) {
                 swap(nums, mid, right);
-                //move to the next value
+                //reduce the bound since a 2 is in its proper place of nums[right]
                 right--;
             }
         }
