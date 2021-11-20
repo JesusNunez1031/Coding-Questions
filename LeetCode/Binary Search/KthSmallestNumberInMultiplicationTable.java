@@ -47,9 +47,9 @@ public class KthSmallestNumberInMultiplicationTable {
     }
 
     private static boolean isSmallest(int mid, int m, int n, int k) {
-        int count = 0;
+        int count = 0; // number of elements in table <= mid
 
-        // Check how close we are to k using mid
+        // calculate how many elements are in between mid and by dividing mid by each divisor in the range 1 to m
         for (int i = 1; i <= m; i++) {
             /*
                 As i increases mid/i will decrease and by extension the count will also slowly increase, at the end of
