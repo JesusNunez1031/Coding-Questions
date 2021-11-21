@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class constructBinaryTreeFromPreorderAndInorderTraversal {
+public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
     /*
     Given preorder and inorder traversal of a tree, construct the binary tree.
 
