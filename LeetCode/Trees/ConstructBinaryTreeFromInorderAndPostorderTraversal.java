@@ -58,8 +58,12 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
         int index = indexes.get(root.val);
 
         // all nodes before "index" are the nodes on the left subtree, and nodes after are on the right subtree
-        root.left = buildTreeHelper(inorder, postorder, start, index - 1);
+        /*
+            Since Post Order traversal goes as follows, Left Right Root, and the root of each tree is the last node of
+            the postorder traversal array, we must build the tree backwards, Root Right Left.
+         */
         root.right = buildTreeHelper(inorder, postorder, index + 1, end);
+        root.left = buildTreeHelper(inorder, postorder, start, index - 1);
 
         return root;
     }
