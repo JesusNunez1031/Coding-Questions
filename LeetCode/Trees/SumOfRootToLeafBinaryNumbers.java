@@ -22,6 +22,7 @@ public class SumOfRootToLeafBinaryNumbers {
         The number of nodes in the tree is in the range [1, 1000].
         Node.val is 0 or 1.
      */
+    //TC: O(n) and SC: O(h) where h is the height of the tree
     public int sumRootToLeaf(TreeNode root) {
         if (root == null) {
             return 0;
