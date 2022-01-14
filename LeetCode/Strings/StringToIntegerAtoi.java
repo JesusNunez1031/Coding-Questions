@@ -1,4 +1,4 @@
-public class myAtoi {
+public class StringToIntegerAtoi {
     /*
         Implement atoi which converts a string to an integer.
         The function first discards as many whitespace characters as necessary until the first non-whitespace character
@@ -74,8 +74,8 @@ public class myAtoi {
             i++;
         }
 
-        //if the string had no valid integers or if sb contains only the sign return 0
-        if (sb.length() == 0 || (sb.length() == 1 && sb.charAt(0) == sign)) {
+        //if the string had no valid integers sb will be empty hence we return 0
+        if (sb.length() == 0) {
             return 0;
         }
 
@@ -83,6 +83,8 @@ public class myAtoi {
         long ans = 0;
         while (i < sb.length()) {
             ans = (ans * 10) + (sb.charAt(i) - '0');    //-'0' to convert a char to a digit
+
+            // check if we exceed the min or max cap
             if (ans > Integer.MAX_VALUE || ans < Integer.MIN_VALUE) {
                 return sign == '-' ? Integer.MIN_VALUE : Integer.MAX_VALUE;
             }
