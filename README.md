@@ -11,7 +11,7 @@ Daily updates will be added as I continue to solve more from leetcode and Hacker
 6. Maps (e.g. Sets, Hash Maps)
 7. Binary Trees
 ### Tips For Approaches to Algorithm Questions
-1. If the given array is sorted consider,
+1. If the given array is sorted consider using,
    - Binary Search
    - Two Pointers
 2. If asked to give all permutations/subsets for a given set of data,
