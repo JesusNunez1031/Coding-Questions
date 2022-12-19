@@ -92,7 +92,7 @@ public class FindIfPathExistsInGraph {
         while (!queue.isEmpty()) {
             int current = queue.remove();
 
-            // check if path so far leads to destination
+            // check if path so far leads to destinations
             if (current == destination) {
                 return true;
             }
