@@ -14,7 +14,7 @@ Daily updates will be added as I continue to solve more from leetcode and Hacker
 1. If the given array is sorted consider using,
    - Binary Search
    - Two Pointers
-2. If asked to give all permutations/subsets for a given set of data,
+2. If asked to give all leetCode.backtracking.permutations/leetCode.backtracking.subsets for a given set of data,
    - Backtracking
    - Sorting given data can help reduce extra work
 3. If given a Tree or Graph,
