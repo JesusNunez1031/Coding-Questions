@@ -2,15 +2,12 @@
 # is over 21.
 #
 #
-# codingbat.warmup_1.diff21(19) → 2
-# codingbat.warmup_1.diff21(10) → 11
-# codingbat.warmup_1.diff21(21) → 0
-
-def codingbat.warmup_1.diff21(n):
+# diff21(19) → 2
+# diff21(10) → 11
+# diff21(21) → 0
+def diff21(n):
+    abs_diff = abs(21 - n)
     if n > 21:
-        return abs(21 - n) * 2
-
-    return 21 - n
-
-
-print(codingbat.warmup_1.diff21(21))
+        return abs_diff * 2
+    else:
+        return abs_diff
